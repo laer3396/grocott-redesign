@@ -38,7 +38,7 @@ p {/* brødtekst*/
     background: #82c7c0;
     border: none;
     padding: 12px 20px;
-    border-radius: 20px;
+    border-radius: 9px;
     cursor: pointer;
     font-size: 16px;
     color: #01245E;
@@ -155,14 +155,7 @@ p {/* brødtekst*/
 }
 
 .btn {
-    margin-top: 35px;
-    background: #82c7c0;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #01245E;
+    font-size: 18px;
 }
 
 
@@ -190,6 +183,11 @@ p {/* brødtekst*/
     margin: 0px;
     font-size: 45px;
     font-weight: 800;
+
+}
+
+.stats p {
+    font-size: 25px;
 
 }
 
