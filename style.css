@@ -100,7 +100,7 @@ p {/* brødtekst*/
 .hamburger {
     display: block;
     cursor: pointer;
-    z-index: 2000;
+  
 
 }
 
