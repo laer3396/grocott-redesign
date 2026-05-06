@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    color: #01245E;
+    font-family: mulish;
+}
+
+h1 { /* Overskrift*/
+    font-size: 35px;
+    font-weight: 200;
+}
+
+
+h2 { /* Overskrift*/
+    font-size: 35px;
+    font-weight: 200;
+}
+
+h3 {/* under overskrift*/
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+p {/* brødtekst*/
+    font-size: 16px;
+    font-family: karla;
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 35px;
+    background: #82c7c0;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #01245E;
+}
+
+
+
+
+
+
+
+
+
+/* Topbar */
+.topbar {
+    background: #C5D8E6;
+    color: #01245E;
+    text-align: center;
+    font-size: 14px;
+    padding: 6px;
+}
+
+
+/* Hero */
+.hero {
+    padding: 10% 20px;
+}
+
+
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #e3ecf3;
+    text-align: center;
+    padding: 5% 20px;
+}
+
+.stats h3 {
+    margin: 0px;
+    font-size: 25px;
+    font-weight: 800;
+
+}
+
+/* Content */
+.content {
+    padding: 5% 20px;
+}
+
+
+.content span {
+    color: #1e73d8;
+    font-weight: 800;
+}
+
+
+/* Liste */
+.list {
+    background: #f2f5f8;
+    padding: 5% 20px;
+    font-size: 18px;
+
+}
+
+.list ul {
+    list-style: none;
+}
+
+.list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #1e73d8;
+}
+
+/* Why section */
+.why {
+    padding: 5% 20px;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+
+h1 { /* Overskrift*/
+    font-size: 45px;
+    font-weight: 200;
+}
+
+
+h2 { /* Overskrift*/
+    font-size: 45px;
+    font-weight: 200;
+}
+
+h3 {/* under overskrift*/
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+p {/* brødtekst*/
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn {
+    margin-top: 35px;
+    background: #82c7c0;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #01245E;
+}
+
+
+/* Topbar */
+.topbar {
+    font-size: 18px;
+    padding: 6px;
+    
+}
+
+
+/* Hero */
+.hero {
+    padding: 10% 100px;
+}
+
+
+
+/* Stats */
+.stats {
+    padding: 2% 100px;
+}
+
+.stats h3 {
+    margin: 0px;
+    font-size: 45px;
+    font-weight: 800;
+
+}
+
+    .content-wrapper {
+        display: flex;
+       
+    }
+
+    .content,
+    .list {
+        flex: 1;
+        padding: 5% 100px;
+    }
+
+    .content {
+        background: white;
+    }
+
+    .list {
+        background: #f2f5f8;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+/* Why section */
+.why {
+    padding: 5% 100px;
+}
+
+
+}
+
