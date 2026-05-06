@@ -45,76 +45,82 @@ p {/* brødtekst*/
     color:#01245E;
 }
 
+.site-header {
+    background-color: rgb(3, 5, 38);
+    color: rgb(172, 176, 242);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Gør headeren "klæbrig" */
+    top: 0; /* Klæber til toppen af visningsporten */
+    z-index: 1000; /* Sikrer den ligger over andet indhold */
+}
+
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Fordeler logo og menu i hver sin side */
     align-items: center;
-    padding: 15px 20px;
-    background: #f8f8f8;
+    padding: 10px 5%;
 }
 
-/* Logo */
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
 .nav-logo img {
-    width: 150px;
+  width: 40px; /* Sætter bredden til f.eks. 150 pixels */
+  height: auto; /* Bevarer billedets proportioner */
 }
 
-/* Menu (skjult mobil) */
+
+
 .nav-menu {
     position: fixed;
-    top: 70px;
-    left: -100%;
+    left: -100%; /* Skjul menuen uden for skærmen */
+    top: 60px; /* Under headeren */
+    flex-direction: column; /* Stabler links lodret */
+    background-color: rgb(3, 5, 38);
     width: 100%;
-    background: white;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
     transition: 0.3s;
-    padding: 20px;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 }
 
 .nav-menu.active {
-    left: 0;
+    left: 0; /* Flytter menuen ind i synsfeltet */
+    background-color: transparent;
 }
 
-.nav-menu li {
-    list-style: none;
-    margin: 15px 0;
-}
-
-.nav-menu a {
+.nav-link {
+    color: rgb(172, 176, 242);
     text-decoration: none;
-    color: #01245E;
-    font-size: 18px;
+    padding: 15px; /* Mere lodret luft for touch-skærme */
+    margin: 10px 0; /* Mere lodret luft for touch-skærme */
+    transition: background-color 0.3s ease;
 }
 
-/* Dropdown mobil */
-.dropdown-menu {
-    display: none;
-    padding-left: 15px;
+.nav-link:hover, .nav-link.active {
+    background-color: #181A40;
+    border-radius: 5px;
 }
 
-.dropdown.active .dropdown-menu {
-    display: block;
-}
-
-/* Burger */
+/* Skjul burgermenu-ikonet som standard (desktop view) */
 .hamburger {
-    display: block;
+    display: block; 
     cursor: pointer;
-  
-
 }
 
 .bar {
+    display: block;
     width: 25px;
     height: 3px;
-    background: #01245E;
-    margin: 5px 0;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(172, 176, 242);
 }
 
-/* Skjul desktop ting */
-.nav-right {
-    display: none;
-}
+
 
 
 /* Topbar */
