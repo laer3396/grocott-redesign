@@ -1,38 +1,35 @@
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===== BASE ===== */
 body {
     line-height: 1.5;
     color: #01245E;
     font-family: mulish;
 }
 
-h1 { /* Overskrift*/
+h1, h2 {
     font-size: 35px;
     font-weight: 200;
 }
 
-
-h2 { /* Overskrift*/
-    font-size: 35px;
-    font-weight: 200;
-}
-
-h3 {/* under overskrift*/
+h3 {
     font-size: 18px;
     margin-top: 10px;
     font-weight: 600;
 }
 
-p {/* brødtekst*/
+p {
     font-size: 16px;
     font-family: karla;
     margin-top: 10px;
 }
 
+/* ===== BUTTON ===== */
 .btn {
     margin-top: 35px;
     background: #b1e99f;
@@ -41,124 +38,13 @@ p {/* brødtekst*/
     border-radius: 9px;
     cursor: pointer;
     font-size: 16px;
+    color: #01245E;
     font-weight: 200;
-    color:#01245E;
-}
-
-.site-header {
-    background-color: #01245E;
-    position: sticky; /* Gør headeren "klæbrig" */
-    top: 0; /* Klæber til toppen af visningsporten */
-    z-index: 1000; /* Sikrer den ligger over andet indhold */
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Fordeler logo og menu i hver sin side */
-    align-items: center;
-    padding: 10px 5%;
-}
-
-.nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-
-.nav-logo img {
-  width: 40px; /* Sætter bredden til f.eks. 150 pixels */
-  height: auto; /* Bevarer billedets proportioner */
 }
 
 
 
-.nav-menu {
-    position: fixed;
-    top: 0;
-    left: -100%; /* skjult udenfor skærmen */
-    width: 80%; /* hvor bred menuen er */
-    height: 100vh; /* fylder hele højden */
-    background-color: #C5D8E6;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px; /* plads til header */
-    transition: 0.3s ease;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* ✅ giver ens afstand */
-
-
-}
-
-/* Når aktiv */
-.nav-menu.active {
-    left: 0;
-}
-
-.nav-link {
-    color: #01245E;
-    text-decoration: none;
-    padding: 15px; /* Mere lodret luft for touch-skærme */
-    transition: background-color 0.3s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-    background-color: #01245E;
-    color: #ffffff;
-}
-
-/* Skjul burgermenu-ikonet som standard (desktop view) */
-.hamburger {
-    display: block; 
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color:  #C5D8E6;
-}
-
-.dropdown-menu {
-    display: none;
-    flex-direction: column;
-}
-
-.dropdown-menu.active {
-    display: flex;
-}
-
-.dropdown-item {
-    color: #01245E;
-    text-decoration: none;
-    padding: 15px 40px;
-}
-
-
-.dropdown-item:hover {
-    background-color: #01245E;
-    color: #ffffff;
-}
-
-
-/* gør dropdown "inline" i side-menu */
-.dropdown {
-    width: 100%;
-}
-
-.dropdown > .nav-link {
-    display: block;
-    padding: 15px;
-}
-
-
-
-/* Topbar */
+/* ===== TOPBAR ===== */
 .topbar {
     background: #C5D8E6;
     color: #01245E;
@@ -167,15 +53,123 @@ p {/* brødtekst*/
     padding: 6px;
 }
 
+/* ===== HEADER ===== */
+.btn-nav {
+    background: #b1e99f;
+    color: #01245E;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 9px;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.site-header {
+    background-color: #EAEFF3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-/* Hero */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* ===== MOBILE MENU ===== */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #EAEFF3;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    gap: 20px;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-link {
+    color: #01245E;
+    text-decoration: none;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    font-weight: 800;
+}
+
+/* ===== BURGER ===== */
+/* 1. Sørg for at hamburgeren er synlig og klikbar */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    position: relative;        
+    z-index: 9999;             
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 2. Gør selve stregerne synlige */
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #01245E;
+    display: block;
+}
+/* ===== DROPDOWN ===== */
+.dropdown {
+    width: 100%;
+}
+
+.dropdown > .nav-link {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #C5D8E6;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-item {
+    padding: 15px 40px;
+    color: #01245E;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #01245E;
+    color: #fff;
+}
+
+/* ===== HERO ===== */
 .hero {
     padding: 10% 20px;
 }
 
-
-
-/* Stats */
+/* ===== STATS ===== */
 .stats {
     display: flex;
     justify-content: space-around;
@@ -185,30 +179,24 @@ p {/* brødtekst*/
 }
 
 .stats h3 {
-    margin: 0px;
     font-size: 25px;
     font-weight: 800;
-
 }
 
-/* Content */
+/* ===== CONTENT ===== */
 .content {
     padding: 5% 20px;
 }
-
 
 .content span {
     color: #1e73d8;
     font-weight: 800;
 }
 
-
-/* Liste */
+/* ===== LIST ===== */
 .list {
     background: #f2f5f8;
     padding: 5% 20px;
-    font-size: 18px;
-
 }
 
 .list ul {
@@ -228,84 +216,75 @@ p {/* brødtekst*/
     color: #105BF5;
 }
 
-/* Why section */
-.why {
-    padding: 5% 20px;
-}
-
+/* ===== WHY ===== */
 .why {
     position: relative;
-    background-image: url("img_lager/DSC_5410.webp");
-    background-image: 30%;
-    background-size: cover;
-    background-position: center;
+    background: url("img_lager/DSC_5410.webp") center/cover;
     padding: 80px 20px;
 }
 
-/* Overlay */
 .why::before {
     content: "";
     position: absolute;
     inset: 0;
-   background: rgb(242, 245, 248, 0.9)
-
+    background: rgba(242, 245, 248, 0.9);
 }
 
-/* Sørg for at tekst ligger OVER overlay */
 .why * {
     position: relative;
     z-index: 1;
 }
 
-
-
+/* ===== DESKTOP ===== */
 @media screen and (min-width: 769px) {
 
-
     .navbar {
-    padding: 0 150px;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 150px;
+}
+
+
+    .hamburger {
+        display: none;
     }
 
     .nav-menu {
-    display: flex;
-    position: static;
-    flex-direction: row;
-
-    width: auto;
-    height: 100px;
-    background: none;
-    box-shadow: none;
-    padding-top: 0;
-    gap: 30px; /* ✅ afstand mellem menu punkter */
-    align-items: center; /* ✅ centrerer menu-punkter vertikalt */
-
-
-    
-}
-
-.hamburger {
-    display: none;
-}
-
-
-    .nav-menu a {
-        font-size: 16px;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: 100px;
+        background: none;
+        padding-top: 0;
+        gap: 30px;
+        align-items: center;
+        
     }
 
-.nav-link {
-    color: #C5D8E6;
-    
-}
+.btn-nav {
+        order: 3; /* Sørger for den kommer efter menuen på desktop */
+    }
 
-.nav-link:hover, .nav-link.active {
-   
-    background-color: transparent;
-}
 
+    .nav-link {
+        color: #01245E;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: transparent;
+        font-weight: 800;
+    }
 
     .dropdown {
         position: relative;
+    }
+
+    .dropdown > .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
     .dropdown-menu {
@@ -316,101 +295,59 @@ p {/* brødtekst*/
         min-width: 200px;
         display: none;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        
-    }
-
-    .dropdown-menu.active {
-        display: none; /* deaktivér mobil klik */
     }
 
     .dropdown:hover .dropdown-menu {
         display: flex;
     }
 
+    .dropdown-menu.active {
+        display: none;
+    }
+
     .dropdown-item {
         padding: 12px;
     }
 
+    /* TYPO */
+    h1, h2 {
+        font-size: 45px;
+    }
 
-.dropdown > .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* afstand mellem tekst og pil */
-}
+    h3 {
+        font-size: 25px;
+    }
 
-.arrow {
-    font-size: 14px;
-}
+    p {
+        font-size: 18px;
+    }
 
+    .btn {
+        font-size: 18px;
+    }
 
+    .topbar {
+        font-size: 18px;
+    }
 
-  
+    .hero {
+        padding: 10% 150px;
+    }
 
+    .stats {
+        padding: 2% 150px;
+    }
 
+    .stats h3 {
+        font-size: 45px;
+    }
 
-
-h1 { /* Overskrift*/
-    font-size: 45px;
-    font-weight: 200;
-}
-
-
-h2 { /* Overskrift*/
-    font-size: 45px;
-    font-weight: 200;
-}
-
-h3 {/* under overskrift*/
-    font-size: 25px;
-    margin-top: 10px;
-    font-weight: 600;
-}
-
-p {/* brødtekst*/
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.btn {
-    font-size: 18px;
-}
-
-
-/* Topbar */
-.topbar {
-    font-size: 18px;
-    padding: 6px;
-    
-}
-
-
-/* Hero */
-.hero {
-    padding: 10% 150px;
-}
-
-
-
-/* Stats */
-.stats {
-    padding: 2% 150px;
-}
-
-.stats h3 {
-    margin: 0px;
-    font-size: 45px;
-    font-weight: 800;
-
-}
-
-.stats p {
-    font-size: 25px;
-
-}
+    .stats p {
+        font-size: 25px;
+    }
 
     .content-wrapper {
         display: flex;
-       
     }
 
     .content,
@@ -419,25 +356,20 @@ p {/* brødtekst*/
         padding: 5% 150px;
     }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* ✅ vertikal centrering */
-        align-items: flex-start; /* holder teksten venstrejusteret */
+    
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    }
 
     .list {
         display: flex;
         align-items: center;
     }
 
-
-
-/* Why section */
-.why {
-    padding: 5% 150px;
+    .why {
+        padding: 5% 150px;
+    }
 }
-
-}
-
