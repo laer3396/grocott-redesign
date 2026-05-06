@@ -46,9 +46,7 @@ p {/* brødtekst*/
 }
 
 .site-header {
-    background-color: rgb(3, 5, 38);
-    color: rgb(172, 176, 242);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #01245E;
     position: sticky; /* Gør headeren "klæbrig" */
     top: 0; /* Klæber til toppen af visningsporten */
     z-index: 1000; /* Sikrer den ligger over andet indhold */
@@ -76,32 +74,38 @@ p {/* brødtekst*/
 
 .nav-menu {
     position: fixed;
-    left: -100%; /* Skjul menuen uden for skærmen */
-    top: 60px; /* Under headeren */
-    flex-direction: column; /* Stabler links lodret */
-    background-color: rgb(3, 5, 38);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    top: 0;
+    left: -100%; /* skjult udenfor skærmen */
+    width: 80%; /* hvor bred menuen er */
+    height: 100vh; /* fylder hele højden */
+    background-color: #C5D8E6;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* plads til header */
+    transition: 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* ✅ giver ens afstand */
+
+
 }
 
+/* Når aktiv */
 .nav-menu.active {
-    left: 0; /* Flytter menuen ind i synsfeltet */
-    background-color: transparent;
+    left: 0;
 }
 
 .nav-link {
-    color: rgb(172, 176, 242);
+    color: #01245E;
     text-decoration: none;
     padding: 15px; /* Mere lodret luft for touch-skærme */
-    margin: 10px 0; /* Mere lodret luft for touch-skærme */
     transition: background-color 0.3s ease;
 }
 
 .nav-link:hover, .nav-link.active {
-    background-color: #181A40;
-    border-radius: 5px;
+    background-color: #01245E;
+    color: #ffffff;
 }
 
 /* Skjul burgermenu-ikonet som standard (desktop view) */
@@ -117,9 +121,40 @@ p {/* brødtekst*/
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: rgb(172, 176, 242);
+    background-color:  #C5D8E6;
 }
 
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-item {
+    color: #01245E;
+    text-decoration: none;
+    padding: 15px 40px;
+}
+
+
+.dropdown-item:hover {
+    background-color: #01245E;
+    color: #ffffff;
+}
+
+
+/* gør dropdown "inline" i side-menu */
+.dropdown {
+    width: 100%;
+}
+
+.dropdown > .nav-link {
+    display: block;
+    padding: 15px;
+}
 
 
 
@@ -226,67 +261,90 @@ p {/* brødtekst*/
 
 @media screen and (min-width: 769px) {
 
-    .hamburger {
-        display: none;
-    }
 
     .navbar {
-   padding: 0 150px;
-        margin: auto;
+    padding: 0 150px;
+    margin: auto;
     }
 
     .nav-menu {
-        position: static;
-        flex-direction: row;
-        gap: 40px;
-        width: auto;
-        background: none;
-        padding: 0;
-    }
+    display: flex;
+    position: static;
+    flex-direction: row;
 
-    .nav-menu li {
-        position: relative;
-        margin: 0;
-    }
+    width: auto;
+    height: 100px;
+    background: none;
+    box-shadow: none;
+    padding-top: 0;
+    gap: 30px; /* ✅ afstand mellem menu punkter */
+    align-items: center; /* ✅ centrerer menu-punkter vertikalt */
+
+
+    
+}
+
+.hamburger {
+    display: none;
+}
+
 
     .nav-menu a {
         font-size: 16px;
-        font-weight: 500;
     }
 
-    /* Dropdown */
+.nav-link {
+    color: #C5D8E6;
+    
+}
+
+.nav-link:hover, .nav-link.active {
+   
+    background-color: transparent;
+}
+
+
+    .dropdown {
+        position: relative;
+    }
+
     .dropdown-menu {
         position: absolute;
-        top: 120%;
+        top: 100%;
         left: 0;
-        background: white;
-        min-width: 180px;
+        background: #C5D8E6;
+        min-width: 200px;
         display: none;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        border-radius: 6px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        
     }
 
-    .dropdown-menu li {
-        margin: 0;
-    }
-
-    .dropdown-menu a {
-        display: block;
-        padding: 10px;
+    .dropdown-menu.active {
+        display: none; /* deaktivér mobil klik */
     }
 
     .dropdown:hover .dropdown-menu {
-        display: block;
+        display: flex;
     }
 
-    /* Højre side */
-    .nav-right {
-        display: block;
-        font-weight: bold;
-        color: #01245E;
-        border-bottom: 2px dotted #ccc;
-        padding-bottom: 5px;
+    .dropdown-item {
+        padding: 12px;
     }
+
+
+.dropdown > .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* afstand mellem tekst og pil */
+}
+
+.arrow {
+    font-size: 14px;
+}
+
+
+
+  
 
 
 
