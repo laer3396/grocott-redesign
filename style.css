@@ -60,7 +60,7 @@ p {
 
 /* ===== HEADER ===== */
 .btn-nav {
-    background: #b1e99f;
+    background: rgba(78, 232, 244, 0.5);
     color: #01245E;
     text-decoration: none;
     padding: 12px 20px;
@@ -234,8 +234,8 @@ p {
     background-color: transparent;
     border: 2px solid #9AF6FB;; /* tilpas farve */
     color: #ffffff;
+    
 }
-
 
 
 
@@ -313,6 +313,65 @@ p {
     position: relative;
     z-index: 1;
 }
+
+.footer {
+  background: #1f2933;
+  color: #fff;
+
+}
+
+.footer a {
+  color: #4fd1c5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+
+
+.note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.links {
+  margin-top: 1.5rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column; /* i footer = bedst */
+  gap: 0px;
+
+}
+
+.footer-buttons button {
+  align-self: flex-start;  /* ✅ stopper full width */
+}
+
 
 /* ===== DESKTOP ===== */
 @media screen and (min-width: 769px) {
@@ -487,4 +546,31 @@ p {
         padding: 100px 150px;
         padding-right: 300px;
     }
+ 
+
+  
+ 
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;                 /* ✅ luft mellem kolonner */
+  align-items: start;        /* ✅ alt starter samme sted */
+  padding: 50px 150px;
+  width: 100%;
+ 
+}
+
+ .footer-buttons {
+    flex-direction: column;   /* desktop */
+    display: flex;
+  }
+
+ 
+
+
+
+
+
+  
+
 }
