@@ -9,16 +9,24 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Karla&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- TOPBAR -->
-    <div class="topbar">
-        Tlf: 50 86 67 70 | nicolai@grocottys.dk
-    </div>
+   
+<div class="topbar">
+    <span>Tlf: 50 86 67 70</span>
+    <span>|</span>
+    <span>nicolai@grocottys.dk</span>
+</div>
+
 
     <!-- HEADER -->
     <header class="site-header">
@@ -26,10 +34,9 @@
 
             <!-- LOGO -->
             <a href="index.html" class="nav-logo">
-                <img src="img_lager/Grocott fys og sundhedshus logo.webp" alt="Logo">
+                <img src="img_lager/logo.webp" alt="Logo">
             </a>
             
-        <a href="link-til-booking" class="btn-nav">Bestil tid</a>
 
             <!-- BURGER -->
             <div class="hamburger">
@@ -49,7 +56,7 @@
                         Behandlinger <span class="arrow">▾</span>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Hovedpine</a>
+                        <a href="behandling.html" class="dropdown-item">Hovedpine</a>
                         <a href="#" class="dropdown-item">Kæbe</a>
                         <a href="#" class="dropdown-item">Ryg</a>
                     </div>
@@ -82,6 +89,7 @@
                         <a href="#" class="dropdown-item">Praktisk info</a>
                     </div>
                 </div>
+                <a href="link-til-booking" class="btn-nav">Bestil tid</a>
             </div>
             
         </nav>
@@ -89,10 +97,26 @@
 
 
     <!-- HERO -->
-    <section class="hero">
+  <section class="hero">
+
+    <div class="hero-text">
         <h1>Fysioterapi med høj faglighed</h1>
-        <h3>Hos os mødes du af individuelt tilpasset fysioterapi med fokus på dig.</h3>
-    </section>
+        <h3>Individuelt tilpasset behandling med fokus på dig</h3>
+        <p>
+            Hos Grocott Fys hjælper vi dig med at bevæge dig bedre, stærkere og uden smerter. 
+            Hos os får du en individuel behandling baseret på din krop og dine behov.
+            <br><br>
+            Vi kombinerer faglig ekspertise med personlig rådgivning – så du hurtigt kan komme tilbage til det, der betyder mest for dig.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn-hero">Bestil tid</button>
+            <button class="btn-hero secondary">Find din behandling</button>
+        </div>
+    </div>
+
+</section>
+
 
     <!-- STATS -->
     <section class="stats">
@@ -136,7 +160,12 @@
     <section class="why">
         <h2>Hvorfor vælge Grocott Fysioterapi?</h2>
         <h3>Helhedsorienteret behandling</h3>
-        <p>Jeg arbejder med årsagen bag dine gener – ikke kun symptomerne – for at skabe holdbare resultater.</p>
+        <p>Jeg ser kroppen som en sammenhængende helhed. Oplever du fx smerter i knæet, undersøger jeg ikke kun knæet, men også de bagvedliggende årsager – som fx funktion i fødderne. Gennem grundige tests og observationer finder jeg kernen i problemet. <br> <br>Mit mål er ikke kun at lindre dine smerter her og nu, men at skabe holdbare resultater på lang sigt.</p>
+        <br>
+        <br>
+        <h3>Færre konsultationer – bedre resultater</h3>
+        <p>Tid er ofte en begrænset ressource i sundhedssystemet, hvilket kan gå ud over kvaliteten. Derfor arbejder jeg uden for overenskomst, så jeg kan afsætte den nødvendige tid til netop din problematik. <br> <br>
+        Mere tid og høj faglighed giver bedre og mere holdbare resultater. Det betyder færre konsultationer, større selvstændighed og en løsning, der virker – både på kort og lang sigt.  </p>
         <button class="btn">Find behandling</button>
     </section>
 
