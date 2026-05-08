@@ -1,19 +1,19 @@
-/* ===== RESET ===== */
+/* ===== RESET (Uændret) ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
+/* ===== BASE / TYPOGRAPHY ===== */
 body {
     color: #01245E;
-    font-family: mulish;
+    font-family: mulish, sans-serif; /* Tilføjet fallback */
 }
 
 h1, h2 {
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 100%;
 }
 
@@ -25,15 +25,15 @@ h3 {
 
 p {
     font-size: 16px;
-    font-family: Karla;
+    font-family: Karla, sans-serif;
     font-weight: 300;
     margin-top: 5px;
 }
 
-/* ===== BUTTON ===== */
+/* ===== COMPONENTS (Buttons & UI Elements) ===== */
 .btn {
     margin-top: 35px;
-    background:rgba(78, 232, 244, 0.5);
+    background: rgba(78, 232, 244, 0.5);
     border: none;
     padding: 12px 20px;
     border-radius: 9px;
@@ -43,22 +43,15 @@ p {
     font-weight: 200;
 }
 
-
-
-/* ===== TOPBAR ===== */
-
-.topbar {
-    background: #C5D8E6;
-    color: #01245E;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* <-- afstand mellem tekster */
-    font-size: 12px;
-    padding: 6px;
+.btn:hover {
+background-color: #01245E;
+color: #ffffff;
+    transform: translateY(-1px); /* Løfter knappen en lille smule */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Tilføjer en let skygge */
+    outline: 2px solid #01245E; /* Din kantfarve */
+    
 }
 
-
-/* ===== HEADER ===== */
 .btn-nav {
     background: rgba(78, 232, 244, 0.5);
     color: #01245E;
@@ -71,10 +64,19 @@ p {
     align-self: flex-start;   
     width: auto; 
     margin-left: 10px; 
-
-    
-  
 }
+
+/* ===== LAYOUT: TOPBAR & HEADER ===== */
+.topbar {
+    background: #C5D8E6;
+    color: #01245E;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    padding: 6px;
+}
+
 .site-header {
     background-color: #ffffff;
     position: sticky;
@@ -94,7 +96,33 @@ p {
     height: auto;
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===== NAVIGATION & BURGER MENU ===== */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #01245E;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Burger Animation */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 .nav-menu {
     position: fixed;
     top: 0;
@@ -108,7 +136,6 @@ p {
     gap: 20px;
     transition: 0.3s ease;
     z-index: 999;
-    
 }
 
 .nav-menu.active {
@@ -127,76 +154,32 @@ p {
     font-weight: 800;
 }
 
-/* ===== BURGER ===== */
-/* 1. Sørg for at hamburgeren er synlig og klikbar */
-.hamburger {
-    display: block;
-    cursor: pointer;
-    z-index: 9999;
-}
-
-/* Animation til kryds */
-.hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #01245E;
-    display: block;
-    transition: all 0.3s ease; /* 👈 vigtig */
-}
-
-
-/* 2. Gør selve stregerne synlige */
-.bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #01245E;
-    display: block;
-}
-/* ===== DROPDOWN ===== */
+/* Dropdown (Mobile) */
 .dropdown {
     width: 100%;
 }
-
 .dropdown > .nav-link {
     display: block;
 }
-
 .dropdown-menu {
     display: none;
     flex-direction: column;
-    background-color:#f2f5f8;;
+    background-color: #f2f5f8;
 }
-
 .dropdown-menu.active {
     display: flex;
 }
-
 .dropdown-item {
     padding: 15px 40px;
     color: #01245E;
     text-decoration: none;
 }
-
 .dropdown-item:hover {
     background-color: #01245E;
     color: #fff;
 }
 
-/* ===== HERO ===== */
+/* ===== SECTION: HERO ===== */
 .hero {
     position: relative;
     display: flex;
@@ -205,36 +188,33 @@ p {
     padding: 50px 20px;
     gap: 30px;
     overflow: hidden;
-    
-
     background:
         linear-gradient(
             to right,
-            
             rgba(0, 20, 60, 0.7) 40%,
             rgba(255, 255, 255, 0.8) 100%
         ),
         url("img_lager/DSC_5019.webp") center right/cover no-repeat;
-
-
 }
 
-
-
-/* tekst ovenpå */
 .hero-text {
     position: relative;
     z-index: 2;
-    color: #ffffff /* mørk tekst fordi højre side er lys */
+    color: #ffffff;
 }
 
-.hero p{
+.hero p {
     margin-top: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
 }
 
 .btn-hero {
     margin-top: 35px;
-    background:#9AF6FB;
+    background: #9AF6FB;
     border: none;
     padding: 12px 20px;
     border-radius: 9px;
@@ -244,23 +224,13 @@ p {
     font-weight: 200;
 }
 
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-}
-
 .btn-hero.secondary {
     background-color: transparent;
-    border: 2px solid #9AF6FB;; /* tilpas farve */
+    border: 2px solid #9AF6FB;
     color: #ffffff;
-    
 }
 
-
-
-
-/* ===== STATS ===== */
+/* ===== SECTION: STATS ===== */
 .stats {
     display: flex;
     justify-content: space-around;
@@ -274,10 +244,73 @@ p {
     font-weight: 800;
 }
 
-/* ===== CONTENT ===== */
+/* ===== SECTION: CARD GRID ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    padding: 50px 20px;
+}
+
+.card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #C5D8E6; 
+    padding: 20px 15px;
+    color: #1a1a1a;
+    box-sizing: border-box;
+    transition: max-height 0.4s ease-in-out;
+    max-height: 60px; 
+}
+
+.card-overlay h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.card-overlay p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Card Hover States */
+.card:hover img {
+    opacity: 0.2;
+}
+.card:hover .card-overlay {
+    max-height: 100%; 
+}
+.card:hover .card-overlay p {
+    opacity: 1;
+}
+
+/* ===== SECTION: CONTENT & WHY ===== */
 .content {
     padding: 50px 20px;
-    align-items: center;
+    padding-bottom: 0px;
 }
 
 .content span {
@@ -285,36 +318,6 @@ p {
     font-weight: 800;
 }
 
-/* ===== LIST ===== */
-.list {
-    background: #f2f5f8;
-    padding: 50px 20px;
-    align-items: center;
-}
-
-.list ul {
-    list-style: none;
-}
-
-.list li {
-    padding-left: 35px;
-    position: relative;
-}
-
-
-.list li:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-
-.list li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #105BF5;
-}
-
-/* ===== WHY ===== */
 .why {
     position: relative;
     background: url("img_lager/DSC_5410.webp") center/cover;
@@ -334,81 +337,67 @@ p {
     z-index: 1;
 }
 
+/* ===== FOOTER ===== */
 .footer {
-  background: #1f2933;
-  color: #fff;
-
-}
-
-.footer a {
-  color: #4fd1c5;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+    background: #1f2933;
+    color: #fff;
 }
 
 .footer-container {
-
-  margin: 0 auto;
-  padding: 50px 20px;
+    margin: 0 auto;
+    padding: 50px 20px;
 }
 
+.footer a {
+    color: #4fd1c5;
+    font-weight: 700;
+    text-decoration: none;
+}
 
+.footer a:hover {
+    text-decoration: underline;
+}
 
 .note {
-  font-size: 0.9rem;
-  opacity: 0.8;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .links {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .social {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
-
 
 .col {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-
 .footer-buttons {
-  display: flex;
-  flex-direction: column; /* i footer = bedst */
-  gap: 0px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }
 
 .footer-buttons button {
-  align-self: flex-start;  /* ✅ stopper full width */
+    align-self: flex-start;
 }
 
-
-/* ===== DESKTOP ===== */
+/* ===== DESKTOP STYLES (min-width: 769px) ===== */
 @media screen and (min-width: 769px) {
-
     .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0% 150px;
-}
-
+        padding: 0% 150px;
+    }
 
     .hamburger {
         display: none;
     }
-
-
 
     .nav-menu {
         position: static;
@@ -421,25 +410,11 @@ p {
         align-items: center; 
     }
 
-    .nav-logo img {
-    width: 200px;
-
-}
-
-.btn-nav {
-    order: 3; /* Sørger for den kommer efter menuen på desktop */
-    font-size: 18px;
-    white-space: nowrap;
-    align-self: flex-start;   
-    width: auto; 
-    margin-left: 0px; 
-    align-self: center;   
-
-    }
-
-
-    .nav-link {
-        color: #01245E;
+    .btn-nav {
+        order: 3;
+        font-size: 18px;
+        margin-left: 0px; 
+        align-self: center;   
     }
 
     .nav-link:hover,
@@ -448,151 +423,89 @@ p {
         font-weight: 800;
     }
 
+    /* Desktop Dropdown */
     .dropdown {
         position: relative;
     }
-
     .dropdown > .nav-link {
         display: flex;
         align-items: center;
         gap: 8px;
     }
-
     .dropdown-menu {
         position: absolute;
         top: 100%;
         left: 0;
-        background: #f2f5f8;
         min-width: 200px;
         display: none;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
-
     .dropdown:hover .dropdown-menu {
         display: flex;
     }
-
     .dropdown-menu.active {
-        display: none;
+        display: none; /* Deaktiverer mobil-click logik på desktop */
     }
 
-    .dropdown-item {
-        padding: 12px;
-    }
+    /* Desktop Typography */
+    h1, h2 { font-size: 45px; }
+    h3 { font-size: 25px; }
+    p { font-size: 18px; }
+    .btn { font-size: 18px; }
+    .topbar { font-size: 18px; }
 
-    /* TYPO */
-    h1, h2 {
-        font-size: 45px;
-    }
-
-    h3 {
-        font-size: 25px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .btn {
-        font-size: 18px;
-    }
-
-    .topbar {
-        font-size: 18px;
-    }
-    
+    /* Desktop Hero */
     .hero {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 60px 150px;
-        gap: 20px;
-         height: 600px;
-        
+        height: 600px;
     }
-
     .hero-text {
         flex: 1;
         text-align: left;
     }
-.hero p{
-    margin-top: 50px;
-    margin-right: 520px;
-}
+    .hero p {
+        margin-top: 50px;
+        margin-right: 520px;
+    }
+    .btn-hero {
+        padding: 14px 30px;
+        font-size: 20px;
+    }
 
-.btn-hero {
-    padding: 14px 30px;
-    font-size: 20px;
-    font-weight: 200;
-}
-    
-
-
-
+    /* Desktop Sections */
     .stats {
         padding: 2% 150px;
     }
+    .stats h3 { font-size: 45px; }
+    .stats p { font-size: 25px; }
 
-    .stats h3 {
-        font-size: 45px;
-    }
-
-    .stats p {
-        font-size: 25px;
-    }
-
-    .content-wrapper {
-        display: flex;
-    }
-
-    .content,
-    .list {
-        flex: 1;
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
         padding: 100px 150px;
+        padding-top: 0px;
     }
+    .card-overlay h2 { font-size: 25px; }
+    .card-overlay p { font-size: 16px; }
 
-    
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-
-    .list {
-        display: flex;
-        align-items: center;
+    .content {
+        padding: 100px 150px;
     }
 
     .why {
         padding: 100px 150px;
         padding-right: 300px;
     }
- 
 
-  
- 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;                 /* ✅ luft mellem kolonner */
-  align-items: start;        /* ✅ alt starter samme sted */
-  padding: 50px 150px;
-  width: 100%;
- 
-}
-
- .footer-buttons {
-    flex-direction: column;   /* desktop */
-    display: flex;
-  }
-
- 
-
-
-
-
-
-  
-
+    /* Desktop Footer */
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        align-items: start;
+        padding: 50px 150px;
+    }
 }
