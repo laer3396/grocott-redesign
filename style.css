@@ -320,10 +320,28 @@ color: #ffffff;
     padding-bottom: 0px;
 }
 
-.content span {
-    color: #1e73d8;
-    font-weight: 800;
+.content p {
+    margin-top: 15px;
+    
 }
+
+.content h3 {
+    margin-top: 30px;
+    
+}
+
+.content a {
+    margin-top: 5px;
+    color: #01245E;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
 
 .why {
     position: relative;
@@ -336,7 +354,7 @@ color: #ffffff;
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(242, 245, 248, 0.9);
+    background: rgba(242, 245, 248, 0.7);
 }
 
 .why * {
@@ -357,12 +375,12 @@ color: #ffffff;
 
 .footer a {
     color: #4fd1c5;
-    font-weight: 700;
     text-decoration: none;
 }
 
 .footer a:hover {
     text-decoration: underline;
+    font-weight: 700;
 }
 
 .note {
