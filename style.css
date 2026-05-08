@@ -354,7 +354,7 @@ color: #ffffff;
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(242, 245, 248, 0.7);
+    background: rgba(242, 245, 248, 0.9);
 }
 
 .why * {
