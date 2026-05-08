@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Åbn/luk selve mobil-menuen
   hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
   });
 
   // 2. Håndter klik på links i menuen
