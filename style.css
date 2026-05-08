@@ -33,13 +33,13 @@ p {
 /* ===== COMPONENTS (Buttons & UI Elements) ===== */
 .btn {
     margin-top: 35px;
-    background: rgba(78, 232, 244, 0.5);
+    background: #1e73d8;
     border: none;
     padding: 12px 20px;
     border-radius: 9px;
     cursor: pointer;
     font-size: 16px;
-    color: #01245E;
+    color: #ffffff;
     font-weight: 200;
 }
 
@@ -53,8 +53,8 @@ color: #ffffff;
 }
 
 .btn-nav {
-    background: rgba(78, 232, 244, 0.5);
-    color: #01245E;
+    background:#1e73d8;
+    color:#ffffff;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 9px;
@@ -213,20 +213,20 @@ color: #ffffff;
 }
 
 .btn-hero {
+     background:#1e73d8;
+    color:#ffffff;
     margin-top: 35px;
-    background: #9AF6FB;
     border: none;
     padding: 12px 20px;
     border-radius: 9px;
     cursor: pointer;
     font-size: 16px;
-    color: #01245E;
     font-weight: 200;
 }
 
 .btn-hero.secondary {
     background-color: transparent;
-    border: 2px solid #9AF6FB;
+    border: 2px solid #1e73d8;;
     color: #ffffff;
 }
 
@@ -286,6 +286,7 @@ color: #ffffff;
     margin: 0;
     font-size: 16px;
     font-weight: 200;
+    color: #01245E;
 }
 
 .card-overlay p {
@@ -294,6 +295,7 @@ color: #ffffff;
     line-height: 1.4;
     opacity: 0;
     transition: opacity 0.3s ease;
+    color: #01245E;
 }
 
 /* Card Hover States */
@@ -306,6 +308,11 @@ color: #ffffff;
 .card:hover .card-overlay p {
     opacity: 1;
 }
+
+
+
+
+
 
 /* ===== SECTION: CONTENT & WHY ===== */
 .content {
