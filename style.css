@@ -414,6 +414,142 @@ color: #ffffff;
     align-self: flex-start;
 }
 
+
+/* Ny sektion */
+.flow-section {
+  background: #f4f4f4;
+  padding: 50px 20px;
+}
+
+.flow-media {
+  width: 100%;
+  height: 200px;
+  background-image: url("img_lager/DSC_5186.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 9px;
+
+}
+
+
+/* TEXT */
+.flow-label {
+    margin-top: 15px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 200;
+     background-color: transparent;
+    border: 2px solid #1e73d8;
+    color:#01245E;
+    margin-bottom: 10px;
+}
+
+.flow-title {
+  margin-bottom: 1rem;
+}
+
+.flow-description {
+  margin-bottom: 2rem;
+}
+
+/* CARDS */
+.flow-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.flow-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 9px;
+
+}
+
+.flow-box h3 {
+  margin-bottom: 0.5rem;
+ font-size: 16px;
+  font-weight: 700;
+ 
+}
+
+.flow-box p {
+
+
+}
+
+/* DOT */
+.flow-dot {
+  width: 12px;
+  height: 12px;
+  background:#1e73d8;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+}
+
+
+
+
+ .flow-dot-akut {
+  width: 12px;
+  height: 12px;
+  background: #4fd1c5;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+}
+
+/* Priser sektion*/
+.prices {
+  background: #eef1f3;
+  padding: 50px 20px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+
+.note {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.price-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.price-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Ikon = simpel prik */
+.icon {
+  width: 16px;
+  height: 16px;
+  background:  #C5D8E6;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Emergency farve */
+.price-item.emergency .icon {
+  background: #4fd1c5;
+}
+
+
 /* ===== DESKTOP STYLES (min-width: 769px) ===== */
 @media screen and (min-width: 769px) {
     .navbar {
@@ -524,6 +660,56 @@ color: #ffffff;
         padding: 100px 150px;
         padding-right: 300px;
     }
+
+
+  .price-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+
+.prices {
+padding: 100px 150px;
+}
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+
+   /* Flow */
+   .flow-section {
+    padding: 100px 150px;
+   }
+
+ .flow-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .flow-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flow-box-wide {
+    grid-column: span 2;
+  }
+
+  .flow-title {
+    font-size: 2.2rem;
+  }
+
+  .flow-media {
+
+  height: 100%;
+}
+
+.flow-label {
+    margin-top: 0px;
+}
+
 
     /* Desktop Footer */
     .footer-container {
