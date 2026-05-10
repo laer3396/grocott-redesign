@@ -1,14 +1,15 @@
-/* ===== RESET (Uændret) ===== */
+/* ==========================================================================
+   1. RESET & BASE (Globale indstillinger)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BASE / TYPOGRAPHY ===== */
 body {
     color: #01245E;
-    font-family: mulish, sans-serif; /* Tilføjet fallback */
+    font-family: mulish, sans-serif;
 }
 
 h1, h2 {
@@ -20,7 +21,13 @@ h1, h2 {
 h3 {
     font-size: 25px;
     margin-top: 10px;
-    font-weight: 200;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Karla, sans-serif;
 }
 
 p {
@@ -30,45 +37,90 @@ p {
     margin-top: 5px;
 }
 
-/* ===== COMPONENTS (Buttons & UI Elements) ===== */
-.btn {
-    margin-top: 35px;
-    background: #1e73d8;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 200;
-}
+/* ==========================================================================
+   2. UI COMPONENTS (Knapper & UI Elementer)
+   ========================================================================== */
 
-.btn:hover {
-background-color: #01245E;
-color: #ffffff;
-    transform: translateY(-1px); /* Løfter knappen en lille smule */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Tilføjer en let skygge */
-    outline: 2px solid #01245E; /* Din kantfarve */
-    
-}
 
 .btn-nav {
-    background:#1e73d8;
-    color:#ffffff;
+    background: #1e73d8;
+    color: #ffffff;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 9px;
     font-weight: 200;
     font-size: 16px;
     white-space: nowrap;
-    align-self: flex-start;   
-    width: auto; 
-    margin-left: 10px; 
+    align-self: flex-start;
+    width: auto;
+    margin-left: 10px;
 }
 
-/* ===== LAYOUT: TOPBAR & HEADER ===== */
+/* ===== GENEREL KNAP-BASIS ====nnn= */ 
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 9px;
+    justify-content: flex-start;  /* <-- venstrejusterer indhold */
+    text-align: left;         /* <-- vigtigt for 2 linjer */
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+    font-family: mulish, sans-serif; /* Sikrer samme font som body */
+    margin-top: 35px;
+    white-space: normal; /* vigtigt hvis tekst skal bryde */
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg); /* peger → */
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.btn-blue {
+    background-color: #1e73d8;
+    color: #ffffff !important; 
+}
+
+.btn-blue:hover {
+    background-color: #01245E;
+}
+
+
+.btn-outline {
+    background-color: transparent;
+    border: 3px solid #1e73d8;
+      color: #01245E;
+}
+
+.btn-outline:hover {
+    Background-color:  #f4f4f4;
+}
+
+
+
+/* ==========================================================================
+   3. LAYOUT (Header, Topbar & Navigation)
+   ========================================================================== */
 .topbar {
-    background: #C5D8E6;
+    background:#e3ecf3;
     color: #01245E;
     display: flex;
     justify-content: center;
@@ -96,7 +148,7 @@ color: #ffffff;
     height: auto;
 }
 
-/* ===== NAVIGATION & BURGER MENU ===== */
+/* --- Mobile Menu & Hamburger --- */
 .hamburger {
     display: block;
     cursor: pointer;
@@ -112,7 +164,6 @@ color: #ffffff;
     transition: all 0.3s ease;
 }
 
-/* Burger Animation */
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -146,7 +197,6 @@ color: #ffffff;
     color: #01245E;
     text-decoration: none;
     padding: 15px;
-    transition: 0.3s;
 }
 
 .nav-link:hover,
@@ -154,7 +204,7 @@ color: #ffffff;
     font-weight: 800;
 }
 
-/* Dropdown (Mobile) */
+/* --- Dropdown --- */
 .dropdown {
     width: 100%;
 }
@@ -179,7 +229,11 @@ color: #ffffff;
     color: #fff;
 }
 
-/* ===== SECTION: HERO ===== */
+/* ==========================================================================
+   4. SECTIONS (Hovedindhold)
+   ========================================================================== */
+
+/* --- Hero Section --- */
 .hero {
     position: relative;
     display: flex;
@@ -189,11 +243,7 @@ color: #ffffff;
     gap: 30px;
     overflow: hidden;
     background:
-        linear-gradient(
-            to right,
-            rgba(0, 20, 60, 0.7) 40%,
-            rgba(255, 255, 255, 0.8) 100%
-        ),
+        linear-gradient(to right, rgba(0, 20, 60, 0.7) 40%, rgba(255, 255, 255, 0.8) 100%),
         url("img_lager/DSC_5019.webp") center right/cover no-repeat;
 }
 
@@ -212,53 +262,42 @@ color: #ffffff;
     gap: 15px;
 }
 
-.btn-hero {
-     background:#1e73d8;
-    color:#ffffff;
-    margin-top: 35px;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 200;
-}
 
-.btn-hero.secondary {
-    background-color: transparent;
-    border: 2px solid #1e73d8;;
-    color: #ffffff;
-}
-
-/* ===== SECTION: STATS ===== */
+/* --- Stats Section --- */
 .stats {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     background: #e3ecf3;
     text-align: center;
-    padding: 5% 20px;
+    padding: 20px 20px;
+    gap: 20px;
 }
 
 .stats h3 {
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-/* ===== SECTION: CARD GRID ===== */
+/* --- Card Grid Section --- */
+.container {
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px;
-    padding: 50px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
 }
 
 .card {
     position: relative;
-    border-radius: 12px;
+    height: 250px;
+    border-radius: 9px;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 .card img {
@@ -266,55 +305,62 @@ color: #ffffff;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 0.3s ease;
 }
 
 .card-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #C5D8E6; 
-    padding: 20px 15px;
-    color: #1a1a1a;
-    box-sizing: border-box;
-    transition: max-height 0.4s ease-in-out;
-    max-height: 60px; 
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(197, 216, 230, 0);
+    transition: background 0.3s ease;
 }
 
 .card-overlay h2 {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0;
+    padding: 12px 18px;
+    background: rgba(244, 244, 244, 0.9);
+    border-radius: 9px;
     font-size: 16px;
-    font-weight: 200;
-    color: #01245E;
+    width: 100%;
+    max-width: 60%;
+    text-align: center;
 }
 
 .card-overlay p {
-    margin: 10px 0 0 0;
-    font-size: 14px;
-    line-height: 1.4;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    color: #01245E;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Card Hover States */
-.card:hover img {
-    opacity: 0.2;
-}
 .card:hover .card-overlay {
-    max-height: 100%; 
+    background: rgba(197, 216, 230, 0.9);
 }
+
+.card:hover .card-overlay h2 {
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
 .card:hover .card-overlay p {
     opacity: 1;
 }
 
-
-
-
-
-
-/* ===== SECTION: CONTENT & WHY ===== */
+/* --- Content & Why Section --- */
 .content {
     padding: 50px 20px;
     padding-bottom: 0px;
@@ -322,12 +368,10 @@ color: #ffffff;
 
 .content p {
     margin-top: 15px;
-    
 }
 
 .content h3 {
     margin-top: 30px;
-    
 }
 
 .content a {
@@ -342,12 +386,10 @@ color: #ffffff;
     font-weight: 700;
 }
 
-
 .why {
     position: relative;
     background: url("img_lager/DSC_5410.webp") center/cover;
     padding: 50px 20px;
-    align-items: center;
 }
 
 .why::before {
@@ -362,7 +404,182 @@ color: #ffffff;
     z-index: 1;
 }
 
-/* ===== FOOTER ===== */
+/* --- Flow Section --- */
+
+.btn-flow {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.flow-section {
+    padding: 50px 20px;
+}
+
+
+.flow-media {
+    width: 100%;
+    height: 300px; /* kun mobil */
+    background-image: url("img_lager/DSC_5186.webp");
+    background-size: cover;
+    background-position: center 30%;
+    border-radius: 9px;
+}
+
+.flow-wrapper {
+ display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.flow-box {
+    margin-top: 0px;
+}
+
+
+.flow-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.flow-box {
+    background: #eef1f3;
+    padding: 1.5rem;
+    border-radius: 9px;
+}
+
+
+
+.flow-dot {
+    width: 12px;
+    height: 12px;
+    background: #1e73d8;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+}
+
+.flow-dot-akut {
+    width: 12px;
+    height: 12px;
+    background: #4fd1c5;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+}
+
+
+.flow-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+/* --- Priser Section --- */
+.prices {
+    background: #eef1f3;
+    padding: 50px 20px;
+  
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.price-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    background: #C5D8E6;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.price-item.emergency .icon {
+    background: #4fd1c5;
+}
+
+/* --- Behandler Section --- */
+.behandler {
+    padding: 5%;
+    background: #C5D8E6;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.colorboks {
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+
+.boks-billede {
+    width: 100%;
+    height: 300px;
+    background-image: url("img_lager/DSC_5411.webp");
+    background-size: cover;
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}
+
+.ikon {
+    font-size: 20px;
+    color: #01245E;
+}
+
+.boks h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.booking {
+    background-color:  #eef1f3;
+    padding: 50px 20px;
+}
+
+.booking-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Billede */
+.booking-image {
+    width: 100%;
+    height: 300px;
+    background-image: url("img_lager/kort.webp");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}
+
+.booking-info {
+line-height: 35px;
+}
+
+
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
 .footer {
     background: #1f2933;
     color: #fff;
@@ -388,9 +605,7 @@ color: #ffffff;
     opacity: 0.8;
 }
 
-.links {
-    margin-top: 1.5rem;
-}
+.links { margin-top: 1.5rem; }
 
 .social {
     display: flex;
@@ -414,144 +629,11 @@ color: #ffffff;
     align-self: flex-start;
 }
 
-
-/* Ny sektion */
-.flow-section {
-  background: #f4f4f4;
-  padding: 50px 20px;
-}
-
-.flow-media {
-  width: 100%;
-  height: 200px;
-  background-image: url("img_lager/DSC_5186.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 9px;
-
-}
-
-
-/* TEXT */
-.flow-label {
-    margin-top: 15px;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 200;
-     background-color: transparent;
-    border: 2px solid #1e73d8;
-    color:#01245E;
-    margin-bottom: 10px;
-}
-
-.flow-title {
-  margin-bottom: 1rem;
-}
-
-.flow-description {
-  margin-bottom: 2rem;
-}
-
-/* CARDS */
-.flow-cards {
-  display: grid;
-  gap: 1rem;
-}
-
-.flow-box {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 9px;
-
-}
-
-.flow-box h3 {
-  margin-bottom: 0.5rem;
- font-size: 16px;
-  font-weight: 700;
- 
-}
-
-.flow-box p {
-
-
-}
-
-/* DOT */
-.flow-dot {
-  width: 12px;
-  height: 12px;
-  background:#1e73d8;
-  border-radius: 50%;
-  margin-bottom: 0.6rem;
-}
-
-
-
-
- .flow-dot-akut {
-  width: 12px;
-  height: 12px;
-  background: #4fd1c5;
-  border-radius: 50%;
-  margin-bottom: 0.6rem;
-}
-
-/* Priser sektion*/
-.prices {
-  background: #eef1f3;
-  padding: 50px 20px;
-}
-
-.container {
-  margin: 0 auto;
-}
-
-
-.note {
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-}
-
-.price-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.price-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.price-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Ikon = simpel prik */
-.icon {
-  width: 16px;
-  height: 16px;
-  background:  #C5D8E6;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-/* Emergency farve */
-.price-item.emergency .icon {
-  background: #4fd1c5;
-}
-
-
-/* ===== DESKTOP STYLES (min-width: 769px) ===== */
+/* ==========================================================================
+   6. DESKTOP STYLES (min-width: 769px)
+   ========================================================================== */
 @media screen and (min-width: 769px) {
+    /* Navbar Desktop */
     .navbar {
         padding: 0% 150px;
     }
@@ -568,14 +650,14 @@ color: #ffffff;
         background: none;
         padding-top: 0;
         gap: 30px;
-        align-items: center; 
+        align-items: center;
     }
 
     .btn-nav {
         order: 3;
         font-size: 18px;
-        margin-left: 0px; 
-        align-self: center;   
+        margin-left: 0px;
+        align-self: center;
     }
 
     .nav-link:hover,
@@ -605,17 +687,17 @@ color: #ffffff;
         display: flex;
     }
     .dropdown-menu.active {
-        display: none; /* Deaktiverer mobil-click logik på desktop */
+        display: none;
     }
 
-    /* Desktop Typography */
+    /* Typography & Layout Desktop */
     h1, h2 { font-size: 45px; }
     h3 { font-size: 25px; }
+    h4 { font-size: 18px; }
     p { font-size: 18px; }
     .btn { font-size: 18px; }
     .topbar { font-size: 18px; }
 
-    /* Desktop Hero */
     .hero {
         flex-direction: row;
         align-items: center;
@@ -636,24 +718,34 @@ color: #ffffff;
         font-size: 20px;
     }
 
-    /* Desktop Sections */
     .stats {
+        flex-direction: row;
+        justify-content: space-between;
         padding: 2% 150px;
     }
-    .stats h3 { font-size: 45px; }
-    .stats p { font-size: 25px; }
+    .stats h3, .stats p {
+        width: 80%;
+    }
+    .stats h3 { font-size: 25px; }
+    .stats p { font-size: 18px; }
 
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+    .container {
         padding: 100px 150px;
         padding-top: 0px;
     }
-    .card-overlay h2 { font-size: 25px; }
-    .card-overlay p { font-size: 16px; }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    .card { height: 300px; }
+    .card-overlay { padding: 25px; }
+    .card-overlay p { font-size: 18px; width: 300px; }
+    .card-overlay h2 { max-width: 65%; }
 
     .content {
         padding: 100px 150px;
+        padding-bottom: 35px;
     }
 
     .why {
@@ -661,57 +753,61 @@ color: #ffffff;
         padding-right: 300px;
     }
 
-
-  .price-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-  }
-
-
-.prices {
-padding: 100px 150px;
-}
-
-  h2 {
-    font-size: 2.5rem;
-  }
+    /* Prices Desktop */
+    .prices { padding: 100px 150px; }
+    .price-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
 
 
-   /* Flow */
-   .flow-section {
-    padding: 100px 150px;
-   }
-
- .flow-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .flow-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .flow-box-wide {
-    grid-column: span 2;
-  }
-
-  .flow-title {
-    font-size: 2.2rem;
-  }
-
-  .flow-media {
-
-  height: 100%;
-}
-
-.flow-label {
-    margin-top: 0px;
-}
+    /* Flow Desktop */
+  .flow-section { 
+        padding: 100px 150px;}
 
 
-    /* Desktop Footer */
+    .flow-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: stretch; /* vigtig */
+    }
+
+    .flow-cards { grid-template-columns: 1fr 1fr; }
+    .flow-box-wide { grid-column: span 2; }
+ 
+    .flow-media { height: 100%; }
+    .flow-label { margin-top: 0px; }
+    .flow-title {margin-top: 0rem; }
+
+
+    /* Behandler Desktop */
+    .behandler {
+        flex-direction: row;
+        gap: 80px;
+    }
+    .boks { flex: 1.3; }
+    .boks-billede { flex: 0.7; height: 450px; }
+    .colorboks { padding: 100px 150px; }
+
+    /* booking Desktop */
+
+    .booking {
+        padding: 100px 150px;
+    }
+
+    .booking-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: stretch; /* gør dem samme højde */
+    }
+
+    .booking-image {
+        height: 100%;   /* <-- vigtig */
+    }
+
+    /* Footer Desktop */
     .footer-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
