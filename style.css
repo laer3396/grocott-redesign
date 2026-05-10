@@ -77,20 +77,14 @@ p {
 .btn::after {
     content: "";
     display: inline-block;
-
     width: 8px;
     height: 8px;
-
     border-right: 2px solid currentColor;
     border-top: 2px solid currentColor;
-
     transform: rotate(45deg); /* peger → */
     margin-left: 10px;
-
     transition: transform 0.2s ease;
 }
-
-
 
 
 .btn:hover {
@@ -126,7 +120,7 @@ p {
    3. LAYOUT (Header, Topbar & Navigation)
    ========================================================================== */
 .topbar {
-    background: #C5D8E6;
+    background:#e3ecf3;
     color: #01245E;
     display: flex;
     justify-content: center;
@@ -268,23 +262,6 @@ p {
     gap: 15px;
 }
 
-.btn-hero {
-    background: #1e73d8;
-    color: #ffffff;
-    margin-top: 35px;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 200;
-}
-
-.btn-hero.secondary {
-    background-color: transparent;
-    border: 2px solid #1e73d8;
-    color: #ffffff;
-}
 
 /* --- Stats Section --- */
 .stats {
@@ -413,7 +390,6 @@ p {
     position: relative;
     background: url("img_lager/DSC_5410.webp") center/cover;
     padding: 50px 20px;
-    align-items: center;
 }
 
 .why::before {
@@ -436,25 +412,30 @@ p {
 }
 
 .flow-section {
-    background: #f4f4f4;
     padding: 50px 20px;
 }
 
+
 .flow-media {
     width: 100%;
-    height: 300px;
+    height: 300px; /* kun mobil */
     background-image: url("img_lager/DSC_5186.webp");
     background-size: cover;
     background-position: center 30%;
-    background-repeat: no-repeat;
     border-radius: 9px;
 }
+
+.flow-wrapper {
+ display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
 .flow-box {
     margin-top: 0px;
 }
 
-.flow-title {margin-top: 2rem; }
-.flow-description { margin-bottom: 2rem; }
 
 .flow-cards {
     display: grid;
@@ -462,12 +443,12 @@ p {
 }
 
 .flow-box {
-    background: #fff;
+    background: #eef1f3;
     padding: 1.5rem;
     border-radius: 9px;
 }
 
-.flow-box h4 { margin-bottom: 2%; }
+
 
 .flow-dot {
     width: 12px;
@@ -485,10 +466,19 @@ p {
     margin-bottom: 0.6rem;
 }
 
+
+.flow-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
 /* --- Priser Section --- */
 .prices {
     background: #eef1f3;
     padding: 50px 20px;
+  
 }
 
 .price-grid {
@@ -558,6 +548,34 @@ p {
     gap: 10px;
     margin-bottom: 10px;
 }
+
+.booking {
+    background-color:  #eef1f3;
+    padding: 50px 20px;
+}
+
+.booking-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Billede */
+.booking-image {
+    width: 100%;
+    height: 300px;
+    background-image: url("img_lager/kort.webp");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}
+
+.booking-info {
+line-height: 35px;
+}
+
+
 
 /* ==========================================================================
    5. FOOTER
@@ -741,22 +759,27 @@ p {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
     }
-    h2 { font-size: 2.5rem; }
+
 
     /* Flow Desktop */
-    .flow-section { padding: 100px 150px; }
+  .flow-section { 
+        padding: 100px 150px;}
+
+
     .flow-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
-        align-items: center;
+        align-items: stretch; /* vigtig */
     }
+
     .flow-cards { grid-template-columns: 1fr 1fr; }
     .flow-box-wide { grid-column: span 2; }
  
     .flow-media { height: 100%; }
     .flow-label { margin-top: 0px; }
     .flow-title {margin-top: 0rem; }
+
 
     /* Behandler Desktop */
     .behandler {
@@ -766,6 +789,23 @@ p {
     .boks { flex: 1.3; }
     .boks-billede { flex: 0.7; height: 450px; }
     .colorboks { padding: 100px 150px; }
+
+    /* booking Desktop */
+
+    .booking {
+        padding: 100px 150px;
+    }
+
+    .booking-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: stretch; /* gør dem samme højde */
+    }
+
+    .booking-image {
+        height: 100%;   /* <-- vigtig */
+    }
 
     /* Footer Desktop */
     .footer-container {
