@@ -146,7 +146,7 @@ color: #ffffff;
     color: #01245E;
     text-decoration: none;
     padding: 15px;
-    transition: 0.3s;
+   
 }
 
 .nav-link:hover,
@@ -501,6 +501,9 @@ color: #ffffff;
   margin-bottom: 0.6rem;
 }
 
+
+
+
 /* Priser sektion*/
 .prices {
   background: #eef1f3;
@@ -548,6 +551,39 @@ color: #ffffff;
 .price-item.emergency .icon {
   background: #4fd1c5;
 }
+
+.behandler {
+  padding: 5%;
+  background: #C5D8E6;
+  border-radius: 9px; 
+}
+
+/* Wrapper */
+.behandler {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+    align-items: flex-start;
+
+}
+
+.colorboks{
+    background-color: #ffffff;
+      padding: 50px 20px;
+}
+
+
+.boks-billede {
+  width: 100%;
+  height: 250px;
+  background-image: url("img_lager/DSC_5411.webp");
+  background-size: cover;
+background-position: center 30%;
+  background-repeat: no-repeat;
+  border-radius: 9px;
+    width: 100%;
+}
+
 
 
 /* ===== DESKTOP STYLES (min-width: 769px) ===== */
@@ -708,6 +744,30 @@ padding: 100px 150px;
 
 .flow-label {
     margin-top: 0px;
+}
+
+
+
+
+ 
+.behandler {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .boks {
+    flex: 1.3;
+  }
+
+  .boks-billede {
+    flex: 0.7; /* 🔥 DETTE FIXER ALT */
+    height: 300px;
+  }
+
+
+
+  .colorboks{
+      padding: 100px 150px;
 }
 
 
