@@ -8,7 +8,7 @@
 }
 
 body {
-    color: #01245E;
+    color:#1E3856;
     font-family: mulish, sans-serif;
 }
 
@@ -26,14 +26,14 @@ h3 {
 
 h4 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     font-family: Karla, sans-serif;
 }
 
 p {
     font-size: 16px;
     font-family: Karla, sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     margin-top: 5px;
 }
 
@@ -84,9 +84,7 @@ p {
 }
 
 .btn-outline {
-    background-color: #f4f4f4;
-    border: 3px solid #1e73d8;
-    color: #01245E;
+    background-color:#e3ecf3;
 }
 
 .btn-outline:hover {
@@ -342,7 +340,10 @@ p {
     text-align: center;
     background: rgba(197, 216, 230, 0);
     transition: background 0.3s ease;
+    z-index: 2; /* vigtigt */
 }
+
+
 
 .card-overlay h2 {
     position: absolute;
@@ -351,12 +352,14 @@ p {
     transform: translateX(-50%);
     margin: 0;
     padding: 12px 18px;
-    background: rgba(244, 244, 244, 0.9);
+    background: #e3ecf3;
     border-radius: 9px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     width: 100%;
     max-width: 60%;
     text-align: center;
+    
 }
 
 .card-overlay p {
@@ -373,7 +376,7 @@ p {
 }
 
 .card:hover .card-overlay {
-    background: rgba(197, 216, 230, 0.9);
+    background: #e3ecf3;
 }
 
 .card:hover .card-overlay h2 {
@@ -385,26 +388,40 @@ p {
     opacity: 1;
 }
 
-/* ==========================================================================
-   9. WHY SECTION
-   ========================================================================== */
-.why {
-    position: relative;
-    background: url("img_lager/DSC_5410.webp") center/cover;
-    padding: 50px 20px;
-}
-
-.why::before {
+.card::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(242, 245, 248, 0.9);
+    background: rgba(227, 236, 243, 0.8); /* din farve + transparens */
+    z-index: 1;
+    transition: 0.3s ease;
 }
 
-.why * {
-    position: relative;
-    z-index: 1;
+/* ==========================================================================
+   9. WHY SECTION
+   ========================================================================== */
+
+.about-section {
+    padding: 50px 20px;
+    background: #1E3856;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
+
+
+.about-image {
+    width: 100%;
+    height: 250px;
+    background-image: url("img_lager/DSC_5037.webp");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}
+
 
 /* ==========================================================================
    10. FLOW SECTION (Praktisk Info)
@@ -440,7 +457,7 @@ p {
 }
 
 .flow-box {
-    background: #eef1f3;
+     background: #e3ecf3;
     padding: 1.5rem;
     border-radius: 9px;
     margin-top: 0px;
@@ -510,12 +527,14 @@ p {
 
 .behandler {
     padding: 5%;
-    background: #C5D8E6;
+    background: #1E3856;
     border-radius: 9px;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: flex-start;
+    
 }
 
 .boks h4 {
@@ -527,7 +546,7 @@ p {
 
 .ikon {
     font-size: 20px;
-    color: #01245E;
+    color: #ffffff;
 }
 
 .boks-billede {
@@ -623,7 +642,7 @@ p {
    15. FOOTER
    ========================================================================== */
 .footer {
-    background: #1f2933;
+    background: #1E2F43;
     color: #fff;
 }
 
@@ -794,11 +813,22 @@ p {
     .card-overlay p { font-size: 18px; width: 300px; }
     .card-overlay h2 { max-width: 65%; }
 
-    /* Why Desktop */
-    .why {
-        padding: 100px 150px;
-        padding-right: 300px;
-    }
+    /* Why/about Desktop */
+
+.about-section {
+    flex-direction: row;
+    gap: 60px;
+     padding: 100px 150px;
+}
+
+.about-content {
+    flex: 1.3;
+}
+
+.about-image {
+    flex: 0.7;
+    height: 450px;
+}
 
     /* Flow Desktop */
     .flow-section { 
