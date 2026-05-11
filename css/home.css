@@ -1,0 +1,402 @@
+
+
+/* ==========================================================================
+   5. HERO SECTION
+   ========================================================================== */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 30px;
+    overflow: hidden;
+   background:
+    linear-gradient(to right, rgba(0, 20, 60, 0.7) 40%, rgba(255, 255, 255, 0.8) 100%),
+    url("../img_lager/DSC_5019.webp") center right / cover no-repeat;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.hero p {
+    margin-top: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* ==========================================================================
+   6. STATS SECTION
+   ========================================================================== */
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e3ecf3;
+    text-align: center;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
+.stats h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   7. CONTENT WRAPPER
+   ========================================================================== */
+.content {
+    padding: 50px 20px;
+    padding-bottom: 0px;
+}
+
+.content p {
+    margin-top: 15px;
+}
+
+.content h3 {
+    margin-top: 30px;
+}
+
+.content a {
+    margin-top: 5px;
+    color: #01245E;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   8. CARD GRID (Main Container)
+   ========================================================================== */
+.container {
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.card {
+    position: relative;
+    height: 250px;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* start fra top */
+    align-items:left;
+    background: rgba(227,236,243,0.85); /* altid synlig */
+    z-index: 2;
+    padding: 25px;
+ 
+}
+
+
+/* Overskrift */
+.card-overlay h3 {
+    padding-bottom: 0px;
+    margin: 0;
+    background: transparent;
+    font-weight: 300;
+}
+
+/* Tekst */
+.card-overlay p {
+    padding-top: 5px;
+    font-size: 16px;
+    text-align: left;
+    opacity: 1; /* altid synlig */
+}
+
+.card-overlay a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #1E3856;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: mulish, sans-serif;
+}
+
+.card-overlay a:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 3px solid currentColor;
+    border-top: 3px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+
+
+/* ==========================================================================
+   9. WHY SECTION
+   ========================================================================== */
+
+.about-section {
+    padding: 50px 20px;
+    background: #1E3856;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+
+.about-image {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img_lager/DSC_5037.webp");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}
+
+
+/* ==========================================================================
+   10. FLOW SECTION (Praktisk Info)
+   ========================================================================== */
+.flow-section {
+    padding: 50px 20px;
+}
+
+.flow-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.flow-media {
+    width: 100%;
+    height: 300px;
+    background-image: url("../img_lager/DSC_5186.webp");
+    background-size: cover;
+    background-position: center 30%;
+    border-radius: 9px;
+}
+
+.flow-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.flow-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.flow-box {
+     background: #e3ecf3;
+    padding: 1.5rem;
+    border-radius: 9px;
+    margin-top: 0px;
+}
+
+.flow-dot {
+    width: 12px;
+    height: 12px;
+    background: #1e73d8;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+}
+
+.flow-dot-akut {
+    width: 12px;
+    height: 12px;
+    background: #4fd1c5;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+}
+
+/* ==========================================================================
+   11. PRICES SECTION
+   ========================================================================== */
+.prices {
+    background: #eef1f3;
+    padding: 50px 20px;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.price-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    background: #C5D8E6;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.price-item.emergency .icon {
+    background: #4fd1c5;
+}
+
+/* ==========================================================================
+   12. BEHANDLER SECTION (Om Grocott)
+   ========================================================================== */
+.colorboks {
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+
+.behandler {
+    padding: 5%;
+    background: #1E3856;
+    border-radius: 9px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    
+}
+
+.boks h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 35px;
+}
+
+.ikon {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.boks-billede {
+    width: 100%;
+    height: 300px;
+    background-image: url("../img_lager/DSC_5411.webp");
+    background-size: cover;
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}
+
+/* ==========================================================================
+   13. TESTIMONIALS
+   ========================================================================== */
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-header h2 {
+    margin-top: 0;  
+    margin-bottom: 30px;
+    color: #01245E;
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 9px;
+    text-align: left;
+    position: relative;
+}
+
+.quote {
+    font-size: 100px;
+    opacity: 0.2;
+    line-height: 0.8;
+    margin-bottom: -20px;
+}
+
+.text {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author span {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   14. BOOKING SECTION
+   ========================================================================== */
+.booking {
+    background-color: #eef1f3;
+    padding: 50px 20px;
+}
+
+.booking-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.booking-info {
+    line-height: 35px;
+}
+
+.booking-image {
+    width: 100%;
+    height: 300px;
+    background-image: url("../img_lager/kort.webp");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    border-radius: 9px;
+}

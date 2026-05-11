@@ -1,0 +1,41 @@
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+    margin-top: 35px;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+.btn-blue {
+    background-color: #1e73d8;
+    color: white;
+}
+
+.btn-outline {
+    background-color:#e3ecf3;
+}
+
+/* små UI ting */
+.icon {
+    width: 16px;
+    height: 16px;
+    background: #C5D8E6;
+    border-radius: 50%;
+}

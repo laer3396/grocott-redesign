@@ -1,0 +1,242 @@
+
+/* ==========================================================================
+   16. DESKTOP STYLES (min-width: 769px)
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+
+    /* Base Typography Desktop */
+    h1, h2 { font-size: 45px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 18px; }
+    p { font-size: 18px; }
+    .btn { font-size: 18px; }
+    .topbar { font-size: 18px; }
+
+    /* Navbar Desktop */
+    .navbar {
+        padding: 0% 150px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: 5px;
+        background: none;
+        padding-top: 0;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .btn-nav {
+        order: 3;
+        font-size: 18px;
+        margin-left: 0px;
+        align-self: center;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: transparent;
+        font-weight: 800;
+    }
+
+    /* Dropdown Desktop */
+    .dropdown {
+        position: relative;
+    }
+    .dropdown > .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        display: none;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+    .dropdown-menu.active {
+        display: none;
+    }
+
+    /* Hero Desktop */
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 150px;
+        height: 600px;
+    }
+    .hero-text {
+        flex: 1;
+        text-align: left;
+    }
+    .hero p {
+        margin-top: 50px;
+        margin-right: 520px;
+    }
+    .btn-hero {
+        padding: 14px 30px;
+        font-size: 20px;
+    }
+
+    /* Stats Desktop */
+    .stats {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2% 150px;
+    }
+    .stats h3, .stats p {
+        width: 80%;
+    }
+    .stats h3 { font-size: 25px; }
+    .stats p { font-size: 18px; }
+
+    /* Content Desktop */
+    .content {
+        padding: 100px 150px;
+        padding-bottom: 35px;
+    }
+
+    /* Card Grid Desktop */
+    .container {
+        padding: 100px 150px;
+        padding-top: 0px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    .card {
+    height: 300px;   
+}
+
+.card-overlay {
+    padding: 40px;
+}
+
+
+/* Tekst */
+.card-overlay p {
+    font-size: 18px;
+  
+}
+
+.card-overlay a {
+    margin-top: 12px;
+    font-size: 18px;
+   
+}
+
+.card-overlay a:after {
+    width: 8px;
+    height: 8px;
+   
+}
+
+    /* Why/about Desktop */
+
+.about-section {
+    flex-direction: row;
+    gap: 60px;
+     padding: 100px 150px;
+}
+
+.about-content {
+    flex: 1.3;
+}
+
+.about-image {
+    flex: 0.7;
+    height: 450px;
+}
+
+    /* Flow Desktop */
+    .flow-section { 
+        padding: 100px 150px;
+    }
+
+    .flow-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: stretch;
+    }
+
+    .flow-cards { grid-template-columns: 1fr 1fr; }
+    .flow-box-wide { grid-column: span 2; }
+ 
+    .flow-media { height: 100%; }
+    .flow-title { margin-top: 0rem; }
+
+    /* Prices Desktop */
+    .prices { padding: 100px 150px; }
+    .price-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    /* Behandler Desktop */
+    .colorboks { padding: 100px 150px; }
+    .behandler {
+        flex-direction: row;
+        gap: 80px;
+    }
+    .boks { flex: 1.3; }
+    .boks-billede { flex: 0.7; height: 450px; }
+
+    /* Testimonials Desktop */
+    .testimonials {
+        padding: 100px 150px;
+    }
+
+    .testimonials-header h2 {
+        margin-top: 0;
+    }
+
+    .testimonials-grid {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        flex: 1;
+    }
+
+    /* Booking Desktop */
+    .booking {
+        padding: 100px 150px;
+    }
+
+    .booking-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: stretch;
+    }
+
+    .booking-image {
+        height: 100%;
+    }
+
+    /* Footer Desktop */
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        align-items: start;
+        padding: 50px 150px;
+    }
+}

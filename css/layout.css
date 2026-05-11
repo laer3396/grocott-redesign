@@ -1,0 +1,186 @@
+/* ==========================================================================
+   3. TOPBAR
+   ========================================================================== */
+.topbar {
+    background: #e3ecf3;
+    color: #01245E;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 12px;
+    padding: 6px;
+}
+
+/* ==========================================================================
+   4. SITE HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 20px;
+}
+
+.nav-logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #01245E;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Nav Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    gap: 20px;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-link {
+    color: #01245E;
+    text-decoration: none;
+    padding: 15px;
+ 
+    opacity: 0.9;
+    transition: 0.2s;
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+     opacity: 1.5;
+}
+
+
+
+/* Dropdown */
+.dropdown {
+    width: 100%;
+}
+.dropdown > .nav-link {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f2f5f8;
+}
+.dropdown-menu.active {
+    display: flex;
+}
+.dropdown-item {
+    padding: 15px 40px;
+    color: #01245E;
+    text-decoration: none;
+}
+.dropdown-item:hover {
+    background-color: #01245E;
+    color: #fff;
+}
+
+.btn-nav {
+    background: #1e73d8;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: 200;
+    font-size: 16px;
+    white-space: nowrap;
+    align-self: flex-start;
+    width: auto;
+    margin-left: 10px;
+}
+
+/* ==========================================================================
+   15. FOOTER
+   ========================================================================== */
+.footer {
+    background: #1E2F43;
+    color: #fff;
+}
+
+.footer-container {
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.footer a {
+    color: #4fd1c5;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.footer-buttons button {
+    align-self: flex-start;
+}

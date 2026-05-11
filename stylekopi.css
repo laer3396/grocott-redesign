@@ -344,29 +344,50 @@ p {
     align-items:left;
     background: rgba(227,236,243,0.85); /* altid synlig */
     z-index: 2;
-    padding-top: 20px;
+    padding: 25px;
+ 
 }
+
 
 /* Overskrift */
 .card-overlay h3 {
-    padding: 25px;
     padding-bottom: 0px;
     margin: 0;
     background: transparent;
-    font-weight: 600;
-
-    
-
+    font-weight: 300;
 }
 
 /* Tekst */
 .card-overlay p {
-    padding: 25px;
     padding-top: 5px;
-    font-size: 0.9rem;
+    font-size: 16px;
     text-align: left;
     opacity: 1; /* altid synlig */
 }
+
+.card-overlay a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #1E3856;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: mulish, sans-serif;
+}
+
+.card-overlay a:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 3px solid currentColor;
+    border-top: 3px solid currentColor;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+}
+
+
 
 /* ==========================================================================
    9. WHY SECTION
@@ -777,12 +798,35 @@ p {
 
     .card-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+        gap: 50px;
     }
-    .card { height: 300px; }
-    .card-overlay { padding: 25px; }
-    .card-overlay p { font-size: 18px; width: 300px; }
-    .card-overlay h2 { max-width: 65%; }
+
+    .card {
+    height: 300px;   
+}
+
+.card-overlay {
+    padding: 40px;
+}
+
+
+/* Tekst */
+.card-overlay p {
+    font-size: 18px;
+  
+}
+
+.card-overlay a {
+    margin-top: 12px;
+    font-size: 18px;
+   
+}
+
+.card-overlay a:after {
+    width: 8px;
+    height: 8px;
+   
+}
 
     /* Why/about Desktop */
 
