@@ -1,0 +1,54 @@
+/* HERO */
+.hero {
+    padding: 50px 20px;
+}
+
+/* CARD GRID */
+.container {
+    padding: 50px 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.card {
+    position: relative;
+    height: 250px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    padding: 25px;
+    background: rgba(227,236,243,0.85);
+}
+
+.card-overlay h3 {
+    margin: 0;
+}
+
+.card-overlay p {
+    margin-top: 5px;
+}
+
+.card-overlay a {
+    margin-top: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ABOUT */
+.about-section {
+    padding: 50px 20px;
+    background: #1E3856;
+    color: #fff;
+}

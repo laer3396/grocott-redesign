@@ -1,7 +1,7 @@
 /* BUTTONS */
 .btn {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 16px;   
     border-radius: 9px;
     font-size: 16px;
     font-weight: 300;
@@ -15,8 +15,8 @@
 .btn::after {
     content: "";
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-right: 1px solid currentColor;
     border-top: 1px solid currentColor;
     transform: rotate(45deg);
