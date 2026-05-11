@@ -38,40 +38,23 @@ p {
 }
 
 /* ==========================================================================
-   2. UI COMPONENTS (Knapper & UI Elementer)
+   2. UI COMPONENTS (Generelle knapper)
    ========================================================================== */
-
-
-.btn-nav {
-    background: #1e73d8;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 9px;
-    font-weight: 200;
-    font-size: 16px;
-    white-space: nowrap;
-    align-self: flex-start;
-    width: auto;
-    margin-left: 10px;
-}
-
-/* ===== GENEREL KNAP-BASIS ====nnn= */ 
 .btn {
     display: inline-block;
     padding: 12px 20px;
     border-radius: 9px;
-    justify-content: flex-start;  /* <-- venstrejusterer indhold */
-    text-align: left;         /* <-- vigtigt for 2 linjer */
+    justify-content: flex-start;
+    text-align: left;
     font-size: 16px;
     font-weight: 300;
     cursor: pointer;
     text-decoration: none;
     border: none;
     transition: all 0.3s ease;
-    font-family: mulish, sans-serif; /* Sikrer samme font som body */
+    font-family: mulish, sans-serif;
     margin-top: 35px;
-    white-space: normal; /* vigtigt hvis tekst skal bryde */
+    white-space: normal;
 }
 
 .btn::after {
@@ -79,48 +62,43 @@ p {
     display: inline-block;
     width: 8px;
     height: 8px;
-    border-right: 2px solid currentColor;
-    border-top: 2px solid currentColor;
-    transform: rotate(45deg); /* peger → */
+    border-right: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    transform: rotate(45deg);
     margin-left: 10px;
     transition: transform 0.2s ease;
 }
-
 
 .btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .btn-blue {
     background-color: #1e73d8;
-    color: #ffffff !important; 
+    color: white;
 }
 
 .btn-blue:hover {
     background-color: #01245E;
 }
 
-
 .btn-outline {
-    background-color: transparent;
+    background-color: #f4f4f4;
     border: 3px solid #1e73d8;
-      color: #01245E;
+    color: #01245E;
 }
 
 .btn-outline:hover {
-    Background-color:  #f4f4f4;
+    background-color: #01245E;
+    color: white;
 }
 
-
-
 /* ==========================================================================
-   3. LAYOUT (Header, Topbar & Navigation)
+   3. TOPBAR
    ========================================================================== */
 .topbar {
-    background:#e3ecf3;
+    background: #e3ecf3;
     color: #01245E;
     display: flex;
     justify-content: center;
@@ -129,6 +107,9 @@ p {
     padding: 6px;
 }
 
+/* ==========================================================================
+   4. SITE HEADER & NAVIGATION
+   ========================================================================== */
 .site-header {
     background-color: #ffffff;
     position: sticky;
@@ -148,7 +129,7 @@ p {
     height: auto;
 }
 
-/* --- Mobile Menu & Hamburger --- */
+/* Hamburger Menu */
 .hamburger {
     display: block;
     cursor: pointer;
@@ -174,6 +155,7 @@ p {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Nav Menu */
 .nav-menu {
     position: fixed;
     top: 0;
@@ -204,7 +186,7 @@ p {
     font-weight: 800;
 }
 
-/* --- Dropdown --- */
+/* Dropdown */
 .dropdown {
     width: 100%;
 }
@@ -229,11 +211,23 @@ p {
     color: #fff;
 }
 
-/* ==========================================================================
-   4. SECTIONS (Hovedindhold)
-   ========================================================================== */
+.btn-nav {
+    background: #1e73d8;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: 200;
+    font-size: 16px;
+    white-space: nowrap;
+    align-self: flex-start;
+    width: auto;
+    margin-left: 10px;
+}
 
-/* --- Hero Section --- */
+/* ==========================================================================
+   5. HERO SECTION
+   ========================================================================== */
 .hero {
     position: relative;
     display: flex;
@@ -262,8 +256,9 @@ p {
     gap: 15px;
 }
 
-
-/* --- Stats Section --- */
+/* ==========================================================================
+   6. STATS SECTION
+   ========================================================================== */
 .stats {
     display: flex;
     flex-direction: column;
@@ -279,7 +274,37 @@ p {
     font-weight: 700;
 }
 
-/* --- Card Grid Section --- */
+/* ==========================================================================
+   7. CONTENT WRAPPER
+   ========================================================================== */
+.content {
+    padding: 50px 20px;
+    padding-bottom: 0px;
+}
+
+.content p {
+    margin-top: 15px;
+}
+
+.content h3 {
+    margin-top: 30px;
+}
+
+.content a {
+    margin-top: 5px;
+    color: #01245E;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   8. CARD GRID (Main Container)
+   ========================================================================== */
 .container {
     margin: 0 auto;
     padding: 50px 20px;
@@ -360,32 +385,9 @@ p {
     opacity: 1;
 }
 
-/* --- Content & Why Section --- */
-.content {
-    padding: 50px 20px;
-    padding-bottom: 0px;
-}
-
-.content p {
-    margin-top: 15px;
-}
-
-.content h3 {
-    margin-top: 30px;
-}
-
-.content a {
-    margin-top: 5px;
-    color: #01245E;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.content a:hover {
-    text-decoration: underline;
-    font-weight: 700;
-}
-
+/* ==========================================================================
+   9. WHY SECTION
+   ========================================================================== */
 .why {
     position: relative;
     background: url("img_lager/DSC_5410.webp") center/cover;
@@ -404,38 +406,33 @@ p {
     z-index: 1;
 }
 
-/* --- Flow Section --- */
-
-.btn-flow {
-    margin-top: 0;
-    margin-bottom: 35px;
-}
-
+/* ==========================================================================
+   10. FLOW SECTION (Praktisk Info)
+   ========================================================================== */
 .flow-section {
     padding: 50px 20px;
 }
 
+.flow-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
 .flow-media {
     width: 100%;
-    height: 300px; /* kun mobil */
+    height: 300px;
     background-image: url("img_lager/DSC_5186.webp");
     background-size: cover;
     background-position: center 30%;
     border-radius: 9px;
 }
 
-.flow-wrapper {
- display: flex;
+.flow-text {
+    display: flex;
     flex-direction: column;
-    gap: 30px;
-
+    gap: 1.5rem;
 }
-
-.flow-box {
-    margin-top: 0px;
-}
-
 
 .flow-cards {
     display: grid;
@@ -446,9 +443,8 @@ p {
     background: #eef1f3;
     padding: 1.5rem;
     border-radius: 9px;
+    margin-top: 0px;
 }
-
-
 
 .flow-dot {
     width: 12px;
@@ -466,19 +462,12 @@ p {
     margin-bottom: 0.6rem;
 }
 
-
-.flow-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-
-/* --- Priser Section --- */
+/* ==========================================================================
+   11. PRICES SECTION
+   ========================================================================== */
 .prices {
     background: #eef1f3;
     padding: 50px 20px;
-  
 }
 
 .price-grid {
@@ -511,7 +500,14 @@ p {
     background: #4fd1c5;
 }
 
-/* --- Behandler Section --- */
+/* ==========================================================================
+   12. BEHANDLER SECTION (Om Grocott)
+   ========================================================================== */
+.colorboks {
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+
 .behandler {
     padding: 5%;
     background: #C5D8E6;
@@ -522,9 +518,16 @@ p {
     align-items: flex-start;
 }
 
-.colorboks {
-    background-color: #ffffff;
-    padding: 50px 20px;
+.boks h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 35px;
+}
+
+.ikon {
+    font-size: 20px;
+    color: #01245E;
 }
 
 .boks-billede {
@@ -537,20 +540,62 @@ p {
     border-radius: 9px;
 }
 
-.ikon {
-    font-size: 20px;
+/* ==========================================================================
+   13. TESTIMONIALS
+   ========================================================================== */
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-header h2 {
+    margin-top: 0;  
+    margin-bottom: 30px;
     color: #01245E;
 }
 
-.boks h4 {
+.testimonials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-card {
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 9px;
+    text-align: left;
+    position: relative;
+}
+
+.quote {
+    font-size: 100px;
+    opacity: 0.2;
+    line-height: 0.8;
+    margin-bottom: -20px;
+}
+
+.text {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.author {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
+.author span {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   14. BOOKING SECTION
+   ========================================================================== */
 .booking {
-    background-color:  #eef1f3;
+    background-color: #eef1f3;
     padding: 50px 20px;
 }
 
@@ -560,7 +605,10 @@ p {
     gap: 30px;
 }
 
-/* Billede */
+.booking-info {
+    line-height: 35px;
+}
+
 .booking-image {
     width: 100%;
     height: 300px;
@@ -571,14 +619,8 @@ p {
     border-radius: 9px;
 }
 
-.booking-info {
-line-height: 35px;
-}
-
-
-
 /* ==========================================================================
-   5. FOOTER
+   15. FOOTER
    ========================================================================== */
 .footer {
     background: #1f2933;
@@ -605,18 +647,16 @@ line-height: 35px;
     opacity: 0.8;
 }
 
-.links { margin-top: 1.5rem; }
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
 .social {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-
-.col {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 }
 
 .footer-buttons {
@@ -629,10 +669,20 @@ line-height: 35px;
     align-self: flex-start;
 }
 
+
 /* ==========================================================================
-   6. DESKTOP STYLES (min-width: 769px)
+   16. DESKTOP STYLES (min-width: 769px)
    ========================================================================== */
 @media screen and (min-width: 769px) {
+
+    /* Base Typography Desktop */
+    h1, h2 { font-size: 45px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 18px; }
+    p { font-size: 18px; }
+    .btn { font-size: 18px; }
+    .topbar { font-size: 18px; }
+
     /* Navbar Desktop */
     .navbar {
         padding: 0% 150px;
@@ -666,7 +716,7 @@ line-height: 35px;
         font-weight: 800;
     }
 
-    /* Desktop Dropdown */
+    /* Dropdown Desktop */
     .dropdown {
         position: relative;
     }
@@ -690,14 +740,7 @@ line-height: 35px;
         display: none;
     }
 
-    /* Typography & Layout Desktop */
-    h1, h2 { font-size: 45px; }
-    h3 { font-size: 25px; }
-    h4 { font-size: 18px; }
-    p { font-size: 18px; }
-    .btn { font-size: 18px; }
-    .topbar { font-size: 18px; }
-
+    /* Hero Desktop */
     .hero {
         flex-direction: row;
         align-items: center;
@@ -718,6 +761,7 @@ line-height: 35px;
         font-size: 20px;
     }
 
+    /* Stats Desktop */
     .stats {
         flex-direction: row;
         justify-content: space-between;
@@ -729,6 +773,13 @@ line-height: 35px;
     .stats h3 { font-size: 25px; }
     .stats p { font-size: 18px; }
 
+    /* Content Desktop */
+    .content {
+        padding: 100px 150px;
+        padding-bottom: 35px;
+    }
+
+    /* Card Grid Desktop */
     .container {
         padding: 100px 150px;
         padding-top: 0px;
@@ -743,15 +794,29 @@ line-height: 35px;
     .card-overlay p { font-size: 18px; width: 300px; }
     .card-overlay h2 { max-width: 65%; }
 
-    .content {
-        padding: 100px 150px;
-        padding-bottom: 35px;
-    }
-
+    /* Why Desktop */
     .why {
         padding: 100px 150px;
         padding-right: 300px;
     }
+
+    /* Flow Desktop */
+    .flow-section { 
+        padding: 100px 150px;
+    }
+
+    .flow-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: stretch;
+    }
+
+    .flow-cards { grid-template-columns: 1fr 1fr; }
+    .flow-box-wide { grid-column: span 2; }
+ 
+    .flow-media { height: 100%; }
+    .flow-title { margin-top: 0rem; }
 
     /* Prices Desktop */
     .prices { padding: 100px 150px; }
@@ -760,38 +825,34 @@ line-height: 35px;
         gap: 3rem;
     }
 
-
-    /* Flow Desktop */
-  .flow-section { 
-        padding: 100px 150px;}
-
-
-    .flow-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        align-items: stretch; /* vigtig */
-    }
-
-    .flow-cards { grid-template-columns: 1fr 1fr; }
-    .flow-box-wide { grid-column: span 2; }
- 
-    .flow-media { height: 100%; }
-    .flow-label { margin-top: 0px; }
-    .flow-title {margin-top: 0rem; }
-
-
     /* Behandler Desktop */
+    .colorboks { padding: 100px 150px; }
     .behandler {
         flex-direction: row;
         gap: 80px;
     }
     .boks { flex: 1.3; }
     .boks-billede { flex: 0.7; height: 450px; }
-    .colorboks { padding: 100px 150px; }
 
-    /* booking Desktop */
+    /* Testimonials Desktop */
+    .testimonials {
+        padding: 100px 150px;
+    }
 
+    .testimonials-header h2 {
+        margin-top: 0;
+    }
+
+    .testimonials-grid {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .testimonial-card {
+        flex: 1;
+    }
+
+    /* Booking Desktop */
     .booking {
         padding: 100px 150px;
     }
@@ -800,11 +861,11 @@ line-height: 35px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
-        align-items: stretch; /* gør dem samme højde */
+        align-items: stretch;
     }
 
     .booking-image {
-        height: 100%;   /* <-- vigtig */
+        height: 100%;
     }
 
     /* Footer Desktop */
