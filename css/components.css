@@ -28,14 +28,10 @@
     color: white;
 }
 
-.btn-outline {
-    background-color:#e3ecf3;
-}
-
 /* små UI ting */
 .icon {
     width: 16px;
     height: 16px;
-    background: #e3ecf3;
+    background: #EDF3F7;
     border-radius: 50%;
 }

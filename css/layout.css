@@ -2,12 +2,12 @@
    3. TOPBAR
    ========================================================================== */
 .topbar {
-    background: #e3ecf3;
+    background:  #DEEEFF;
     color: #1E3856;
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 12px;
     padding: 6px;
 }
@@ -107,7 +107,7 @@
 .dropdown-menu {
     display: none;
     flex-direction: column;
-    background-color: #f4f4f4;
+    background-color: #EDF3F7;
     border-radius: 9px;
 }
 .dropdown-menu.active {
@@ -151,7 +151,7 @@
 }
 
 .footer a {
-    color: #4fd1c5;
+    color: #ffffff;
     text-decoration: none;
 }
 

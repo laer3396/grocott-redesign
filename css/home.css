@@ -13,7 +13,7 @@
     gap: 30px;
     overflow: hidden;
     background:
-        linear-gradient(to right, rgba(30, 56, 86,0.95)40%, rgba(255, 255, 255, 0.8) 100%),
+        linear-gradient(to right, rgba(30, 56, 86,0.95)30%, rgba(255, 255, 255, 0.8) 100%),
         url("../img_lager/DSC_54100.webp") center 50%/cover no-repeat;
 }
 
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #e3ecf3;
+    background: #DEEEFF;
     text-align: center;
     padding: 20px 20px;
     gap: 20px;
@@ -48,6 +48,12 @@
 .stats h3 {
     font-size: 18px;
     font-weight: 700;
+    color: #1E3856;
+}
+
+
+.stats p {
+       color: #1E3856;
 }
 
 /* ==========================================================================
@@ -121,17 +127,7 @@
     flex-direction: column;
     justify-content: flex-start; /* start fra top */
     align-items:left;
-      
-
-
-
-background: linear-gradient(
-  #e3ecf3,
-  #f4f4f4
-);
-
-
-
+background-color: #EDF3F7;
     z-index: 2;
     padding: 25px;
  
@@ -179,13 +175,13 @@ background: linear-gradient(
 
 
 /* ==========================================================================
-   9. WHY SECTION
+   9. WHY SECTIONbackground: #6BB5FF;
    ========================================================================== */
 
 .about-section {
     padding: 50px 25px;
-    background: #1E3856;
-    color: #ffffff;
+     background-color: #DEEEFF;
+    color:#1E3856;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -238,7 +234,7 @@ background: linear-gradient(
 }
 
 .flow-box {
-     background: #e3ecf3;
+     background:  #EDF3F7;
     padding: 1.5rem;
     border-radius: 9px;
     margin-top: 0px;
@@ -275,7 +271,7 @@ background: linear-gradient(
    11. PRICES SECTION
    ========================================================================== */
 .prices {
-    background: #e3ecf3;
+    background:  #EDF3F7;
     padding: 50px 25px;
 }
 
@@ -322,9 +318,8 @@ background: linear-gradient(
 
 .behandler {
     padding: 5%;
-    background: #1E3856;
+     background-color: #DEEEFF;
     border-radius: 9px;
-    color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -341,7 +336,7 @@ background: linear-gradient(
 
 .ikon {
     font-size: 20px;
-    color: #ffffff;
+    color:#1E3856;
 }
 
 .boks-billede {
@@ -375,9 +370,10 @@ background: linear-gradient(
 }
 
 .testimonial-card {
-    background: #f4f4f4;
+    background: transparent;
     padding: 25px;
     border-radius: 9px;
+ border: 2px solid #1E3856;
     text-align: left;
     position: relative;
 }
@@ -410,7 +406,7 @@ background: linear-gradient(
    14. BOOKING SECTION
    ========================================================================== */
 .booking {
-    background-color: #e3ecf3;
+    background-color: #DEEEFF;
     padding: 50px 25px;
 }
 
@@ -456,6 +452,7 @@ background: linear-gradient(
     .hero p {
         margin-top: 50px;
         margin-right: 520px;
+        width: 55%;
     }
     .btn-hero {
         padding: 14px 20px;
@@ -579,7 +576,6 @@ background: linear-gradient(
     .price-item {
         display: flex;
         align-items: center;
-  
     }
 
 
