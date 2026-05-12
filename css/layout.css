@@ -3,7 +3,7 @@
    ========================================================================== */
 .topbar {
     background: #e3ecf3;
-    color: #01245E;
+    color: #1E3856;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -45,7 +45,7 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #01245E;
+    background-color: #1E3856;
     display: block;
     transition: all 0.3s ease;
 }
@@ -81,7 +81,7 @@
 }
 
 .nav-link {
-    color: #01245E;
+    color: #1E3856;
     text-decoration: none;
     padding: 15px;
  
@@ -107,7 +107,7 @@
 .dropdown-menu {
     display: none;
     flex-direction: column;
-    background-color: #f2f5f8;
+    background-color: #f4f4f4;
     border-radius: 9px;
 }
 .dropdown-menu.active {
@@ -115,11 +115,11 @@
 }
 .dropdown-item {
     padding: 15px 15px;
-    color: #01245E;
+    color: #1E3856;
     text-decoration: none;
 }
 .dropdown-item:hover {
-    background-color: #01245E;
+    background-color: #1E3856;
     color: #fff;
 }
 
@@ -141,7 +141,7 @@
    15. FOOTER
    ========================================================================== */
 .footer {
-    background: #1E2F43;
+    background-color:#1E3856;
     color: #fff;
 }
 

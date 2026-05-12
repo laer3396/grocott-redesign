@@ -13,8 +13,8 @@
     gap: 30px;
     overflow: hidden;
     background:
-        linear-gradient(to right, rgba(0, 20, 60, 0.7) 40%, rgba(255, 255, 255, 0.8) 100%),
-        url("../img_lager/DSC_5019.webp") center right/cover no-repeat;
+        linear-gradient(to right, rgba(30, 56, 86,0.95)40%, rgba(255, 255, 255, 0.8) 100%),
+        url("../img_lager/DSC_54100.webp") center 50%/cover no-repeat;
 }
 
 .hero-text {
@@ -75,7 +75,7 @@
 
 .content a {
     margin-top: 5px;
-    color: #01245E;
+    color: #1E3856;
     font-weight: 700;
     text-decoration: none;
 }
@@ -121,7 +121,17 @@
     flex-direction: column;
     justify-content: flex-start; /* start fra top */
     align-items:left;
-    background: rgba(227,236,243,0.86); /* altid synlig */
+      
+
+
+
+background: linear-gradient(
+  #e3ecf3,
+  #f4f4f4
+);
+
+
+
     z-index: 2;
     padding: 25px;
  
@@ -148,10 +158,10 @@
     display: inline-block;
     margin-top: 12px;
     text-decoration: none;
-    color: #1E3856;
     font-size: 16px;
     font-weight: 700;
     font-family: mulish, sans-serif;
+    color: #1E3856;
 }
 
 .card-overlay a:after {
@@ -265,7 +275,7 @@
    11. PRICES SECTION
    ========================================================================== */
 .prices {
-    background: #eef1f3;
+    background: #e3ecf3;
     padding: 50px 25px;
 }
 
@@ -292,7 +302,7 @@
 .icon {
     width: 16px;
     height: 16px;
-    background: #C5D8E6;
+    background: #1E3856;
     border-radius: 50%;
     display: inline-block;
 }
@@ -355,7 +365,7 @@
 .testimonials-header h2 {
     margin-top: 0;  
     margin-bottom: 30px;
-    color: #01245E;
+    color: #1E3856;
 }
 
 .testimonials-grid {
@@ -400,7 +410,7 @@
    14. BOOKING SECTION
    ========================================================================== */
 .booking {
-    background-color: #eef1f3;
+    background-color: #e3ecf3;
     padding: 50px 25px;
 }
 
