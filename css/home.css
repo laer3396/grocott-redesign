@@ -5,22 +5,28 @@
    ========================================================================== */
 
 .hero {
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 50px 25px;
     gap: 30px;
-    overflow: hidden;
-    background:
-        linear-gradient(to right, rgba(30, 56, 86,0.95)30%, rgba(255, 255, 255, 0.8) 100%),
-        url("../img_lager/DSC_54100.webp") center 50%/cover no-repeat;
+
+   
+background-color:  #EDF3F7;
 }
+
+.hero-image-box {
+    width: 100%;
+    height: 300px;
+    border-radius: 9px;
+    background: url("../img_lager/DSC_5459.webp") center 20%/cover no-repeat;
+}
+
+
 
 .hero-text {
     position: relative;
     z-index: 2;
-    color: #ffffff;
+    color:#1E3856
 }
 
 .hero p {
@@ -41,19 +47,25 @@
     align-items: center;
     background: #DEEEFF;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px;
     gap: 20px;
+}
+
+.stats > div {
+    width: 80%;
+    max-width: 500px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(30, 56, 86, 0.3);
+}
+
+/* fjern streg på sidste */
+.stats > div:last-child {
+    border-bottom: none;
 }
 
 .stats h3 {
     font-size: 18px;
     font-weight: 700;
-    color: #1E3856;
-}
-
-
-.stats p {
-       color: #1E3856;
 }
 
 /* ==========================================================================
@@ -102,7 +114,7 @@
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 25px;
 }
 
 .card {
@@ -127,7 +139,7 @@
     flex-direction: column;
     justify-content: flex-start; /* start fra top */
     align-items:left;
-background-color: #EDF3F7;
+    background-color: #EDF3F7;
     z-index: 2;
     padding: 25px;
  
@@ -438,38 +450,56 @@ background-color: #EDF3F7;
  @media screen and (min-width: 769px) {
 
  /* Hero Desktop */
-    .hero {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 60px 150px;
-        height: 600px;
-    }
-    .hero-text {
-        flex: 1;
-        text-align: left;
-    }
-    .hero p {
-        margin-top: 50px;
-        margin-right: 520px;
-        width: 55%;
-    }
-    .btn-hero {
-        padding: 14px 20px;
-        font-size: 18px;
+ .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 150px;
+    min-height: 600px;
+
+}
+
+.hero-text {
+    flex: 1.2;
+    text-align: left;
+    max-width: 700px;
+}
+
+.hero p {
+    margin-top: 20px;
+    width: 95%; /* fjern fixed width */
+}
+
+
+  .hero-image-box {
+        flex: 0.4;
+        height: 400px;
     }
 
-    /* Stats Desktop */
+
+ /* stats */
     .stats {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
         padding: 2% 150px;
     }
-    .stats h3, .stats p {
-        width: 80%;
+
+    .stats > div {
+        flex: 1;
+        text-align: center;
+        padding: 0 30px;
+
+        border-bottom: none; /* 🔥 vigtigt: fjern mobil streg */
+        border-right: 1px solid rgba(30, 56, 86, 0.3);
     }
-    .stats h3 { font-size: 25px; }
-    .stats p { font-size: 18px; }
+
+    .stats > div:last-child {
+        border-right: none;
+    }
+
+
 
     /* Content Desktop */
     .content {
