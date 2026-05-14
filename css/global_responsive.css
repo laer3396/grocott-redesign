@@ -5,7 +5,7 @@
 @media screen and (min-width: 769px) {
 
     /* Base Typography Desktop */
-    h1, h2 { font-size: 45px; }
+    h1, h2 { font-size: 40px; }
     h3 { font-size: 25px; }
     h4 { font-size: 18px; }
     p { font-size: 18px; }
@@ -74,20 +74,15 @@
    
 
     /* Footer Desktop */
-    .footer-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
-        align-items: start;
-        padding: 50px 150px;
+   .footer-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolonner ligesom stats */
+        gap: var(--space-xl);
     }
 
-    /* Footer knapper */
     .footer-buttons {
-        flex-direction: column;
-        gap: 10px;
+        grid-column: span 3; /* Knappen i fuld bredde nederst eller placeret efter ønske */
+        align-items: flex-start;
     }
-
 
 
     /* Generel knap */

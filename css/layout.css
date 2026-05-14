@@ -42,13 +42,14 @@
 }
 
 .bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    width: 24px;
+    height: 2px;
+    margin: 4px 0;
     background-color: #1E3856;
     display: block;
     transition: all 0.3s ease;
 }
+
 
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
@@ -140,14 +141,17 @@
 /* ==========================================================================
    15. FOOTER
    ========================================================================== */
+
 .footer {
-    background-color:#1E3856;
+    background-color: #1E3856;
     color: #fff;
+    padding: var(--space-xl) 0; /* Matcher dine andre sektioner */
 }
 
 .footer-container {
-    margin: 0 auto;
-    padding: 50px 25px;
+    display: grid;
+    gap: var(--space-l);
+    grid-template-columns: 1fr; /* Mobil: En kolonne */
 }
 
 .footer a {
@@ -160,29 +164,15 @@
     font-weight: 700;
 }
 
-.note {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.col {
+.footer .col {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: var(--space-s);
 }
 
 .social {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.footer-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-
-.footer-buttons button {
-    align-self: flex-start;
+    flex-direction: row;
+    gap: var(--space-m);
+    align-items: center;
 }
