@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     background-color: #EDF3F7;
+    gap: var(--space-l);
 }
 
 .hero-image-box {
@@ -64,6 +65,7 @@
    ========================================================================== */
 .content-wrapper {
     text-align: left;
+    gap: var(--space-l);
 }
 
 .card-grid {
@@ -78,6 +80,10 @@
     border-radius: 9px;
     display: flex;
     flex-direction: column;
+}
+
+.card p{
+   margin-bottom: var(--space-s);
 }
 
 .card a {
@@ -96,7 +102,10 @@
    ========================================================================== */
 .about-section {
     background-color: #DEEEFF;
+
+    
 }
+
 
 .about-image {
     width: 100%;
@@ -140,6 +149,9 @@
     border-radius: 9px;
 }
 
+.flow-text h3{
+       margin-bottom: var(--space-s);
+}
 
 
 .flow-box button {
@@ -217,6 +229,7 @@
     display: flex;
     padding: var(--space-m);
     flex-direction: column;
+     gap: var(--space-l);
 }
 
 .boks h4 {
@@ -310,7 +323,7 @@
 }
 
 .booking-info {
-    line-height: 1.5;
+    line-height: 3;
 }
 
 .booking-image {
