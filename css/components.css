@@ -1,15 +1,17 @@
 /* BUTTONS */
 .btn {
     display: inline-block;
-    padding: 10px 16px;   
+    padding: 12px 18px;   
     border-radius: 9px;
     font-size: 16px;
-    font-weight: 300;
     cursor: pointer;
     text-decoration: none;
     border: none;
     transition: all 0.3s ease;
     margin-top: 35px;
+    background-color: #1e73d8;
+    color: white;
+    font-family: DM Sans;
 }
 
 .btn::after {
@@ -17,21 +19,41 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-right: 1px solid currentColor;
-    border-top: 1px solid currentColor;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
     transform: rotate(45deg);
     margin-left: 10px;
+
 }
 
-.btn-blue {
-    background-color: #1e73d8;
-    color: white;
-}
 
 /* små UI ting */
-.icon {
+.dot-icon {
     width: 16px;
     height: 16px;
-    background: #EDF3F7;
+    background: #1E3856;
     border-radius: 50%;
+}
+
+.dot-iconxs {
+    width: 10x;
+    height: 10px;
+    background: #1E3856;
+    border-radius: 50%;
+}
+
+
+
+
+@media screen and (min-width: 769px) {
+     .btn {
+        font-size: 18px;
+        padding: 14px 20px;
+    }
+
+    /* Pil bliver lidt større */
+    .btn::after {
+        width: 8px;
+        height: 8px;
+    }
 }

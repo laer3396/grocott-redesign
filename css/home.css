@@ -1,19 +1,13 @@
-
 /* ==========================================================================
    5. HERO SECTION
    ========================================================================== */
-
-
 .hero {
     display: flex;
     flex-direction: column;
-    gap: var(--space-l);
     background-color: #EDF3F7;
 }
 
-
 .hero-image-box {
-    margin-top: var(--space-xl);
     width: 100%;
     height: 300px;
     border-radius: 9px;
@@ -31,136 +25,96 @@
     width: 90%;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: var(--space-s);
+.hero h2 {
+    font-size: 24px;
+    font-weight: 400;
 }
+
 
 /* ==========================================================================
    6. STATS SECTION
    ========================================================================== */
+.stats {
+    text-align: center;
+    background-color: #DEEEFF;
+}
+
 .stats .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* ✅ centrerer alt */
-  text-align: center;    /* ✅ centrerer tekst */
-  gap: var(--space-m);
-  padding: var(--space-s) var(--space-m); /* ✅ vigtig */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-m);
 }
 
 .stats .container > div {
-  width: 100%;
+    width: 100%;
 }
 
 .stats .container > div:last-child {
     border-bottom: none;
 }
 
-
-.stats {
-  text-align: center;
-  background-color: #DEEEFF;
-}
-
-
 .stats h3 {
-  margin-bottom: var(--space-xs);
-}
-
-
-/* ==========================================================================
-   7. CONTENT WRAPPER
-   ========================================================================== */
-.content {
-    padding-bottom: 0;
-}
-
-.content p {
-    margin-top: var(--space-s);
-}
-
-.content h3 {
-    margin-top: var(--space-l);
-    width: 70%;
-}
-
-.content a {
-    margin-top: var(--space-xs);
-}
-
-.content h2 {
-    width: 70%;
-}
-
-.content a:hover {
-    text-decoration: underline;
-    font-weight: 700;
+    margin-bottom: var(--space-xs);
 }
 
 /* ==========================================================================
-   8. CARD GRID (Main Container)
+   7. CONTENT WRAPPER & CARD GRID (Samlet)
    ========================================================================== */
-
+.content-wrapper {
+    text-align: left;
+}
 
 .card-grid {
-  display: grid;
-  gap: var(--space-m);
-  grid-template-columns: 1fr;
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: 1fr;
 }
 
-
 .card {
-  background: #EDF3F7;
-  padding: var(--space-m);
-  border-radius: 9px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-m);
+    background: #EDF3F7;
+    padding: var(--space-m);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card a {
-  margin-top: auto;
-  font-weight: 700;
-  text-decoration: none;
-  color: #1E3856;
+    margin-top: auto;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1E3856;
 }
 
-
-
+.card a:hover {
+    text-decoration: underline;
+}
 
 /* ==========================================================================
-   9. WHY SECTIONbackground: #6BB5FF;
+   9. WHY SECTION
    ========================================================================== */
-
 .about-section {
     background-color: #DEEEFF;
-    color:#1E3856;
 }
-
-
 
 .about-image {
-  width: 100%;
-  height: 300px; /* ✅ tilbage igen */
-  border-radius: 9px;
-  background-image: url("../img_lager/DSC_5034.webp");
-  background-size: cover;
-  background-position: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 9px;
+    background-image: url("../img_lager/DSC_5034.webp");
+    background-size: cover;
+    background-position: center;
 }
-
-
-
 
 /* ==========================================================================
    10. FLOW SECTION (Praktisk Info)
    ========================================================================== */
-.flow-section {
-}
 
 .flow-wrapper {
     display: flex;
     flex-direction: column;
-    gap: var(--space-l)
+    gap: var(--space-l);
 }
 
 .flow-media {
@@ -172,66 +126,49 @@
     border-radius: 9px;
 }
 
-.flow-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-m);
-}
 
 .flow-cards {
     display: grid;
     gap: var(--space-m);
-    
 }
 
 .flow-box {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-s);
-  background-color: #DEEEFF;
-  padding: var(--space-m);
-  border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    background-color: #DEEEFF;
+    padding: var(--space-m);
+    border-radius: 9px;
 }
 
 
-
-.flow-dot,
-.flow-dot-akut {
-    width: var(--space-xs);
-    height: var(--space-xs);
-    margin-bottom: var(--space-xs);
-}
-
-.flow-dot {
-    width: 12px;
-    height: 12px;
-    background: #1e73d8;
-    border-radius: 50%;
-  
-}
-
-.flow-dot-akut {
-    width: 12px;
-    height: 12px;
-    background: #4fd1c5;
-    border-radius: 50%;
-}
 
 .flow-box button {
-    border-radius: 9px;          /* runde hjørner */
-    border: 3px solid #1e73d8;   /* korrekt border */
-    background: transparent;     /* ingen baggrund */
-    color: #1E3856;              /* tekstfarve */
+    border-radius: 9px;
+    border: 3px solid #1e73d8;
+    background: transparent;
+    color: #1E3856;
     font-size: 16px;
     cursor: pointer;
     text-align: left;
 }
 
+.flow-title-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.dot-icon.emergency {
+    background: #4fd1c5;
+}
+
+
+
 /* ==========================================================================
    11. PRICES SECTION
    ========================================================================== */
 .prices {
-    background:  #EDF3F7;
+    background: #EDF3F7;
 }
 
 .price-grid {
@@ -246,7 +183,6 @@
     flex-direction: column;
     margin-top: var(--space-m);
     gap: var(--space-s);
-
 }
 
 .price-item {
@@ -255,7 +191,7 @@
     gap: var(--space-s);
 }
 
-.icon {
+.dot-icon {
     width: 16px;
     height: 16px;
     background: #1E3856;
@@ -263,43 +199,43 @@
     display: inline-block;
 }
 
-.price-item.emergency .icon {
+.price-item.emergency .dot-icon {
     background: #4fd1c5;
+}
+
+.price-item p {
+    margin: 0;
 }
 
 
 /* ==========================================================================
    12. BEHANDLER SECTION (Om Grocott)
    ========================================================================== */
-
 .behandler {
     background-color: #DEEEFF;
     border-radius: 9px;
     display: flex;
+    padding: var(--space-m);
     flex-direction: column;
-    gap: var(--space-l);
-    padding: var(--space-m); /* ✅ vigtig */
 }
-
 
 .boks h4 {
     display: flex;
     align-items: center;
     gap: var(--space-s);
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
-
-
-
-.ikon {
-    font-size: 20px;
-    color:#1E3856;
+.behandler .dot-icon {
+    width: 8px;
+    height: 8px;
+    background: #1e73d8; /* farve */
 }
+
 
 .boks-billede {
     width: 100%;
-    height: 300px; /* ✅ mobil */
+    height: 300px;
     background-image: url("../img_lager/DSC_5429.webp");
     background-size: cover;
     background-position: center 20%;
@@ -309,53 +245,56 @@
 /* ==========================================================================
    13. TESTIMONIALS
    ========================================================================== */
+/* ==========================================================================
+   13. TESTIMONIALS (Opdateret struktur)
+   ========================================================================== */
+
 .testimonials {
+    /* Bagrundsfarven placeres her, hvis hele sektionen skal have den */
+    background-color: #fff; 
     text-align: center;
 }
 
-.testimonials-header h2 {
-    margin-top: 0;  
+/* Sørg for at overskriften flugter med dine andre sektioner */
+.testimonials .content-wrapper {
     margin-bottom: var(--space-l);
-    color: #1E3856;
+    text-align: center; /* Centreret h2 som tidligere */
 }
 
 .testimonials-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Mobil: Stak ovenpå hinanden */
     gap: var(--space-m);
 }
 
 .testimonial-card {
-    background: transparent;
+    background: #fff;
     border-radius: 9px;
     border: 3px solid #1E3856;
     text-align: left;
-    position: relative;
     padding: var(--space-m);
-    gap: var(--space-s);
+    display: flex;
+    flex-direction: column;
 }
 
 .quote {
-    font-size: 100px;
+    font-size: 80px;
+    line-height: 0;
+    margin-top: var(--space-m);
+    color: #1E3856;
     opacity: 0.2;
 }
 
 .text {
     margin-bottom: var(--space-m);
-    line-height: 1.5;
+    flex-grow: 1; /* Sørger for at kortene får ens højde */
 }
 
 .author {
     display: flex;
-    align-items: center;
-    gap: var(--space-s);
+    flex-direction: column; /* Stak navn og titel vertikalt */
 }
 
-.author span {
-    font-size: 16px;
-    font-weight: 200;
-
-}
 
 /* ==========================================================================
    14. BOOKING SECTION
@@ -385,152 +324,121 @@
 }
 
 .social img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
-
 
 /* ==========================================================================
    16. DESKTOP STYLES (min-width: 1024px)
    ========================================================================== */
- @media screen and (min-width: 1024px) {
-
- /* Hero Desktop */
- 
-
-  .hero .container {
-    display: flex;
-    align-items: stretch; /* ✅ vigtig */
-    gap: var(--space-2xl);
-  }
-
-  .hero-image-box {
-    height: auto;  /* ✅ nu følger den teksten */
-    flex: 0.8;
-  }
-
-  .hero-text {
-    flex: 1.2;
-
-}
-
-
-
-
-.hero p {
-    margin-top: var(--space-m);
-    width: 95%; /* fjern fixed width */
-}
-
-
-
-
-
- /* stats */
-    
-
-  .stats .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-m);
-    text-align: center;
-    padding: 0 var(--space-xl); /* ✅ 0 top/bund */
-
-  
-
-  }
-
-  .stats .container > div {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-.stats .container > div:last-child {
-  border-right: none;
-}
-
-
-
-
-    /* Content Desktop */
- 
-    .content h2 {
-    width: 100%;
-}
-
-   
-    /* card Desktop */
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-  }
-
- .card {
-  background: #EDF3F7;
-  padding: var(--space-m);
-  border-radius: 9px;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.card p {
-  flex-grow: 1;
-}
-
-    /* Why/about Desktop */
-
-
-
-
-  .about-section .container {
-    display: flex;
-    align-items: stretch;
-    gap: var(--space-2xl);
-  }
-
-  .about-image {
-    height: auto;   /* ✅ nu virker stretch */
-    flex: 0.8;
-  }
-
-  .about-content {
-    flex: 1.2;
-  }
-
-
-
-
-
-    .flow-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-xl);
+@media screen and (min-width: 1024px) {
+    /* Hero Desktop */
+    .hero .container {
+        display: flex;
         align-items: stretch;
+        gap: var(--space-2xl);
     }
 
-    .flow-cards { grid-template-columns: 1fr 1fr; }
-    .flow-box-wide { grid-column: span 2; }
- 
-    .flow-media { height: 100%; }
-    .flow-title { margin-top: 0rem; }
+    .hero-image-box {
+        height: auto;
+        flex: 0.8;
+    }
 
-  /* Prices Desktop */
-    
+    .hero-text {
+        flex: 1.2;
+    }
 
+    .hero p {
+        margin-top: var(--space-m);
+        width: 95%;
+    }
+
+    /* Stats */
+    .stats .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+    }
+
+    .stats .container > div {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .stats .container > div:last-child {
+        border-right: none;
+    }
+
+    /* Card Desktop */
+    .content-wrapper {
+        max-width: 800px;
+    }
+
+
+ .content-wrapper .btn {
+      margin-bottom: var(--space-m);
+  }
+
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card p {
+        flex-grow: 1;
+    }
+
+
+
+    /* Why/about Desktop */
+    .about-section .container {
+        display: flex;
+        align-items: stretch;
+        gap: var(--space-2xl);
+    }
+
+    .about-image {
+        height: auto;
+        flex: 0.8;
+    }
+
+    .about-content {
+        flex: 1.2;
+    }
+
+    /* Flow Section */
+    .flow-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: var(--space-m);
+        align-items: start;
+    }
+
+    .flow-media {
+        height: 100%;
+        min-height: 500px;
+    }
+
+    .flow-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-m);
+    }
+
+    .flow-box-wide {
+        grid-column: span 2;
+    }
+
+    /* Prices Desktop */
     .price-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
-     
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--space-l);
         margin-top: var(--space-l);
-
     }
 
     .price-column {
         display: flex;
         flex-direction: column;
-
     }
 
     .price-item {
@@ -538,48 +446,39 @@
         align-items: center;
     }
 
-
     /* Behandler Desktop */
+    .behandler {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: var(--space-3xl);
+        padding: var(--space-xl);
+    }
 
-  .behandler {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;   /* ✅ vigtig! */
-    gap: var(--space-2xl);
-  }
+    .boks {
+        flex: 1.2;
+    }
 
-  .boks {
-    flex: 1.2;
-  }
-
-  .boks-billede {
-    flex: 0.8;
-    height: auto;          /* ✅ nu følger den teksten */
-  }
-
+    .boks-billede {
+        flex: 0.8;
+        height: auto;
+    }
 
     /* Testimonials Desktop */
-   
-    .testimonials-grid {
-        flex-direction: row;
-        gap: var(--space-l);
+   .testimonials-grid {
+        flex-direction: row;     /* Desktop: Ved siden af hinanden */
+        align-items: stretch;    /* Alle kort bliver lige høje */
     }
 
-    .testimonial-card {
-        flex: 1;
-    }
 
-   
-
+        /* booking Desktop */
     .booking-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-2xl);
         align-items: stretch;
     }
 
     .booking-image {
         height: 100%;
     }
-
 }

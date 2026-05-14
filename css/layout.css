@@ -1,3 +1,17 @@
+
+/* GLOBAL CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-m);
+}
+
+/* SECTION SYSTEM */
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
 /* ==========================================================================
    3. TOPBAR
    ========================================================================== */
@@ -137,7 +151,7 @@
     width: auto;
     margin-left: 10px;
 }
-
+  
 /* ==========================================================================
    15. FOOTER
    ========================================================================== */
@@ -176,3 +190,105 @@
     gap: var(--space-m);
     align-items: center;
 }
+
+
+
+
+/* ==========================================================================
+   16. DESKTOP STYLES (min-width: 769px)
+   ========================================================================== */
+@media screen and (min-width: 769px) {
+
+/* DESKTOP */
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-xl);
+  }
+
+    /* Base Typography Desktop */
+    h1, h2 { font-size: 40px; }
+    h3 { font-size: 25px; }
+    h4 { font-size: 18px; }
+    p { font-size: 18px; }
+    .topbar { font-size: 18px; }
+
+  
+
+
+    /* Footer Desktop */
+   .footer-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolonner ligesom stats */
+        gap: var(--space-xl);
+    }
+
+    .footer-buttons {
+        grid-column: span 3; /* Knappen i fuld bredde nederst eller placeret efter ønske */
+        align-items: flex-start;
+    }
+/* Navbar Desktop */
+    .navbar {
+        padding: 0% 150px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: 5px;
+        background: none;
+        padding-top: 0;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .btn-nav {
+        order: 3;
+        font-size: 18px;
+        padding: 14px 20px;
+        margin-left: 0px;
+        align-self: center;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: transparent;
+        font-weight: 800;
+    }
+
+    /* Dropdown Desktop */
+    .dropdown {
+        position: relative;
+    }
+    .dropdown > .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        display: none;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+    .dropdown-menu.active {
+        display: none;
+    }
+
+}
+
+
+
+  
+
