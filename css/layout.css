@@ -1,13 +1,21 @@
 
 /* GLOBAL CONTAINER */
 
+
 .section {
   padding: var(--space-l) 0;
 }
 
+
 .container {
-  padding: 0 var(--space-m);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
+
+
+
+
 
 /* ==========================================================================
    3. TOPBAR
@@ -20,7 +28,7 @@
     gap: 20px;
     font-weight: 300;
     font-size: 12px;
-    padding: 6px;
+    padding: var(--space-xs);
 }
 
 /* ==========================================================================
@@ -45,30 +53,38 @@
     height: auto;
 }
 
-/* Hamburger Menu */
+
 .hamburger {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 1100; /* Skal være højere end menuens 1001 */
+    position: relative; /* Kræves for at z-index virker */
 }
+
+
 
 .bar {
     width: 25px;
     height: 3px;
-    margin: 5px auto;
     background-color: #01245E;
-    display: block;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
+
+
 .hamburger.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(9px) rotate(45deg); /* Byt rækkefølge eller juster pixels */
 }
+
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 /* Nav Menu */
@@ -81,12 +97,13 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
-    gap: 20px;
+    gap: var(--space-m);
+    padding-top: var(--space-3xl);
     transition: 0.3s ease;
     z-index: 1001;
-    padding: 80px var(--space-m) 20px; /* tilføj sidepadding */
+    justify-self: center;
 }
+
 
 .nav-menu.active {
     left: 0;
@@ -95,8 +112,7 @@
 .nav-link {
     color: #01245E;
     text-decoration: none;
-    padding: 15px;
- 
+    padding: var(--space-s);
     opacity: 0.9;
     transition: 0.2s;
 }
@@ -106,6 +122,8 @@
 .nav-link.active {
      opacity: 1.5;
 }
+
+
 
 
 
@@ -125,7 +143,7 @@
     display: flex;
 }
 .dropdown-item {
-    padding: 15px 40px;
+    padding: var(--space-s) var(--space-l);
     color: #01245E;
     text-decoration: none;
 }
@@ -134,25 +152,14 @@
     color: #fff;
 }
 
-.btn-nav {
-    background: #1e73d8;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 9px;
-    font-weight: 200;
-    font-size: 16px;
-    white-space: nowrap;
-    align-self: flex-start;
-    width: auto;
-    margin-left: 10px;
-}
+
 
   
 /* ==========================================================================
    15. FOOTER
    ========================================================================== */
 /* Base */
+/* FOOTER */
 .footer {
     background: #1E3856;
     color: #fff;
@@ -169,22 +176,26 @@
 .footer .col {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 /* Logo */
-.footer .col img {
-    max-width: 140px;
+.footer-logo {
+        max-width: 260px;
+   
 }
 
 /* Tekst */
 .footer h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin: 0; /* ✅ vigtigt */
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .footer p {
+    margin: 0;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* Links */
@@ -200,13 +211,11 @@
 /* Social */
 .social {
     display: flex;
-    gap: 12px;
-    margin-top: 10px;
+    gap: var(--space-m);
 }
 
 .social img {
     width: 22px;
-    height: auto;
 }
 
 
@@ -218,13 +227,17 @@
    ========================================================================== */
 
 @media (min-width: 768px) {
-  .section {
+ 
+.section {
     padding: var(--space-2xl) 0;
   }
 
+  /* behold samme padding */
+
   .container {
-    padding: 0 var(--space-2xl);
+    padding: 0;
   }
+
 
 
 
@@ -238,56 +251,60 @@
   
 
 
-
-
-
     .footer-container {
-        grid-template-columns: 0.8fr 1.5fr 1.2fr 1fr;
-        gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-2xl);
         align-items: start;
     }
 
-    /* lidt luft mellem tekst i info */
-    .footer .col:nth-child(2) {
-        padding-right: 10px;
+    .footer h3 {
+        font-size: 25px;
     }
 
+    .footer p {
+        font-size: 16px;
+    }
+
+    /* Gør logo større på desktop */
+    .footer-logo {
+        max-width: 260px;
+    }
 
 
       
 
 /* Navbar Desktop */
-    .navbar {
-
+  .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Skubber logo til venstre, knap til højre */
     align-items: center;
-    padding: 0; /* vigtigt */
+    padding: 0;
 }
 
+.nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-l);
+    align-items: center;
+    
+    /* Dette tvinger menuen til at forsøge at centrere sig i flex-containeren */
+    margin: 0 auto; 
+    
+    /* Fjern justify-self: center (det virker kun i grid) */
+    background: none;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+}
     
 
     .hamburger {
         display: none;
     }
 
-    .nav-menu {
-        position: static;
-        flex-direction: row;
-        width: auto;
-        height: auto;
-        background: none;
-        padding-top: 0;
-        gap: 30px;
-        align-items: center;
-    }
+   
 
-    .btn-nav {
-        order: 3;
-        font-size: 18px;
-        margin-left: 0px;
-        align-self: center;
-    }
 
     .nav-link:hover,
     .nav-link.active {

@@ -4,42 +4,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
-  // 1. Åbn/luk selve mobil-menuen
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+  // 1. Toggle mobil-menu
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+
     hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
   });
 
-  // 2. Håndter klik på links i menuen
+  // 2. Klik på almindelige links → luk menu
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      
-      // Hvis linket er en dropdown-toggle, så stop her 
-      // (så menuen ikke lukker, når du bare vil åbne en dropdown)
-      if (link.classList.contains('dropdown-toggle')) {
-        return; 
-      }
-      
-      // Ellers: luk menuen når et almindeligt link trykkes
-      navMenu.classList.remove('active');
+    link.addEventListener('click', () => {
+      if (link.classList.contains('dropdown-toggle')) return;
+
+      closeMenu();
     });
   });
 
-  // 3. Valgfri: Håndter klik på dropdown-toggle på mobil (hvis du vil have dem til at folde ud)
+  // 3. Dropdown (mobil)
   dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', (e) => {
-      // Forhindrer at siden hopper til toppen ved klik på #
       e.preventDefault();
-      
-      // Find den tilhørende dropdown-menu
-      const dropdownMenu = toggle.nextElementSibling;
-      
-      // Toggle 'active' klassen på selve dropdown-menuen
-      if (dropdownMenu) {
-        dropdownMenu.classList.toggle('active');
+      e.stopPropagation();
+
+      const currentMenu = toggle.nextElementSibling;
+
+      // Luk alle andre dropdowns
+      dropdownMenus.forEach(menu => {
+        if (menu !== currentMenu) {
+          menu.classList.remove('active');
+        }
+      });
+
+      // Toggle den aktuelle
+      if (currentMenu) {
+        currentMenu.classList.toggle('active');
       }
     });
   });
+
+  // 4. Klik udenfor → luk alt
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // ✅ Helper function
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+
+    // Luk alle dropdowns
+    dropdownMenus.forEach(menu => {
+      menu.classList.remove('active');
+    });
+  }
 
 });
