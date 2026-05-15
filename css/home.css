@@ -153,7 +153,7 @@
 .flow-box {
     display: flex;
     flex-direction: column;
-    background-color: #DEEEFF;
+    background-color: #EDF3F7;
     padding: var(--space-m);
     border-radius: 9px;
 }
@@ -162,16 +162,6 @@
        margin-bottom: var(--space-s);
 }
 
-
-.flow-box button {
-    border-radius: 9px;
-    border: 3px solid #1e73d8;
-    background: transparent;
-    color: #1E3856;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: left;
-}
 
 .flow-title-row {
     display: flex;
