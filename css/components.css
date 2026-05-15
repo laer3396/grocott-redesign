@@ -2,9 +2,10 @@
 .btn,
 .btn-second {
     display: inline-block;
-    padding: 12px 18px;
-    border-radius: 9px;
+    padding: var(--space-s) var(--space-l);
+    border-radius: 25px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -23,34 +24,14 @@
 
 /* SECONDARY */
 .btn-second {
-    background: transparent;
+    background:transparent;
     border: 3px solid #1e73d8;
     color: #1E3856;
     width: fit-content;
     text-align: left;
+    color: #1e73d8;
 }
 
-/* PILE (fælles) */
-.btn::after,
-.btn-second::after {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    margin-left: 10px;
-    transform: rotate(45deg);
-}
-
-/* FARVER på pil */
-.btn::after {
-    border-right: 2px solid currentColor;
-    border-top: 2px solid currentColor;
-}
-
-.btn-second::after {
-    border-right: 2px solid currentColor;
-    border-top: 2px solid currentColor;
-}
 
 
 /* små UI ting */
@@ -71,6 +52,14 @@
 .btn:hover {
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    background-color: #1E3856;
+}
+
+.btn-second:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    background-color: #1e73d8;
+    color: white;
 }
 
 
@@ -79,7 +68,7 @@
    .btn,
 .btn-second {
     font-size: 18px;
-    padding: 14px 20px;
+    padding: var(--space-s) var(--space-l);
     margin-bottom: 0;
 }
     /* Pil bliver lidt større */
