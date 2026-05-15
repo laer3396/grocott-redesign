@@ -38,6 +38,7 @@
 .stats {
     text-align: center;
     background-color: #DEEEFF;
+   
 }
 
 .stats .container {
@@ -49,16 +50,24 @@
 }
 
 .stats .container > div {
-    width: 100%;
+    width: 80%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #1E3856 /* stregen */
 }
 
 .stats .container > div:last-child {
     border-bottom: none;
 }
 
-.stats h3 {
-    margin-bottom: var(--space-xs);
+.stats p {
+    margin-top: 0;
 }
+
+.stats h3 {
+    font-weight: 700;
+}
+
+
 
 /* ==========================================================================
    7. CONTENT WRAPPER & CARD GRID (Samlet)
@@ -363,31 +372,31 @@
 
     .hero p {
         margin-top: var(--space-m);
-        width: 95%;
     }
 
     /* Stats */
-    .stats .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-    }
+   .stats .container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: var(--space-l);
+    align-items: center; /* 👈 DET HER fixer det */
+}
 
-    .stats .container > div {
-        max-width: 320px;
-        margin: 0 auto;
-    }
+  .stats .container > div {
+    width: auto;
+    padding: 0 1rem;
+    border-bottom: none;                /* fjern vandret streg */
+    border-right: 1px solid #1E3856;    /* lodret streg */
+  }
 
-    .stats .container > div:last-child {
-        border-right: none;
-    }
-
-    /* Card Desktop */
-    .content-wrapper {
-        max-width: 800px;
-    }
+  .stats .container > div:last-child {
+    border-right: none;                 /* ingen streg på sidste */
+  }
 
 
+
+    /* card */
  .content-wrapper .btn {
       margin-bottom: var(--space-m);
   }
@@ -464,7 +473,7 @@
         display: flex;
         flex-direction: row;
         align-items: stretch;
-        gap: var(--space-3xl);
+        gap: var(--space-2xl);
         padding: var(--space-xl);
     }
 
@@ -489,6 +498,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: stretch;
+        gap: var(--space-2xl);
     }
 
     .booking-image {

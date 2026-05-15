@@ -28,10 +28,10 @@ body {
     font-size: 16px;
 }
 
-/* Headings = Sen */
+
 h1 {
     font-family: "Sen", sans-serif;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: var(--space-s);
@@ -48,14 +48,14 @@ h2 {
 
 h3 {
     font-family: "Sen", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 /* mindre headings */
 h4 {
     font-family: "Sen", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -73,3 +73,34 @@ p {
 
   
 
+@media screen and (min-width: 1024px) {
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+/* mindre headings */
+h4 {
+    font-size: 18px;
+}
+
+/* body tekst */
+p {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+}
