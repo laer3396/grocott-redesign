@@ -1,69 +1,100 @@
 /* ==========================================================================
-   5. HERO SECTION
+   5. TOPBANNER SECTION
    ========================================================================== */
-.hero {
-    display: flex;
-    flex-direction: column;
-    background-color: #EDF3F7;
-    gap: var(--space-l);
+
+/* Banner Base */
+.topbanner-section {
+  position: relative;
+  padding: var(--space-xl) 0; /* ✅ matcher resten af sitet */
+  color: #fff;
+  overflow: hidden;
 }
 
-.hero-image-box {
-    width: 100%;
-    height: 300px;
-    border-radius: 9px;
-    background: url("../img_lager/DSC_5459.webp") center 20%/cover no-repeat;
+/* Background */
+.banner-background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
 }
 
-.hero-text {
-    position: relative;
-    z-index: 2;
-    color: #1E3856;
+.banner-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.5;
 }
 
-.hero p {
-    margin-top: var(--space-xs);
-    width: 90%;
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
-.hero h2 {
-    font-size: 24px;
-    font-weight: 400;
+/* Container (bruges SAMMEN med .container i HTML) */
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-l);
+}
+
+/* Content */
+.banner-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Text */
+.banner-description {
+  margin-top: var(--space-s);
+  opacity: 0.9;
+}
+
+/* Buttons */
+.banner-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+  flex-wrap: wrap;
+  margin-top: var(--space-m);
+}
+
+/* Services grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-m);
+  width: 100%;
+  margin-top: var(--space-l); /* ✅ FIX (ikke auto) */
+}
+
+/* Cards */
+.service-card {
+  color: #1E3856;
+  text-decoration: none;
+  background: #DEEEFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: var(--space-m);
+  border-radius: 9px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05),
+              0 2px 4px -1px rgba(0,0,0,0.03);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 
-/* ==========================================================================
-   6. STATS SECTION
-   ========================================================================== */
-.stats {
-    text-align: center;
-    background-color: #DEEEFF;
-}
-
-.stats .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-m);
-}
-
-.stats .container > div {
-    width: 80%;
-    padding: 1rem 0;
-    border-bottom: 1px solid #1E3856; /* stregen */
-}
-
-.stats .container > div:last-child {
-    border-bottom: none;
-}
-
-.stats p {
-    margin-top: 0;
-}
-
-.stats h3 {
-    font-weight: 700;
+.card-arrow {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: var(--space-m);
 }
 
 
@@ -96,7 +127,7 @@
 
 .card img {
     width: 100%;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
     margin-bottom: var(--space-m);
@@ -115,7 +146,6 @@
     margin-bottom: 0;
 }
 
-
 /* ==========================================================================
    9. WHY SECTION
    ========================================================================== */
@@ -131,7 +161,6 @@
     background-size: cover;
     background-position: center;
 }
-
 
 /* ==========================================================================
    10. FLOW SECTION (Praktisk Info)
@@ -154,9 +183,8 @@
 .flow-cards {
     display: grid;
     gap: var(--space-m);
-        margin-top: var(--space-s);
+    margin-top: var(--space-s);
 }
-
 
 .flow-box {
     display: flex;
@@ -165,9 +193,6 @@
     padding: var(--space-m);
     border-radius: 9px;
 }
-
-
-
 
 .flow-title-row {
     display: flex;
@@ -185,13 +210,17 @@
     margin-top: var(--space-s);
 }
 
-
 /* ==========================================================================
    11. PRICES SECTION
    ========================================================================== */
 .prices {
     background: #EDF3F7;
 }
+
+.section.prices .btn {
+    margin-bottom: 0;
+}
+
 
 .price-grid {
     margin-top: var(--space-m);
@@ -205,6 +234,7 @@
     flex-direction: column;
     margin-top: var(--space-m);
     gap: var(--space-s);
+    position: relative;
 }
 
 .price-item {
@@ -229,7 +259,6 @@
     margin: 0;
 }
 
-
 /* ==========================================================================
    12. BEHANDLER SECTION (Om Grocott)
    ========================================================================== */
@@ -248,12 +277,11 @@
 .boks-billede {
     width: 100%;
     height: 300px;
-    background-image: url("../img_lager/DSC_5429.webp");
+    background-image: url("../img_lager/DSC_5459.webp");
     background-size: cover;
-    background-position: center 20%;
+    background-position: center 10%;
     border-radius: 9px;
 }
-
 
 /* ==========================================================================
    13. TESTIMONIALS
@@ -303,7 +331,6 @@
     flex-direction: column; /* Stak navn og titel vertikalt */
 }
 
-
 /* ==========================================================================
    14. BOOKING SECTION
    ========================================================================== */
@@ -332,53 +359,41 @@
     height: 30px;
 }
 
-
 /* ==========================================================================
    16. DESKTOP STYLES (min-width: 1024px)
    ========================================================================== */
 @media screen and (min-width: 1024px) {
     /* Hero Desktop */
-    .hero .container {
-        display: flex;
-        align-items: stretch;
-        gap: var(--space-2xl);
-    }
 
-    .hero-image-box {
-        height: auto;
-        flex: 0.8;
-    }
+/* ==========================================================================
+   DESKTOP (1024px+)
+   ========================================================================== */
 
-    .hero-text {
-        flex: 1.2;
-    }
+  .topbanner-section {
+    padding: calc(var(--space-xl) * 1.5) 0;
+  }
 
-    .hero p {
-        margin-top: var(--space-m);
-    }
+  /* større headline */
+  .banner-content h1 {
+    font-size: 55px;
+  }
 
-    /* Stats */
-    .stats .container {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        justify-content: center;
-        gap: var(--space-l);
-        align-items: center; /* 👈 DET HER fixer det */
-    }
+  /* grid bliver 3 kolonner */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    .stats .container > div {
-        width: auto;
-        border-bottom: none;             /* fjern vandret streg */
-        border-right: 1px solid #1E3856; /* lodret streg */
-    }
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 160px;
+  }
 
-    .stats .container > div:last-child {
-        border-right: none;              /* ingen streg på sidste */
-    }
-
-.stats {
-    padding: var(--space-l) 0; /* mindre end section */
-}
+  .card-arrow {
+    align-self: flex-end;
+    margin-top: var(--space-s);
+  }
 
 
     /* card */
@@ -437,21 +452,39 @@
     }
 
     /* Prices Desktop */
+    .prices {
+        text-align: center;
+    }
+
     .price-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-l);
-        margin-top: var(--space-l);
+        gap: 0;
+        margin: var(--space-m) auto;
     }
 
     .price-column {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .price-column:nth-child(1) {
+        border-right: 1px solid #1e40af;
+    }
+
+    .price-column:nth-child(2) {
+        border-right: 1px solid #1e40af;
     }
 
     .price-item {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     /* Behandler Desktop */

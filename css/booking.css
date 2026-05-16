@@ -99,11 +99,18 @@
     margin-bottom: var(--space-m);
 }
 
-/* ===== priser ===== */
-
+/* ==========================================================================
+   11. PRICES SECTION
+   ========================================================================== */
 .prices {
     background: #EDF3F7;
 }
+
+
+.section.prices .btn {
+    margin-bottom: 0;
+}
+
 
 .price-grid {
     margin-top: var(--space-m);
@@ -117,6 +124,7 @@
     flex-direction: column;
     margin-top: var(--space-m);
     gap: var(--space-s);
+    position: relative;
 }
 
 .price-item {
@@ -180,21 +188,39 @@
         grid-template-columns: 1fr 1fr;
         gap: var(--space-m); /* samme som mobil */
     }
- /* Prices Desktop */
+/* Prices Desktop */
+    .prices {
+        text-align: center;
+    }
+
     .price-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-l);
-        margin-top: var(--space-l);
+        gap: 0;
+        margin: var(--space-m) auto;
     }
 
     .price-column {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .price-column:nth-child(1) {
+        border-right: 1px solid #1e40af;
+    }
+
+    .price-column:nth-child(2) {
+        border-right: 1px solid #1e40af;
     }
 
     .price-item {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
     }
 }
