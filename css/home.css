@@ -10,36 +10,42 @@
   overflow: hidden;
 }
 
-/* Background */
-.banner-background {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-}
+
 
 .banner-background img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  opacity: 0.5;
+}
+
+.banner-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0; /* ✅ IKKE negativ */
 }
 
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
+  z-index: 1;
+
+  background-color: #000; /* sort */
+  opacity: 0.6;           /* styrke */
 }
+
+
 
 /* Container (bruges SAMMEN med .container i HTML) */
 .banner-container {
+  position: relative; /* ✅ MEGET vigtig */
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-l);
 }
-
 /* Content */
 .banner-content {
   text-align: center;
