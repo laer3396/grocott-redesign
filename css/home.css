@@ -248,15 +248,11 @@ margin-bottom: 0;
 .boks h4 {
     display: flex;
     align-items: center;
-    gap: var(--space-s);
-    line-height: 1.8;
+    
+
 }
 
-.behandler .dot-icon {
-    width: 8px;
-    height: 8px;
-    background: #1e73d8; /* farve */
-}
+
 
 
 .boks-billede {
@@ -335,9 +331,6 @@ margin-bottom: 0;
     gap: var(--space-l);
 }
 
-.booking-info {
-    line-height: 3;
-}
 
 .booking-image {
     width: 100%;
@@ -406,9 +399,11 @@ margin-bottom: 0;
   }
 
 
-    .card-grid {
+ .card-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-m); /* meget vigtigt: gentag gap */
     }
+
 
     .card p {
         flex-grow: 1;
@@ -449,7 +444,6 @@ margin-bottom: 0;
 
     .flow-cards {
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-m);
     }
 
     .flow-box-wide {

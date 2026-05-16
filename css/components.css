@@ -40,13 +40,16 @@
     height: 16px;
     background: #1E3856;
     border-radius: 50%;
+    display: inline-block;
 }
 
+
 .dot-iconxs {
-    width: 10x;
+    width: 10px;
     height: 10px;
     background: #1E3856;
     border-radius: 50%;
+    margin-right: var(--space-s);
 }
 
 .btn:hover {
