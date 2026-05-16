@@ -49,7 +49,7 @@
     height: 10px;
     background: #1E3856;
     border-radius: 50%;
-    margin-right: var(--space-s);
+    margin-right: var(--space-xs);
 }
 
 .btn:hover {

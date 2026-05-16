@@ -38,7 +38,6 @@
 .stats {
     text-align: center;
     background-color: #DEEEFF;
-   
 }
 
 .stats .container {
@@ -52,7 +51,7 @@
 .stats .container > div {
     width: 80%;
     padding: 1rem 0;
-    border-bottom: 1px solid #1E3856 /* stregen */
+    border-bottom: 1px solid #1E3856; /* stregen */
 }
 
 .stats .container > div:last-child {
@@ -68,13 +67,9 @@
 }
 
 
-
 /* ==========================================================================
    7. CONTENT WRAPPER & CARD GRID (Samlet)
    ========================================================================== */
-/* ==========================================================================
-CONTENT WRAPPER & CARD GRID (Opdateret med tyndt farvelag på billeder)
-========================================================================== */
 .content-wrapper {
     text-align: left;
     gap: var(--space-l);
@@ -88,26 +83,24 @@ CONTENT WRAPPER & CARD GRID (Opdateret med tyndt farvelag på billeder)
 }
 
 .card {
-    background: #EDF3F7; 
-    border: 1px solid rgba(0, 0, 0, 0.05); 
+    background: #DEEEFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     padding: var(--space-m);
     border-radius: 9px;
     display: flex;
     flex-direction: column;
-    position: relative; 
+    position: relative;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 .card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 8px 8px 0 0; 
+    border-radius: 8px 8px 0 0;
     margin-bottom: var(--space-m);
 }
-
 
 .card p {
     margin-bottom: var(--space-s);
@@ -118,19 +111,17 @@ CONTENT WRAPPER & CARD GRID (Opdateret med tyndt farvelag på billeder)
 }
 
 .card button {
-margin-top: 0;
-margin-bottom: 0;
-
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+
 /* ==========================================================================
    9. WHY SECTION
    ========================================================================== */
 .about-section {
-    background-color: #DEEEFF;
-
-    
+    background-color: #EDF3F7;
 }
-
 
 .about-image {
     width: 100%;
@@ -141,10 +132,10 @@ margin-bottom: 0;
     background-position: center;
 }
 
+
 /* ==========================================================================
    10. FLOW SECTION (Praktisk Info)
    ========================================================================== */
-
 .flow-wrapper {
     display: flex;
     flex-direction: column;
@@ -160,23 +151,22 @@ margin-bottom: 0;
     border-radius: 9px;
 }
 
-
 .flow-cards {
     display: grid;
     gap: var(--space-m);
+        margin-top: var(--space-s);
 }
+
 
 .flow-box {
     display: flex;
     flex-direction: column;
-    background-color: #EDF3F7;
+    background: #DEEEFF;
     padding: var(--space-m);
     border-radius: 9px;
 }
 
-.flow-text h3{
-       margin-bottom: var(--space-s);
-}
+
 
 
 .flow-title-row {
@@ -189,6 +179,11 @@ margin-bottom: 0;
     background: #4fd1c5;
 }
 
+.flow-box h4 {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space-s);
+}
 
 
 /* ==========================================================================
@@ -239,7 +234,6 @@ margin-bottom: 0;
    12. BEHANDLER SECTION (Om Grocott)
    ========================================================================== */
 .behandler {
-    background-color: #DEEEFF;
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
@@ -248,12 +242,8 @@ margin-bottom: 0;
 .boks h4 {
     display: flex;
     align-items: center;
-    
-
+    margin-bottom: var(--space-s); /* afstand mellem hver h4 ✅ */
 }
-
-
-
 
 .boks-billede {
     width: 100%;
@@ -264,16 +254,12 @@ margin-bottom: 0;
     border-radius: 9px;
 }
 
+
 /* ==========================================================================
    13. TESTIMONIALS
    ========================================================================== */
-/* ==========================================================================
-   13. TESTIMONIALS (Opdateret struktur)
-   ========================================================================== */
-
 .testimonials {
-    /* Bagrundsfarven placeres her, hvis hele sektionen skal have den */
-    background-color: #fff; 
+    background-color: #fff;
     text-align: center;
 }
 
@@ -322,7 +308,7 @@ margin-bottom: 0;
    14. BOOKING SECTION
    ========================================================================== */
 .booking {
-    background-color: #DEEEFF;
+    background-color: #EDF3F7;
 }
 
 .booking-wrapper {
@@ -330,7 +316,6 @@ margin-bottom: 0;
     flex-direction: column;
     gap: var(--space-l);
 }
-
 
 .booking-image {
     width: 100%;
@@ -346,6 +331,7 @@ margin-bottom: 0;
     width: 30px;
     height: 30px;
 }
+
 
 /* ==========================================================================
    16. DESKTOP STYLES (min-width: 1024px)
@@ -372,46 +358,46 @@ margin-bottom: 0;
     }
 
     /* Stats */
-   .stats .container {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
-    gap: var(--space-l);
-    align-items: center; /* 👈 DET HER fixer det */
+    .stats .container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        gap: var(--space-l);
+        align-items: center; /* 👈 DET HER fixer det */
+    }
+
+    .stats .container > div {
+        width: auto;
+        border-bottom: none;             /* fjern vandret streg */
+        border-right: 1px solid #1E3856; /* lodret streg */
+    }
+
+    .stats .container > div:last-child {
+        border-right: none;              /* ingen streg på sidste */
+    }
+
+.stats {
+    padding: var(--space-l) 0; /* mindre end section */
 }
-
-  .stats .container > div {
-    width: auto;
-    padding: 0 1rem;
-    border-bottom: none;                /* fjern vandret streg */
-    border-right: 1px solid #1E3856;    /* lodret streg */
-  }
-
-  .stats .container > div:last-child {
-    border-right: none;                 /* ingen streg på sidste */
-  }
-
 
 
     /* card */
- .content-wrapper .btn {
-      margin-bottom: var(--space-m);
-  }
+    .content-wrapper .btn {
+        margin-bottom: var(--space-m);
+    }
 
-
- .card-grid {
+    .card-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-m); /* meget vigtigt: gentag gap */
     }
-
 
     .card p {
         flex-grow: 1;
     }
 
-.card img {
-    height: 250px;
-}
+    .card img {
+        height: 250px;
+    }
 
     /* Why/about Desktop */
     .about-section .container {
@@ -470,7 +456,7 @@ margin-bottom: 0;
 
     /* Behandler Desktop */
     .behandler .container {
-       display: flex;
+        display: flex;
         align-items: stretch;
         gap: var(--space-2xl);
     }
@@ -484,20 +470,15 @@ margin-bottom: 0;
         height: auto;
     }
 
-
-
-
     /* Testimonials Desktop */
-   .testimonials-grid {
-        flex-direction: row;     /* Desktop: Ved siden af hinanden */
-        align-items: stretch;    /* Alle kort bliver lige høje */
+    .testimonials-grid {
+        flex-direction: row;  /* Desktop: Ved siden af hinanden */
+        align-items: stretch; /* Alle kort bliver lige høje */
     }
 
-
-        /* booking Desktop */
-
+    /* booking Desktop */
     .booking-wrapper {
-        flex-direction: row; /* 🔥 DET MANGLER */
+        flex-direction: row;  /* 🔥 DET MANGLER */
         align-items: stretch;
         gap: var(--space-2xl);
     }
@@ -510,5 +491,4 @@ margin-bottom: 0;
         flex: 0.8;
         height: auto;
     }
-
 }

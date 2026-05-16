@@ -10,7 +10,7 @@
     width: 100%;
     height: 300px;
     border-radius: 9px;
-    background: url("../img_lager/DSC_5459.webp") center 20%/cover no-repeat;
+    background: url("../img_lager/DSC_5410.webp") center 20%/cover no-repeat;
 }
 
 .hero-text-booking {
@@ -48,27 +48,37 @@
 
 
 /* ===== CARD ===== */
+
+.card-info{
+    background: white;
+    border-radius: 9px;
+    border: 3px solid #1E3856;
+    text-align: left;
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+}
+.card-info2{
+    background: #DEEEFF; 
+}
+
 .card-info,
 .card-info2 {
-    background: #EDF3F7; 
-    border: 1px solid rgba(0, 0, 0, 0.05); 
     padding: var(--space-m);
     border-radius: 9px;
     display: flex;
     flex-direction: column;
 }
 
-.card-info2 h3 {
+.card-info2 h3, .card-info h3{
    margin-bottom: var(--space-s);
 }
 
 .info-content h4,
-.card-info h4,
 .card-info2 h4 {
     margin-bottom: var(--space-s);
+    margin-top: var(--space-s);
 }
-
-/* ===== GRID (mobil) ===== */
 
 .card-grid {
     display: grid;
@@ -80,7 +90,54 @@
 .card-info2 p {
     display: flex;
     align-items: center;
-    gap: var(--space-s); /* 🔥 den mangler */
+    gap: var(--space-s); 
+    margin: 0;
+}
+
+.card-info p{
+    margin: 0;
+    margin-bottom: var(--space-m);
+}
+
+/* ===== priser ===== */
+
+.prices {
+    background: #EDF3F7;
+}
+
+.price-grid {
+    margin-top: var(--space-m);
+    gap: var(--space-l);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.price-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-m);
+    gap: var(--space-s);
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.dot-icon {
+    width: 16px;
+    height: 16px;
+    background: #1E3856;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.price-item.emergency .dot-icon {
+    background: #4fd1c5;
+}
+
+.price-item p {
     margin: 0;
 }
 
@@ -88,20 +145,19 @@
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
 
-    /* HERO */
-    .hero-booking .container {
+   .hero-booking .container {
         display: flex;
         align-items: stretch;
         gap: var(--space-2xl);
+        width: 100%;
+    }
+    .hero-text-booking {
+        flex: 1.2; /* 👈 DET HER skubber teksten ud, så den fylder 1.2 dele af pladsen */
     }
 
     .hero-image-booking {
-        height: auto;
-        flex: 0.8;
-    }
-
-    .hero-text-booking {
-        flex: 1.2;
+        height: 400px; /* 👈 Virker nu, fordi flex tvinger den bred */
+        flex: 0.8;    /* 👈 DET HER tvinger billedet til at fylde 0.8 dele af pladsen */
     }
 
     .hero-booking p {
@@ -124,5 +180,21 @@
         grid-template-columns: 1fr 1fr;
         gap: var(--space-m); /* samme som mobil */
     }
+ /* Prices Desktop */
+    .price-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-l);
+        margin-top: var(--space-l);
+    }
 
+    .price-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-item {
+        display: flex;
+        align-items: center;
+    }
 }
