@@ -375,11 +375,13 @@
    DESKTOP (1024px+)
    ========================================================================== */
 
+  /* større headline */
+
+
   .topbanner-section {
-    padding: calc(var(--space-xl) * 1.5) 0;
+    padding: var(--space-3xl) 0; 
   }
 
-  /* større headline */
   .banner-content h1 {
     font-size: 55px;
   }
@@ -389,12 +391,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .service-card {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    min-height: 160px;
-  }
+  .services-grid {
+  grid-template-columns: repeat(3, minmax(0, 320px)); /* max bredde */
+  justify-content: center; /* centrer grid */
+  gap: var(--space-m);
+}
 
   .card-arrow {
     align-self: flex-end;
