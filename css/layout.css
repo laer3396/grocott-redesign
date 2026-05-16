@@ -234,7 +234,7 @@
 @media (min-width: 768px) {
  
 .section {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-3xl) 0;
   }
 
   /* behold samme padding */

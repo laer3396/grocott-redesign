@@ -1,0 +1,52 @@
+.hero-booking {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDF3F7;
+    gap: var(--space-l);
+}
+
+.hero-image-booking{
+    width: 100%;
+    height: 300px;
+    border-radius: 9px;
+    background: url("../img_lager/DSC_5459.webp") center 20%/cover no-repeat;
+}
+
+.hero-text-booking {
+    position: relative;
+    z-index: 2;
+    color: #1E3856;
+}
+
+.hero-booking p {
+    margin-top: var(--space-xs);
+    width: 90%;
+}
+
+.hero-booking h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+@media screen and (min-width: 1024px) {
+   .hero-booking .container {
+        display: flex;
+        align-items: stretch;
+        gap: var(--space-2xl);
+    }
+
+    .hero-image-booking {
+        height: auto;
+        flex: 0.8;
+    }
+
+    .hero-text-booking {
+        flex: 1.2;
+    }
+
+    .hero-booking p {
+        margin-top: var(--space-m);
+    }
+
+}
