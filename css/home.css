@@ -72,43 +72,56 @@
 /* ==========================================================================
    7. CONTENT WRAPPER & CARD GRID (Samlet)
    ========================================================================== */
+/* ==========================================================================
+CONTENT WRAPPER & CARD GRID (Opdateret med tyndt farvelag på billeder)
+========================================================================== */
 .content-wrapper {
     text-align: left;
     gap: var(--space-l);
 }
 
+/* Gør dit grid responsivt, så det automatisk laver flere kolonner på større skærme */
 .card-grid {
     display: grid;
     gap: var(--space-m);
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 9px;
-    margin-bottom: var(--space-s);
-}
-
 
 .card {
-    background: #EDF3F7;
+    background: #EDF3F7; 
+    border: 1px solid rgba(0, 0, 0, 0.05); 
     padding: var(--space-m);
     border-radius: 9px;
     display: flex;
     flex-direction: column;
+    position: relative; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card p{
-   margin-bottom: var(--space-s);
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; 
+    margin-bottom: var(--space-m);
+}
+
+
+.card p {
+    margin-bottom: var(--space-s);
+}
+
+.card h4 {
+    font-size: 25px;
 }
 
 .card button {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+margin-top: 0;
+margin-bottom: 0;
 
+}
 /* ==========================================================================
    9. WHY SECTION
    ========================================================================== */
@@ -404,7 +417,7 @@
     }
 
 .card img {
-    height: 300px;
+    height: 250px;
 }
 
     /* Why/about Desktop */

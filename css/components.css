@@ -2,7 +2,7 @@
 .btn,
 .btn-second {
     display: inline-block;
-    padding: var(--space-s) var(--space-m);
+     padding: var(--space-s) var(--space-m);
     border-radius: 25px;
     font-size: 16px;
     font-weight: 500;
@@ -68,14 +68,8 @@
    .btn,
 .btn-second {
     font-size: 18px;
-    padding: var(--space-s) var(--space-l);
+     padding: var(--space-s) var(--space-l);
     margin-bottom: 0;
-}
-    /* Pil bliver lidt større */
-    .btn::after,
-.btn-second::after {
-    width: 8px;
-    height: 8px;
 }
 
 }
