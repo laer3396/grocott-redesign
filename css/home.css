@@ -120,24 +120,20 @@
 }
 
 .card {
-    background: #DEEEFF;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     padding: var(--space-m);
-    border-radius: 9px;
+    border-radius: 12px;
+
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: var(--space-m);
-}
 
 .card p {
     margin-bottom: var(--space-s);
@@ -150,7 +146,22 @@
 .card button {
     margin-top: 0;
     margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;   /* centrerer horisontalt */
+    align-items: center;       /* centrerer vertikalt */
+    gap: 8px;                  /* afstand mellem tekst og pil */
 }
+
+.card button::after {
+    content: "→";
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+
 
 /* ==========================================================================
    9. WHY SECTION
@@ -195,7 +206,7 @@
 .flow-box {
     display: flex;
     flex-direction: column;
-    background: #DEEEFF;
+     background-color: #EDF3F7;
     padding: var(--space-m);
     border-radius: 9px;
 }
@@ -310,13 +321,18 @@
 }
 
 .testimonial-card {
-    background: #fff;
-    border-radius: 9px;
-    border: 3px solid #1E3856;
-    text-align: left;
+    background: #ffffff;
+    border-radius: 12px;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
     padding: var(--space-m);
+
     display: flex;
     flex-direction: column;
+    text-align: left;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .quote {

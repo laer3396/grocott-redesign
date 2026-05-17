@@ -3,7 +3,7 @@
 .btn-second {
     display: inline-block;
      padding: var(--space-s) var(--space-m);
-    border-radius: 25px;
+    border-radius: 9px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -23,13 +23,15 @@
 }
 
 /* SECONDARY */
+/* SECONDARY */
 .btn-second {
-    background:transparent;
-    border: 2px solid #1e73d8;
-    color: #1E3856;
+    background: #DEEEFF;
+    color: #1e73d8; /* Ryddet op i den dobbelte farve-definition */
     width: fit-content;
     text-align: left;
-    color: #1e73d8;
+    
+    border: none;    /* <--- DETTE FJERNER STANDARD-SKYGGEN/KANTEN */
+    outline: none;   /* Sikrer at der ikke sidder en ekstra rammestribe */
 }
 
 
