@@ -49,17 +49,24 @@
 
 /* ===== CARD ===== */
 
-.card-info{
-    background: white;
+.card-info {
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 9px;
-    border: 3px solid #1E3856;
-    text-align: left;
     padding: var(--space-m);
+
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+
+
 .card-info2{
-    background: #DEEEFF; 
+    background: #EDF3F7; 
 }
 
 .card-info,

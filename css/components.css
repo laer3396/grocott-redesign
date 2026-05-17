@@ -29,7 +29,6 @@
     color: #1e73d8; /* Ryddet op i den dobbelte farve-definition */
     width: fit-content;
     text-align: left;
-    
     border: none;    /* <--- DETTE FJERNER STANDARD-SKYGGEN/KANTEN */
     outline: none;   /* Sikrer at der ikke sidder en ekstra rammestribe */
 }
