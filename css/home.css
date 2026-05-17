@@ -74,7 +74,7 @@
   grid-template-columns: 1fr;
   gap: var(--space-m);
   width: 100%;
-  margin-top: var(--space-m); /* ✅ FIX (ikke auto) */
+ 
 }
 
 /* Cards */
@@ -104,6 +104,13 @@
     text-align: left;
     gap: var(--space-l);
 }
+
+.btn-group {
+    display: flex;
+    gap: var(--space-s);
+    flex-wrap: wrap; /* vigtigt på mobil */
+}
+
 
 /* Gør dit grid responsivt, så det automatisk laver flere kolonner på større skærme */
 .card-grid {
@@ -428,7 +435,7 @@ margin-top: var(--space-s);
 
 
     /* card */
-    .content-wrapper .btn {
+    .content-wrapper .btn-group {
         margin-bottom: var(--space-m);
     }
 
