@@ -77,15 +77,6 @@
     flex-direction: column;
 }
 
-.card-info2 h3, .card-info h3{
-   margin-bottom: var(--space-s);
-}
-
-.info-content h4,
-.card-info2 h4 {
-    margin-bottom: var(--space-s);
-    margin-top: var(--space-s);
-}
 
 .card-grid {
     display: grid;
@@ -95,16 +86,19 @@
 
 
 .card-info2 p {
-    display: flex;
+   display: flex;
     align-items: center;
-    gap: var(--space-s); 
-    margin: 0;
+}
+
+
+.card-info h4{
+    margin-top: var(--space-s);
 }
 
 .card-info p{
-    margin: 0;
-    margin-bottom: var(--space-m);
+    margin-top:0;
 }
+
 
 /* ==========================================================================
    11. PRICES SECTION

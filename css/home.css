@@ -206,7 +206,7 @@
 .flow-box {
     display: flex;
     flex-direction: column;
-     background-color: #EDF3F7;
+    background-color: #EDF3F7;
     padding: var(--space-m);
     border-radius: 9px;
 }
@@ -221,10 +221,9 @@
     background: #4fd1c5;
 }
 
-.flow-box h4 {
+.flow-box p {
     display: flex;
     align-items: center;
-    margin-top: var(--space-s);
 }
 
 .flow-section .btn-second {
@@ -297,7 +296,7 @@
     gap: var(--space-l);
 }
 
-.boks h4 {
+.boks p {
     display: flex;
     align-items: center;
     margin-bottom: var(--space-s); /* afstand mellem hver h4 ✅ */
