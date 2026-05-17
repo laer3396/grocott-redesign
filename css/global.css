@@ -30,32 +30,32 @@ body {
 
 
 h1 {
-    font-family: "Sen", sans-serif;
+    font-family: "Open Sans";
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 300;
     line-height: 1.2;
     margin-bottom: var(--space-s);
 }
 
 h2 {
-    font-family: "Sen", sans-serif;
+    font-family: "Open Sans";
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 300;
     line-height: 1.2;
     margin-bottom: var(--space-s);
 }
 
 h3 {
-    font-family: "Sen", sans-serif;
+    font-family: "Open Sans";
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 /* mindre headings */
 h4 {
-    font-family: "Sen", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* body tekst */
