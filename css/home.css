@@ -74,7 +74,7 @@
   grid-template-columns: 1fr;
   gap: var(--space-m);
   width: 100%;
-  margin-top: var(--space-l); /* ✅ FIX (ikke auto) */
+  margin-top: var(--space-m); /* ✅ FIX (ikke auto) */
 }
 
 /* Cards */
@@ -85,17 +85,15 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   padding: var(--space-m);
   border-radius: 9px;
-
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05),
               0 2px 4px -1px rgba(0,0,0,0.03);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 
 
@@ -387,9 +385,8 @@
     border-radius: 9px;
 }
 
-.social img {
-    width: 30px;
-    height: 30px;
+.booking-info h4{
+margin-top: var(--space-s);
 }
 
 /* ==========================================================================
