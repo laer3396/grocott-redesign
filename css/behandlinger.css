@@ -1,0 +1,145 @@
+/* ===== HERO ===== */
+.hero-booking {
+    display: flex;
+    flex-direction: column;
+    background-color: #EDF3F7;
+    gap: var(--space-l);
+}
+
+.hero-image-behandling {
+    width: 100%;
+    height: 300px;
+    border-radius: 9px;
+    background: url("../img_lager/krop2.png") center /cover no-repeat;
+}
+
+.hero-text-behandling {
+    position: relative;
+    z-index: 2;
+    color: #1E3856;
+}
+
+.hero-behandling p {
+    margin-top: var(--space-xs);
+}
+
+.hero-behandling h2 {
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+/* ==========================================================================
+   TIMELINE – FIXET VERSION
+   ========================================================================== */
+
+.timeline-section {
+  background: #EDF3F7;
+}
+
+.timeline-title {
+  margin-bottom: var(--space-2xl);
+}
+
+/* Wrapper */
+.timeline {
+  position: relative;
+ 
+}
+
+/* Lodret linje (Mobil) */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px; /* Halvdelen af cirklens bredde (40px) */
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #cfe0f7, #4c7bd9);
+  z-index: 1;
+}
+
+/* Item - Bruger flex til at centrere tallet lodret ud for kortet */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center; /* Dette centrerer nummeret perfekt lodret i forhold til kortet */
+  margin-bottom: var(--space-m);
+}
+
+/* Nummer cirkel (Mobil) */
+.timeline-number {
+  position: absolute;
+  left: 0;
+  
+  width: 40px;
+  height: 40px;
+
+  background: #1E3856;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 2; 
+}
+
+/* Card */
+.timeline-card {
+  flex: 1;
+  margin-left: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: var(--space-m);
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+
+/* ===== DESKTOP RESPONSIVENESS ===== */
+@media (min-width: 1024px) {
+
+   .hero-behandling .container {
+        display: flex;
+        align-items: stretch;
+        gap: var(--space-2xl);
+        width: 100%;
+    }
+    .hero-text-behandling {
+        flex: 1.2;
+    }
+
+    .hero-image-behandling{
+        height: 400px;
+        flex: 0.8;
+    }
+
+    .hero-behandling p {
+        margin-top: var(--space-m);
+    }
+
+  /* Timeline Desktop Justeringer */
+/* Hvis du vil have cirklerne en smule større på desktop */
+  .timeline::before {
+    left: 25px; /* Halvdelen af 50px */
+  }
+
+  .timeline-number {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .timeline-card {
+    margin-left: 85px; /* Øget margin så det passer med den større 50px cirkel */
+    padding: 30px var(--space-xl);
+  }
+}
