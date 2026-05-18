@@ -1,0 +1,132 @@
+/* ==========================================================================
+   EVALUERING FORM SPECIFIK STYLING
+   ========================================================================== */
+
+/* Vi bruger ikke .container direkte til at sætte bredden her, da den er global. 
+   I stedetstyler vi selve formularen, så den bliver centreret og læsevenlig. */
+#feedbackForm {
+    max-width: 600px;
+    margin: 40px auto; /* Centrerer formen og giver luft i top/bund */
+    background: #ffffff;
+    padding: var(--space-m, 24px); /* Arver jeres space-variabel, med fallback */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Lidt blødere skygge */
+}
+
+/* Form overskrift (hvis h1 ligger inde i sektionen) */
+.evaluering h1 {
+    text-align: center;
+    color: #1E3856; /* Matcher jeres primære mørkeblå */
+    margin-bottom: var(--space-xs, 10px);
+}
+
+.evaluering p {
+    text-align: center;
+    color: #01245E;
+    margin-bottom: var(--space-l, 30px);
+}
+
+/* Input felter, textareas og select-menuer */
+#feedbackForm input[type="text"],
+#feedbackForm input[type="range"],
+#feedbackForm select,
+#feedbackForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px; /* Skaber luft til næste felt */
+    border-radius: 6px;
+    border: 1px solid #DEEEFF; /* Bruger den lyseblå fra topbaren som ramme */
+    background-color: #fcfdfe;
+    box-sizing: border-box; /* Sikrer at padding ikke sprænger bredden */
+    font-family: "Open Sans", sans-serif; /* Brødtekst font */
+    color: #01245E;
+    transition: border-color 0.2s ease;
+}
+
+/* Fokus stat på felterne */
+#feedbackForm input:focus,
+#feedbackForm select:focus,
+#feedbackForm textarea:focus {
+    outline: none;
+    border-color: #1E3856; /* Skifter til den mørkere blå ved klik */
+}
+
+/* Særlig højde til tekstbokse */
+#feedbackForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Send knap */
+#feedbackForm button[type="submit"] {
+    margin-top: 10px;
+    padding: 14px;
+    width: 100%;
+    background-color: #01245E; /* Matcher jeres mørkeblå menu-farve */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#feedbackForm button[type="submit"]:hover {
+    background-color: #1E3856; /* Går en nuance lysere ved hover */
+}
+
+#feedbackForm button[type="submit"]:active {
+    transform: scale(0.98); /* Lille klik-effekt */
+}
+
+/* ==========================================================================
+   RADIO BUTTONS (Samtykke-sektion)
+   ========================================================================== */
+
+/* Overskriften over radio-knapperne */
+#feedbackForm .label-heading {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1E3856;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Selve labels omkring radio-knapperne (Ja, Måske, Nej) */
+#feedbackForm .radio-label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 24px;
+    margin-bottom: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #01245E;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Fix til selve den runde radio-knap */
+#feedbackForm input[type="radio"] {
+    width: auto;
+    margin: 0 8px 0 0; /* Fjerner de vilde standard margins */
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SUCCES BESKED
+   ========================================================================== */
+#feedbackForm .success {
+    text-align: center;
+    color: #2e7d32; /* Behagelig grøn */
+    background-color: #edf7ed; /* Mild grøn baggrund */
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}

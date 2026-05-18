@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocott Fysioterapi - Evaluering</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/evaluering.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="section evaluering">
+    <div class="container">
+        <h1>Evaluering</h1>
+        <p>Tak fordi du vil hjælpe os med at forbedre vores behandling.</p>
+
+        <form id="feedbackForm">
+            
+            <label Amphora for="navn">Navn (valgfri)</label>
+            <input type="text" id="navn" name="navn">
+
+            <label for="samlet">Samlet vurdering</label>
+            <select id="samlet" name="samlet" required>
+                <option value="">Vælg</option>
+                <option value="Meget tilfreds">Meget tilfreds</option>
+                <option value="Tilfreds">Tilfreds</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Utilfreds">Utilfreds</option>
+                <option value="Meget utilfreds">Meget utilfreds</option>
+            </select>
+
+            <label for="tilfredshed">Hvor tilfreds er du med dit forløb? (1-10)</label>
+            <input type="range" id="tilfredshed" min="1" max="10" name="tilfredshed">
+
+            <label for="fremgang">Har du oplevet forbedring?</label>
+            <select id="fremgang" name="fremgang">
+                <option value="Ja">Ja</option>
+                <option value="Delvist">Delvist</option>
+                <option value="Nej">Nej</option>
+            </select>
+
+            <label for="positivt">Hvad fungerede godt? (Valgfri)</label>
+            <textarea id="positivt" name="positivt"></textarea>
+
+            <label for="forbedring">Kort kommentar: “Hvad har været den største forskel for dig?”</label>
+            <textarea id="forbedring" name="forbedring"></textarea>
+
+            <p class="label-heading">Samtykke: Min kommentar må bruges på hjemmesiden (Valgfri) (anonymt)</p>
+
+            <label class="radio-label">
+                <input type="radio" name="anbefaling" value="Ja"> Ja
+            </label>
+
+            <label class="radio-label">
+                <input type="radio" name="anbefaling" value="Måske"> Måske
+            </label>
+
+            <label class="radio-label">
+                <input type="radio" name="anbefaling" value="Nej"> Nej
+            </label>
+
+            <button type="submit">Send</button>
+
+            <p id="successMsg" class="success" style="display: none;">✅ Tak for din feedback!</p>
+        </form>
+    </div>
+</section>
+
+<script src="evaluering.js"></script>
+</body>
+</html>
