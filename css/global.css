@@ -40,7 +40,7 @@ h1 {
 h2 {
     font-family: "Open Sans";
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.2;
     margin-bottom: var(--space-s);
 }

@@ -117,31 +117,58 @@
     display: grid;
     gap: var(--space-m);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start; 
 }
 
 .card {
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    padding: var(--space-m);
-    border-radius: 9px;
-
+    padding: 0;
+    overflow: hidden;
+border-radius: 9px;
     display: flex;
     flex-direction: column;
-    position: relative;
+}
 
-    background: #ffffff;
+/* BILLEDE SOM BAGGRUND */
+.card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 220px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-
+    background-size: cover;
+    background-position: center;
 }
 
 
-.card p {
-    margin-bottom: var(--space-s);
+.bg-ryg::before {
+    background-image: url("../img_lager/DSC_5034.webp");
 }
 
-.card h4 {
-    font-size: 25px;
+.bg-skulder::before {
+    background-image: url("../img_lager/DSC_5034.webp");
 }
+
+.bg-hp::before {
+    background-image: url("../img_lager/DSC_5034.webp");
+}
+
+
+.bg-knæ::before {
+    background-image: url("../img_lager/DSC_5034.webp");
+}
+
+
+.card-indhold {
+    background-color: #EDF3F7;
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+
+
+
 
 .card button {
     margin-top: 0;
@@ -161,7 +188,30 @@
     transition: transform 0.2s ease;
 }
 
+/* Skjul teksten som standard */
+.dropdown-tekst.is-hidden {
+    display: none;
+}
 
+/* Vis teksten og tilføj lidt luft */
+.dropdown-tekst {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding-top: var(--space-s);
+}
+
+/* Gør klar til at rotere pilen på den aktive knap */
+.btn-toggle::after {
+    content: "→";
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* Når knappen får klassen 'active', roterer pilen nedad */
+.btn-toggle.active::after {
+    transform: rotate(90deg);
+}
 
 /* ==========================================================================
    9. WHY SECTION
@@ -319,55 +369,92 @@
 /* ==========================================================================
    13. TESTIMONIALS
    ========================================================================== */
-.testimonials {
-    background-color: #fff;
+
+.testimonial-section {
+    background-color: #ffffff;
     text-align: center;
 }
 
-/* Sørg for at overskriften flugter med dine andre sektioner */
-.testimonials .content-wrapper {
-    margin-bottom: var(--space-l);
-    text-align: center; /* Centreret h2 som tidligere */
+.testimonial-container {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 var(--space-l); 
+    min-height: 300px;
 }
 
-.testimonials-grid {
-    display: flex;
-    flex-direction: column; /* Mobil: Stak ovenpå hinanden */
-    gap: var(--space-m);
+/* Alle slides kastes oven i hinanden med absolute */
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: var(--space-l);
+    right: var(--space-l);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
 }
 
-.testimonial-card {
-    background: #ffffff;
-    border-radius: 9px;
-
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    padding: var(--space-m);
-
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+.testimonial-slide.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-.quote {
-    font-size: 80px;
-    line-height: 0;
-    margin-top: var(--space-m);
+
+
+.testimonial-text {
+    padding: 0 var(--space-m); /* God luft til siderne, så pilene ikke dækker teksten */
+}
+
+.testimonial-author {
     color: #1E3856;
-    opacity: 0.2;
+    font-weight: bold;
 }
 
-.text {
-    margin-bottom: var(--space-m);
-    flex-grow: 1; /* Sørger for at kortene får ens højde */
-}
-
-.author {
+/* Prikkerne i bunden */
+.dots-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    flex-direction: column; /* Stak navn og titel vertikalt */
+    justify-content: center;
+    gap: 10px;
 }
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #1E3856;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color:#1E3856;
+}
+
+/* Pile-navigation */
+.test-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #1E3856;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.test-btn:hover {
+    color: #1E73D8;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+
 
 /* ==========================================================================
    14. BOOKING SECTION
@@ -440,7 +527,7 @@ margin-top: var(--space-s);
     }
 
     .card-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-m); /* meget vigtigt: gentag gap */
     }
 
@@ -448,9 +535,17 @@ margin-top: var(--space-s);
         flex-grow: 1;
     }
 
-    .card img {
-        height: 250px;
+    
+.card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 300px;
     }
+
+    .card::before {
+        height: auto;
+    }
+
 
     /* Why/about Desktop */
     .about-section .container {
@@ -541,11 +636,24 @@ margin-top: var(--space-s);
         height: auto;
     }
 
-    /* Testimonials Desktop */
-    .testimonials-grid {
-        flex-direction: row;  /* Desktop: Ved siden af hinanden */
-        align-items: stretch; /* Alle kort bliver lige høje */
+
+    
+    .testimonial-container {
+        /* 💻 DESKTOP-HØJDE: Teksten fylder mindre i højden her, så vi skruer ned */
+        height: 260px; 
     }
+    
+    .test-btn {
+        font-size: 2.5rem; /* Gør pilene en smule større på den store skærm */
+    }
+
+   
+    .testimonial-text {
+    font-size: 22px; /* citat */
+    }
+
+    .prev-btn { left: 20px; }
+    .next-btn { right: 20px; }
 
     /* booking Desktop */
     .booking-wrapper {
