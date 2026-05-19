@@ -244,18 +244,6 @@
   }
 
 
-
-
-    /* Base Typography Desktop */
-    h1, h2 { font-size: 40px; }
-    h3 { font-size: 25px; }
-    h4 { font-size: 18px; }
-    p { font-size: 18px; }
-    .topbar { font-size: 18px; }
-
-  
-
-
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-2xl);

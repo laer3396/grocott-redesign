@@ -8,9 +8,9 @@
 
 .hero-image-booking {
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius: 9px;
-    background: url("../img_lager/krop2.png") center /cover no-repeat;
+    background: url("../img_lager/krop2.png") left / cover no-repeat; 
 }
 
 .hero-text-booking {
@@ -154,19 +154,21 @@
 /* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
 
-   .hero-booking .container {
+.hero-booking .container {
         display: flex;
-        align-items: stretch;
+        align-items: stretch; /* Sørger for, at tekst og billede-kasse er lige høje 🎯 */
         gap: var(--space-2xl);
         width: 100%;
     }
+    
     .hero-text-booking {
-        flex: 1.2; /* 👈 DET HER skubber teksten ud, så den fylder 1.2 dele af pladsen */
+        flex: 1.2;
     }
 
     .hero-image-booking {
-        height: 400px; /* 👈 Virker nu, fordi flex tvinger den bred */
-        flex: 0.8;    /* 👈 DET HER tvinger billedet til at fylde 0.8 dele af pladsen */
+        flex: 0.8;  
+        height: auto; /* 👈 VIGTIGT: Overskriver de 200px fra mobil, så kassen følger teksten */
+
     }
 
     .hero-booking p {

@@ -18,17 +18,18 @@
 
 <section class="section evaluering">
     <div class="container">
+        <img src="img_lager/logo.webp" alt="Grocott Fysioterapi logo" class="logo">
         <h1>Evaluering</h1>
-        <p>Tak fordi du vil hjælpe os med at forbedre vores behandling.</p>
+        <p>Tak fordi du tager dig tid til at dele din oplevelse. <br>Din feedback er vigtig og hjælper med at forbedre behandlingen
 
         <form id="feedbackForm">
             
-            <label Amphora for="navn">Navn (valgfri)</label>
+            <label for="navn">Navn</label>
             <input type="text" id="navn" name="navn">
 
             <label for="samlet">Samlet vurdering</label>
             <select id="samlet" name="samlet" required>
-                <option value="">Vælg</option>
+                <option value="">Vælg en mulighed</option>
                 <option value="Meget tilfreds">Meget tilfreds</option>
                 <option value="Tilfreds">Tilfreds</option>
                 <option value="Neutral">Neutral</option>
@@ -36,39 +37,36 @@
                 <option value="Meget utilfreds">Meget utilfreds</option>
             </select>
 
-            <label for="tilfredshed">Hvor tilfreds er du med dit forløb? (1-10)</label>
+            <label for="tilfredshed">Hvor tilfreds er du med dit forløb på en skala fra 1–10?</label>
             <input type="range" id="tilfredshed" min="1" max="10" name="tilfredshed">
 
-            <label for="fremgang">Har du oplevet forbedring?</label>
+            <label for="fremgang">Har du oplevet en forbedring?</label>
             <select id="fremgang" name="fremgang">
+                <option value="">Vælg en mulighed</option>
                 <option value="Ja">Ja</option>
                 <option value="Delvist">Delvist</option>
                 <option value="Nej">Nej</option>
             </select>
 
-            <label for="positivt">Hvad fungerede godt? (Valgfri)</label>
+            <label for="positivt">Hvad har fungeret særligt godt? (valgfrit)</label>
             <textarea id="positivt" name="positivt"></textarea>
 
-            <label for="forbedring">Kort kommentar: “Hvad har været den største forskel for dig?”</label>
+            <label for="forbedring">Tilføj meget gerne en kommentar om din oplevelse af forløbet:</label>
             <textarea id="forbedring" name="forbedring"></textarea>
 
-            <p class="label-heading">Samtykke: Min kommentar må bruges på hjemmesiden (Valgfri) (anonymt)</p>
+            <p class="label-heading">Må din kommentar bruges <b>anonymt</b> på hjemmesiden som reference?</p>
 
             <label class="radio-label">
-                <input type="radio" name="anbefaling" value="Ja"> Ja
+                <input type="radio" name="anbefaling" value="Ja"> Ja, det må I gerne
             </label>
 
             <label class="radio-label">
-                <input type="radio" name="anbefaling" value="Måske"> Måske
+                <input type="radio" name="anbefaling" value="Nej"> Nej tak
             </label>
 
-            <label class="radio-label">
-                <input type="radio" name="anbefaling" value="Nej"> Nej
-            </label>
+            <button type="submit">Send evaluering</button>
 
-            <button type="submit">Send</button>
-
-            <p id="successMsg" class="success" style="display: none;">✅ Tak for din feedback!</p>
+            <p id="successMsg" class="success" style="display: none;">Tak for din feedback!</p>
         </form>
     </div>
 </section>
