@@ -96,9 +96,8 @@
 }
 
 
-
 /* ==========================================================================
-   7. CONTENT WRAPPER & CARD GRID (Samlet)
+   7. CONTENT WRAPPER & CARD GRID (Opdateret til fast visning)
    ========================================================================== */
 .content-wrapper {
     text-align: left;
@@ -111,19 +110,18 @@
     flex-wrap: wrap; /* vigtigt på mobil */
 }
 
-
-/* Gør dit grid responsivt, så det automatisk laver flere kolonner på større skærme */
+/* Gør dit grid responsivt og sørg for, at kortene strækker sig til samme højde */
 .card-grid {
     display: grid;
     gap: var(--space-m);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: start; 
+    align-items: stretch; /* 🔥 Strækker alle kort i rækken til samme højde */
 }
 
 .card {
     padding: 0;
     overflow: hidden;
-border-radius: 9px;
+    border-radius: 9px;
     display: flex;
     flex-direction: column;
 }
@@ -134,85 +132,50 @@ border-radius: 9px;
     display: block;
     width: 100%;
     height: 220px;
-
     background-size: cover;
     background-position: center;
 }
 
+.bg-ryg::before { background-image: url("../img_lager/DSC_5019.webp"); }
+.bg-skulder::before { background-image: url("../img_lager/DSC_5010.webp"); }
+.bg-hp::before { background-image: url("../img_lager/alberte_nakke.webp"); }
+.bg-knæ::before { background-image: url("../img_lager/DSC_4990.webp"); }
 
-.bg-ryg::before {
-    background-image: url("../img_lager/DSC_5034.webp");
-}
-
-.bg-skulder::before {
-    background-image: url("../img_lager/DSC_5034.webp");
-}
-
-.bg-hp::before {
-    background-image: url("../img_lager/DSC_5034.webp");
-}
-
-
-.bg-knæ::before {
-    background-image: url("../img_lager/DSC_5034.webp");
-}
-
-
+/* Indholdet i kortet sættes op som en flex-kolonne */
 .card-indhold {
     background-color: #EDF3F7;
     padding: var(--space-m);
     display: flex;
     flex-direction: column;
-    gap: var(--space-s);
-}
-
-
-
-
-
-.card button {
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 100%;
+    gap: var(--space-s); /* 🔥 Dette styrer nu den præcise afstand på mobil */
+    height: auto;        /* 🔥 Ændret fra 100% – kortet pakker sig tæt om indholdet på mobil */
     box-sizing: border-box;
+}
 
+.card-tekst {
+    flex-grow: 0;        /* 🔥 Ændret fra 1 – fjerner det store tomrum på mobil */
+}
+
+.card-indhold h3 {
+    margin: 0;
+    color: #1E3856;
+}
+
+/* Tekst-containeren tager alt overskydende plads */
+.card-tekst {
+    flex-grow: 1;            /* 🔥 Skubber automatisk 'Book tid'-knappen ned i bunden */
+}
+
+
+/* Knappen i bunden af kortet tilpasses */
+.card-indhold .btn-second {
+    width: 100%;             /* Fyld bredden ud i bunden */
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;   /* centrerer horisontalt */
-    align-items: center;       /* centrerer vertikalt */
-    gap: 8px;                  /* afstand mellem tekst og pil */
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--space-xs);
 }
-
-.card button::after {
-    content: "→";
-    margin-left: 10px;
-    transition: transform 0.2s ease;
-}
-
-/* Skjul teksten som standard */
-.dropdown-tekst.is-hidden {
-    display: none;
-}
-
-/* Vis teksten og tilføj lidt luft */
-.dropdown-tekst {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-s);
-    padding-top: var(--space-s);
-}
-
-/* Gør klar til at rotere pilen på den aktive knap */
-.btn-toggle::after {
-    content: "→";
-    margin-left: 10px;
-    transition: transform 0.2s ease;
-}
-
-/* Når knappen får klassen 'active', roterer pilen nedad */
-.btn-toggle.active::after {
-    transform: rotate(90deg);
-}
-
 /* ==========================================================================
    9. WHY SECTION
    ========================================================================== */
@@ -345,7 +308,8 @@ border-radius: 9px;
 /* ==========================================================================
    12. BEHANDLER SECTION (Om Grocott)
    ========================================================================== */
-.behandler {
+/* RET DETTE: */
+.behandler .container {
     display: flex;
     flex-direction: column;
     gap: var(--space-l);
@@ -365,72 +329,78 @@ border-radius: 9px;
     background-position: center 10%;
     border-radius: 9px;
 }
-
 /* ==========================================================================
    13. TESTIMONIALS
    ========================================================================== */
 
 .testimonial-section {
-    background-color: #ffffff;
+    background-color: #1E3856;
     text-align: center;
+    color: #ffffff;
 }
 
-.testimonial-container {
-    margin: 0 auto;
+
+/* Wrapperen holder styr på pile og det aktive slide */
+.testimonial-wrapper {
     position: relative;
-    padding: 0 var(--space-l); 
-    min-height: 300px;
+    width: 100%;
+    margin-bottom: var(--space-xl); /* Skaber luft ned til prikkerne */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Alle slides kastes oven i hinanden med absolute */
+/* Slider-mekanisme uden de store højde-problemer */
 .testimonial-slide {
-    position: absolute;
-    top: 0;
-    left: var(--space-l);
-    right: var(--space-l);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
+    display: none; /* Skjult som standard */
+    width: 100%;
+    max-width: 800px;
+    padding: 0 var(--space-2xl); /* Plads til pilene i siderne */
+    box-sizing: border-box;
 }
 
+/* Vis kun det aktive slide */
 .testimonial-slide.active {
-    opacity: 1;
-    visibility: visible;
+    display: block;
+    animation: fadeIn 0.4s ease; /* Giver et blødt skift */
 }
-
 
 
 .testimonial-text {
-    padding: 0 var(--space-m); /* God luft til siderne, så pilene ikke dækker teksten */
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-color, #ffffff);
+    margin-bottom: var(--space-m);
 }
 
 .testimonial-author {
-    color: #1E3856;
+    color: #ffffff;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
 /* Prikkerne i bunden */
 .dots-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: var(--space-s);
+    margin-top: var(--space-m);
 }
 
 .dot {
     width: 12px;
     height: 12px;
-    border: 2px solid #1E3856;
+    border: 2px solid #ffffff;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dot.active {
-    background-color:#1E3856;
+    background-color:  #ffffff;
+    transform: scale(1.1);
 }
 
 /* Pile-navigation */
@@ -441,19 +411,23 @@ border-radius: 9px;
     background: none;
     border: none;
     font-size: 2rem;
-    color: #1E3856;
+    color: #ffffff;
     cursor: pointer;
-    padding: 10px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
     z-index: 10;
+    padding: var(--space-xs);
 }
 
 .test-btn:hover {
     color: #1E73D8;
 }
 
-.prev-btn { left: 5px; }
-.next-btn { right: 5px; }
+.prev-btn { 
+    left: 0; 
+}
+.next-btn { 
+    right: 0; 
+}
 
 
 /* ==========================================================================
@@ -506,10 +480,6 @@ margin-top: var(--space-s);
 
   /* grid bliver 3 kolonner */
   .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .services-grid {
   grid-template-columns: repeat(3, minmax(0, 320px)); /* max bredde */
   justify-content: center; /* centrer grid */
   gap: var(--space-m);
@@ -520,32 +490,33 @@ margin-top: var(--space-s);
     margin-top: var(--space-s);
   }
 
+/* Card Desktop Layout (OPDATERET: Fikser forsvindende knapper) */
+  .content-wrapper .btn-group {
+      margin-bottom: var(--space-m);
+  }
 
-    /* card */
-    .content-wrapper .btn-group {
-        margin-bottom: var(--space-m);
-    }
+  .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-m); /* meget vigtigt: gentag gap */
+      align-items: stretch; /* Sørger for, at to kort ved siden af hinanden følges ad i højden */
+  }
 
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-m); /* meget vigtigt: gentag gap */
-    }
+  .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Billede til venstre, indhold til højre */
+      min-height: 300px;              /* 🔥 ÆNDRET fra 'height' til 'min-height'. Sørger for at kortet udvider sig, hvis der er meget tekst */
+      height: auto;                   /* 🔥 Giver kortet lov til at vokse dynamisk */
+  }
 
-    .card p {
-        flex-grow: 1;
-    }
+  .card::before {
+      height: auto; /* Sørger for at billedet strækker sig i hele venstresidens højde */
+  }
 
-    
-.card {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: 300px;
-    }
-
-    .card::before {
-        height: auto;
-    }
-
+  .card-indhold {
+      height: 100%; /* Sørger for at den grå baggrund fylder hele højre kolonne ud */
+      display: flex;
+      flex-direction: column;
+  }
 
     /* Why/about Desktop */
     .about-section .container {
@@ -620,10 +591,12 @@ margin-top: var(--space-s);
         margin: 0 auto;
     }
 
+
     /* Behandler Desktop */
     .behandler .container {
         display: flex;
-        align-items: stretch;
+        flex-direction: row;  /* 🔥 DETTE løser problemet og sætter dem ved siden af hinanden */
+        align-items: stretch; /* Sørger for at billede og tekstboks er lige høje */
         gap: var(--space-2xl);
     }
 
@@ -634,26 +607,25 @@ margin-top: var(--space-s);
     .boks-billede {
         flex: 0.8;
         height: auto;
+        min-height: 450px; /* 🔥 VIGTIGT: Sikrer at baggrundsbilledet rent faktisk kan ses! */
     }
 
 
-    
-    .testimonial-container {
-        /* 💻 DESKTOP-HØJDE: Teksten fylder mindre i højden her, så vi skruer ned */
-        height: 260px; 
-    }
-    
-    .test-btn {
-        font-size: 2.5rem; /* Gør pilene en smule større på den store skærm */
+/* Testimonials Desktop (Placeres inde i din 1024px media query) */
+
+    .testimonial-header {
+        margin-bottom: var(--space-xl);
     }
 
-   
     .testimonial-text {
-    font-size: 22px; /* citat */
+        font-size: 22px; /* Større, læsevenlig citatstørrelse */
     }
 
-    .prev-btn { left: 20px; }
-    .next-btn { right: 20px; }
+    .test-btn {
+        font-size: 2.5rem; /* Tydeligere pile på desktop */
+    }
+    
+   
 
     /* booking Desktop */
     .booking-wrapper {
