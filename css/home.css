@@ -501,13 +501,12 @@ margin-top: var(--space-s);
       align-items: stretch; /* Sørger for, at to kort ved siden af hinanden følges ad i højden */
   }
 
-  .card {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Billede til venstre, indhold til højre */
-      min-height: 300px;              /* 🔥 ÆNDRET fra 'height' til 'min-height'. Sørger for at kortet udvider sig, hvis der er meget tekst */
-      height: auto;                   /* 🔥 Giver kortet lov til at vokse dynamisk */
-  }
-
+ .card {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* 🔥 mindre billede, mere tekst */
+    min-height: 300px;
+    height: auto;
+}
   .card::before {
       height: auto; /* Sørger for at billedet strækker sig i hele venstresidens højde */
   }
