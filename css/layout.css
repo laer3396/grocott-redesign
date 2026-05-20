@@ -1,11 +1,8 @@
-
 /* GLOBAL CONTAINER */
-
 
 .section {
   padding: var(--space-l) 0;
 }
-
 
 .container {
   max-width: 1280px;
@@ -13,348 +10,321 @@
   padding: 0 24px;
 }
 
-
-
-
-
 /* ==========================================================================
    3. TOPBAR
    ========================================================================== */
 .topbar {
-    background:  #DEEEFF;
-    color: #1E3856;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-weight: 300;
-    font-size: 12px;
-    padding: var(--space-xs);
+  background: #DEEEFF;
+  color: #1E3856;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 300;
+  font-size: 12px;
+  padding: var(--space-xs);
 }
 
 /* ==========================================================================
    4. SITE HEADER & NAVIGATION
    ========================================================================== */
 .site-header {
-    background-color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0; /* fjern 20px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; /* fjern 20px */
 }
 
 .nav-logo img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
-
 
 .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    cursor: pointer;
-    z-index: 1100; /* Skal være højere end menuens 1001 */
-    position: relative; /* Kræves for at z-index virker */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100; /* Skal være højere end menuens 1001 */
+  position: relative; /* Kræves for at z-index virker */
 }
-
-
 
 .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #01245E;
-    transition: 0.3s;
+  width: 25px;
+  height: 3px;
+  background-color: #01245E;
+  transition: 0.3s;
 }
-
 
 .navbar .btn {
-    margin-bottom: 0;
-    margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-
 .hamburger.active .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg); /* Byt rækkefølge eller juster pixels */
+  transform: translateY(9px) rotate(45deg); /* Byt rækkefølge eller juster pixels */
 }
 
 .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* Nav Menu */
 .nav-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    height: 100vh;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-m);
-    padding-top: var(--space-3xl);
-    transition: 0.3s ease;
-    z-index: 1001;
-    justify-self: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  padding-top: var(--space-3xl);
+  transition: 0.3s ease;
+  z-index: 1001;
+  justify-self: center;
 }
 
-
 .nav-menu.active {
-    left: 0;
+  left: 0;
 }
 
 .nav-link {
-    color: #01245E;
-    text-decoration: none;
-    padding: var(--space-s);
-    opacity: 0.9;
-    transition: 0.2s;
+  color: #01245E;
+  text-decoration: none;
+  padding: var(--space-s);
+  opacity: 0.9;
+  transition: 0.2s;
 }
-
 
 .nav-link:hover,
 .nav-link.active {
-     opacity: 1.5;
+  opacity: 1.5;
 }
-
-
-
-
 
 /* Dropdown */
 .dropdown {
-    width: 100%;
+  width: 100%;
 }
+
 .dropdown > .nav-link {
-    display: block;
+  display: block;
 }
+
 .dropdown-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #f2f5f8;
+  display: none;
+  flex-direction: column;
+  background-color: #f2f5f8;
 }
+
 .dropdown-menu.active {
-    display: flex;
+  display: flex;
 }
+
 .dropdown-item {
-    padding: var(--space-s) var(--space-l);
-    color: #01245E;
-    text-decoration: none;
+  padding: var(--space-s) var(--space-l);
+  color: #01245E;
+  text-decoration: none;
 }
+
 .dropdown-item:hover {
-    background-color: #01245E;
-    color: #fff;
+  background-color: #01245E;
+  color: #fff;
 }
 
+/* ========================================= */
+/* 3. FOOTER */
+/* ========================================= */
 
-
-  
-/* ========================================= */
-/* 3. FOOTER (Site-Wide) */
-/* ========================================= */
-/* ========================================= */
-/* 3. FOOTER (Site-Wide) */
-/* ========================================= */
-/* ========================================= */
-/* 3. FOOTER (Site-Wide - Mobil Base)       */
-/* ========================================= */
 .footer {
-    background-color: #1E3856;
-    color: #ffffff;
+  background-color: #1E3856;
+  color: #ffffff;
 }
 
 .footer-header-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-logo img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .footer-content-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-l);
-    margin-top: var(--space-l);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-l);
+  margin-top: var(--space-l);
 }
 
 .footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
 .footer-column h3 {
-    margin-bottom: var(--space-xs);
-    color: #ffffff;
+  margin-bottom: var(--space-xs);
+  color: #ffffff;
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-column li {
-    font-size: 16px;
-    line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .footer-column .note {
-    opacity: 0.8;
-    font-size: 14px;
-    margin-top: var(--space-xs);
+  opacity: 0.8;
+  font-size: 14px;
+  margin-top: var(--space-xs);
 }
 
 .social {
-    display: flex;
-    gap: var(--space-m);
+  display: flex;
+  gap: var(--space-m);
 }
 
 .social img {
-    width: 22px;
-    transition: opacity 0.2s ease;
+  width: 22px;
+  transition: opacity 0.2s ease;
 }
-
-
 
 /* ==========================================================================
    16. DESKTOP STYLES (min-width: 769px)
    ========================================================================== */
 
 @media (min-width: 768px) {
- 
-.section {
+  .section {
     padding: var(--space-3xl) 0;
   }
-
 
   .container {
     padding: 0;
   }
 
+  .topbar {
+    font-size: 16px;
+  }
 
+  /* Retter top-delen af fodnoten til at ligge på linje på desktop */
+  .footer-header-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    /* Retter top-delen af fodnoten til at ligge på linje på desktop */
-    .footer-header-wrapper {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .footer-logo img {
+    width: 280px;
+  }
 
-    .footer-logo img {
-        width: 280px;
-    }
+  /* Splitter automatisk ud i 3 lige store kolonner */
+  .footer-content-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+  }
 
-    /* Splitter automatisk ud i 3 lige store kolonner */
-    .footer-content-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-2xl);
-    }
+  /* Klassisk flot tekstjustering på desktop */
+  .footer-column:nth-child(1) {
+    align-items: flex-start;
+    text-align: left;
+  }
 
-    /* Klassisk flot tekstjustering på desktop */
-    .footer-column:nth-child(1) {
-        align-items: flex-start;
-        text-align: left;
-    }
+  .footer-column:nth-child(2) {
+    align-items: flex-start;
+    text-align: left;
+  }
 
-    .footer-column:nth-child(2) {
-        align-items: flex-start;
-        text-align: left;
-    }
+  /* Højrestiller den sidste kolonne med ikonerne for balance */
+  .footer-column:nth-child(3) {
+    align-items: flex-end;
+    text-align: right;
+  }
 
-    /* Højrestiller den sidste kolonne med ikonerne for balance */
-    .footer-column:nth-child(3) {
-        align-items: flex-end;
-        text-align: right;
-    }
-.footer-column li {
+  .footer-column li {
     font-size: 18px;
-  
-}
+  }
 
-/* Navbar Desktop */
+  /* Navbar Desktop */
   .navbar {
     display: flex;
     justify-content: space-between; /* Skubber logo til venstre, knap til højre */
     align-items: center;
     padding: 0;
-}
+  }
 
-.nav-menu {
+  .nav-menu {
     position: static;
     display: flex;
     flex-direction: row;
     gap: var(--space-l);
     align-items: center;
-    
+
     /* Dette tvinger menuen til at forsøge at centrere sig i flex-containeren */
-    margin: 0 auto; 
-    
+    margin: 0 auto;
+
     /* Fjern justify-self: center (det virker kun i grid) */
     background: none;
     width: auto;
     height: auto;
     padding-top: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: transparent;
+    font-weight: 800;
+  }
+
+  /* Dropdown Desktop */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-menu.active {
+    display: none;
+  }
 }
-    
-
-    .hamburger {
-        display: none;
-    }
-
-   
-
-
-    .nav-link:hover,
-    .nav-link.active {
-        background: transparent;
-        font-weight: 800;
-    }
-
-    /* Dropdown Desktop */
-    .dropdown {
-        position: relative;
-    }
-    .dropdown > .nav-link {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        min-width: 200px;
-        display: none;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
-    .dropdown:hover .dropdown-menu {
-        display: flex;
-    }
-    .dropdown-menu.active {
-        display: none;
-    }
-
-
-}
-
-
-
-  
-
