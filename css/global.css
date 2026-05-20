@@ -51,6 +51,14 @@ h3 {
     font-weight: 600;
 }
 
+/* Gør at elementer med denne klasse ligner en H3 */
+h3, .h3-style {
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
 /* mindre headings */
 h4 {
     font-family: "DM Sans", sans-serif;
@@ -94,5 +102,8 @@ p {
         font-size: 18px;
     }
 
+     h3, .h3-style {
+        font-size: 22px;
+    }
 }
 
