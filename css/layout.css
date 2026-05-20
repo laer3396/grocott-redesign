@@ -163,21 +163,22 @@
 /* ========================================= */
 /* 3. FOOTER (Site-Wide) */
 /* ========================================= */
-/* ===== FOOTER ===== */
-
+/* ========================================= */
+/* 3. FOOTER (Site-Wide) */
+/* ========================================= */
+/* ========================================= */
+/* 3. FOOTER (Site-Wide - Mobil Base)       */
+/* ========================================= */
 .footer {
     background-color: #1E3856;
     color: #ffffff;
-    padding: var(--space-3xl) 0;
 }
 
-/* HEADER (logo + knap) */
-.footer-header-container {
+.footer-header-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Ændret fra center til flex-start */
-    padding-bottom: var(--space-l);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-logo img {
@@ -185,7 +186,6 @@
     height: auto;
 }
 
-/* CONTENT GRID */
 .footer-content-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -193,7 +193,6 @@
     margin-top: var(--space-l);
 }
 
-/* KOLONNER */
 .footer-column {
     display: flex;
     flex-direction: column;
@@ -202,6 +201,7 @@
 
 .footer-column h3 {
     margin-bottom: var(--space-xs);
+    color: #ffffff;
 }
 
 .footer-column ul {
@@ -215,13 +215,12 @@
     line-height: 1.6;
 }
 
-/* note tekst */
 .footer-column .note {
     opacity: 0.8;
     font-size: 14px;
+    margin-top: var(--space-xs);
 }
 
-/* SOCIAL */
 .social {
     display: flex;
     gap: var(--space-m);
@@ -231,6 +230,7 @@
     width: 22px;
     transition: opacity 0.2s ease;
 }
+
 
 
 /* ==========================================================================
@@ -250,38 +250,43 @@
 
 
 
+    /* Retter top-delen af fodnoten til at ligge på linje på desktop */
+    .footer-header-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  /* footer */
-  .footer-header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .footer-logo img {
+        width: 280px;
+    }
 
-  /* 3 kolonner - samme som price / cards */
-  .footer-content-container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-2xl);
-  }
+    /* Splitter automatisk ud i 3 lige store kolonner */
+    .footer-content-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-2xl);
+    }
 
-  /* Alignment (klassisk layout) */
-  .footer-column:nth-child(1) {
-    align-items: flex-start;
-    text-align: left;
-  }
+    /* Klassisk flot tekstjustering på desktop */
+    .footer-column:nth-child(1) {
+        align-items: flex-start;
+        text-align: left;
+    }
 
-  .footer-column:nth-child(2) {
-    align-items: center;
-    text-align: left;
-  }
+    .footer-column:nth-child(2) {
+        align-items: flex-start;
+        text-align: left;
+    }
 
-  .footer-column:nth-child(3) {
-    align-items: flex-end;
-    text-align: right;
-  }
-
-
-
+    /* Højrestiller den sidste kolonne med ikonerne for balance */
+    .footer-column:nth-child(3) {
+        align-items: flex-end;
+        text-align: right;
+    }
+.footer-column li {
+    font-size: 18px;
+  
+}
 
 /* Navbar Desktop */
   .navbar {
