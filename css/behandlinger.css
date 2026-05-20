@@ -1,5 +1,5 @@
 /* ===== HERO ===== */
-.hero-booking {
+.hero-behandling {
     display: flex;
     flex-direction: column;
     background-color: #EDF3F7;
@@ -8,9 +8,9 @@
 
 .hero-image-behandling {
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius: 9px;
-    background: url("../img/krop2.png") center /cover no-repeat;
+   background: url("../img/krop.png") center / contain no-repeat;
 }
 
 .hero-text-behandling {
@@ -109,17 +109,19 @@
 
    .hero-behandling .container {
         display: flex;
-        align-items: stretch;
+        align-items: stretch; /* Sørger for, at tekst og billede-kasse er lige høje 🎯 */
         gap: var(--space-2xl);
         width: 100%;
     }
-    .hero-text-behandling {
+    
+    .hero-text-behandling{
         flex: 1.2;
     }
 
-    .hero-image-behandling{
-        height: 400px;
-        flex: 0.8;
+    .hero-image-behandling {
+        flex: 0.8;  
+        height: auto; /* 👈 VIGTIGT: Overskriver de 200px fra mobil, så kassen følger teksten */
+
     }
 
     .hero-behandling p {

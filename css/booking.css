@@ -6,11 +6,18 @@
     gap: var(--space-l);
 }
 
-.hero-image-booking {
+.hero-boks-booking {
     width: 100%;
     height: 200px;
     border-radius: 9px;
-   background: url("../img/krop.png") center / contain no-repeat;
+    background-color: #DEEEFF;
+    padding: var(--space-m);
+    display: flex;
+    flex-direction: column; /* Sørger for at tekst og knap står i en søjle */
+    justify-content: center; /* Centrerer lodret */
+    align-items: center; /* Centrerer vandret */
+    text-align: center; /* Centrerer selve teksten inde i h3 og p */
+    border: 1px solid  #1e73d8;
 }
 
 .hero-text-booking {
@@ -165,8 +172,8 @@
         flex: 1.2;
     }
 
-    .hero-image-booking {
-        flex: 0.8;  
+    .hero-boks-booking {
+        flex: 0.6;  
         height: auto; /* 👈 VIGTIGT: Overskriver de 200px fra mobil, så kassen følger teksten */
 
     }
