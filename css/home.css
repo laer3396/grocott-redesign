@@ -203,13 +203,20 @@
   margin-top: var(--space-s);
 }
 
+
 .flow-box {
   display: flex;
   flex-direction: column;
   background-color: #EDF3F7;
   padding: var(--space-m);
   border-radius: 9px;
+  height: 100%; /* vigtig */
 }
+
+.flow-box .btn-second {
+  margin-top: auto; /* skubber knappen helt ned */
+}
+
 
 .flow-title-row {
   display: flex;
@@ -315,9 +322,8 @@
    13. TESTIMONIALS
    ========================================================================== */
 .testimonial-section {
-  background-color: #1E3856;
+  background-color: #EDF3F7;
   text-align: center;
-  color: #ffffff;
 }
 
 .testimonial-wrapper {
@@ -346,12 +352,12 @@
 .testimonial-text {
   font-style: italic;
   line-height: 1.6;
-  color: var(--text-color, #ffffff);
+  color: var(--text-color, #1E3856);
   margin-bottom: var(--space-m);
 }
 
 .testimonial-author {
-  color: #ffffff;
+  color: #1E3856;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -368,14 +374,14 @@
 .dot {
   width: 12px;
   height: 12px;
-  border: 2px solid #ffffff;
+  border: 2px solid  #1E3856;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dot.active {
-  background-color: #ffffff;
+  background-color: #1E3856;
   transform: scale(1.1);
 }
 
@@ -386,7 +392,7 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: #ffffff;
+  color:  #1E3856;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.2s ease;
   z-index: 10;
@@ -409,9 +415,7 @@
 /* ==========================================================================
    14. BOOKING SECTION
    ========================================================================== */
-.booking {
-  background-color: #EDF3F7;
-}
+
 
 .booking-wrapper {
   display: flex;
