@@ -242,6 +242,13 @@
   align-items: center;
 }
 
+.flow-box p:has(.dot-iconxs) {
+    display: block;
+    position: relative;
+    padding-left: 20px; 
+    margin-top: 0;     
+    margin-bottom: 6px;        
+}
 
 /* ==========================================================================
    11. PRICES SECTION
