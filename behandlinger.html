@@ -97,10 +97,33 @@
     </section>
 
     <section class="section behandlinger">
-        <div class="container">
-            
+    <div class="container">
+
+        <div class="treatment-overview">
+            <div class="treatment-layout">
+
+                <!-- LEFT MENU -->
+                <nav class="treatment-menu">
+                    <ul id="treatmentList"></ul>
+                </nav>
+
+                <!-- RIGHT CONTENT -->
+                <div class="treatment-content">
+                    <img id="treatmentImage" class="treatment-image" alt="Behandling billede">
+
+                    <div class="treatment-text">
+                        <h2 id="treatmentTitle"></h2>
+                        <p id="treatmentDescription"></p>
+                        <a id="treatmentLink" class="primary-btn">Læs mere</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <section class="section timeline-section">
         <div class="container">
@@ -231,6 +254,8 @@
     </footer>
 
     <script src="menu.js"></script>
+    <script src="behandlingsoversigt.js"></script>
+
 </body>
 
 </html>

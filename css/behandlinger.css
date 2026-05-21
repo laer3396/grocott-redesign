@@ -29,6 +29,81 @@
 
 }
 
+/* ===== TREATMENT OVERVIEW ===== */
+
+.treatment-overview {
+  padding:0;
+}
+
+.treatment-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* LEFT MENU */
+.treatment-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+.treatment-menu li {
+  padding: 10px 0;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  color: #4a4a4a;
+  transition: 0.2s ease;
+}
+
+.treatment-menu li:hover {
+  color: #1E3856;
+}
+
+.treatment-menu li.active {
+  font-weight: 600;
+  color: #1E3856;
+  border-left-color: var(--accent);
+}
+
+/* RIGHT CONTENT */
+.treatment-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.treatment-image {
+  width: 100%;
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+.treatment-text h2 {
+  margin-bottom: var(--space-s);
+  color: #1E3856;
+}
+
+.treatment-text p {
+  margin-bottom: var(--space-m);
+  line-height: 1.6;
+}
+
+.primary-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 /* ==========================================================================
    TIMELINE – FIXET VERSION
    ========================================================================== */
@@ -100,10 +175,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-
-
-
-
 /* ===== DESKTOP RESPONSIVENESS ===== */
 @media (min-width: 1024px) {
 
@@ -127,6 +198,36 @@
     .hero-behandling p {
         margin-top: var(--space-m);
     }
+
+
+@media (max-width: 1024px) {
+  .treatment-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .treatment-content {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-menu ul {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: var(--space-m);
+    padding-bottom: var(--space-s);
+  }
+
+  .treatment-menu li {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .treatment-menu li.active {
+    border-bottom-color: var(--accent);
+  }
+}
+
 
   /* Timeline Desktop Justeringer */
 /* Hvis du vil have cirklerne en smule større på desktop */
