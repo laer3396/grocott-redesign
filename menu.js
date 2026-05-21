@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (link.classList.contains('dropdown-toggle')) return;
-
       closeMenu();
     });
   });
@@ -29,18 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       e.stopPropagation();
 
+      const parent = toggle.parentElement; // 🔥 dropdown div
       const currentMenu = toggle.nextElementSibling;
 
-      // Luk alle andre dropdowns
+      // Luk alle andre dropdowns + reset pile
       dropdownMenus.forEach(menu => {
         if (menu !== currentMenu) {
           menu.classList.remove('active');
+          menu.parentElement.classList.remove('open'); // 🔥 vigtigt
         }
       });
 
       // Toggle den aktuelle
       if (currentMenu) {
+        const isOpen = currentMenu.classList.contains('active');
+
         currentMenu.classList.toggle('active');
+        parent.classList.toggle('open', !isOpen); // 🔥 styrer pilen
       }
     });
   });
@@ -57,9 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 
-    // Luk alle dropdowns
+    // Luk alle dropdowns + reset pile
     dropdownMenus.forEach(menu => {
       menu.classList.remove('active');
+      menu.parentElement.classList.remove('open'); // 🔥 reset pil
     });
   }
 
