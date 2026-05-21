@@ -18,6 +18,7 @@
     align-items: center; /* Centrerer vandret */
     text-align: center; /* Centrerer selve teksten inde i h3 og p */
     border: 1px solid  #1e73d8;
+    margin-top:var(--space-m);
 }
 
 .hero-text-booking {

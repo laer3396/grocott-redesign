@@ -59,7 +59,7 @@
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #01245E;
+  background-color: #1E3856;
   transition: 0.3s;
 }
 
@@ -126,7 +126,7 @@
 .dropdown-menu {
   display: none;
   flex-direction: column;
-  background-color: #f2f5f8;
+  background-color: #edf3f7;
 }
 
 .dropdown-menu.active {
@@ -135,12 +135,12 @@
 
 .dropdown-item {
   padding: var(--space-s) var(--space-l);
-  color: #01245E;
+  color: #1E3856;
   text-decoration: none;
 }
 
 .dropdown-item:hover {
-  background-color: #01245E;
+  background-color: #1E3856;
   color: #fff;
 }
 
