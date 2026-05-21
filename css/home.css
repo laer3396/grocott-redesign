@@ -302,10 +302,11 @@
   gap: var(--space-l);
 }
 
-.boks p {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--space-s); 
+.boks p:has(.dot-iconxs) {
+    display: block;
+    position: relative;
+    padding-left: 20px; /* Giver kun plads til ikonet her */
+    margin-bottom: var(--space-s);
 }
 
 .boks-billede {
