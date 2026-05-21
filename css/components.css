@@ -35,8 +35,8 @@
 
 
 
-/* små UI ting */
-.dot-icon {
+/* Liste dot */
+.dot-icon{
     width: 16px;
     height: 16px;
     background: #1E3856;
@@ -58,6 +58,16 @@
     top: 0.65em;          
     transform: translateY(-50%); 
 }
+
+/* Enkel dot */
+.dot-icon-one {
+    width: 16px;
+    height: 16px;
+    background: #1E3856;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 
 .btn:hover {
     transform: translateY(-2px) scale(1.03);

@@ -92,21 +92,21 @@
 }
 
 
-.card-info2 p {
-   display: flex;
-    align-items: center;
-}
+
 
 
 .card-info h4{
     margin-top: var(--space-s);
 }
 
-.card-info p{
-    margin-top:0;
+.boks p:has(.dot-iconxs),
+.card-info2 p:has(.dot-iconxs) {
+    display: block;
+    position: relative;
+    padding-left: 20px;          
+    margin-top: 0;           
+    margin-bottom: var(--space-xs); 
 }
-
-
 /* ==========================================================================
    11. PRICES SECTION
    ========================================================================== */
@@ -141,15 +141,9 @@
     gap: var(--space-s);
 }
 
-.dot-icon {
-    width: 16px;
-    height: 16px;
-    background: #1E3856;
-    border-radius: 50%;
-    display: inline-block;
-}
 
-.price-item.emergency .dot-icon {
+
+.price-item.emergency .dot-icon-one {
     background: #4fd1c5;
 }
 

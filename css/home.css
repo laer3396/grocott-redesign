@@ -224,7 +224,7 @@
   gap: var(--space-s);
 }
 
-.dot-icon.emergency {
+.dot-icon-one.emergency {
   background: #4fd1c5;
 }
 
@@ -275,15 +275,9 @@
   gap: var(--space-s);
 }
 
-.dot-icon {
-  width: 16px;
-  height: 16px;
-  background: #1E3856;
-  border-radius: 50%;
-  display: inline-block;
-}
 
-.price-item.emergency .dot-icon {
+
+.price-item.emergency .dot-icon-one{
   background: #4fd1c5;
 }
 
