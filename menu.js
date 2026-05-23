@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.toggle('active');
   });
 
+  overlay.addEventListener('click', () => {
+    closeMenu();
+  });
+  
   // 2. Klik på almindelige links → luk menu
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
