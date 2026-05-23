@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
-  const overlay = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.overlay');
   const navLinks = document.querySelectorAll('.nav-link');
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   const dropdownMenus = document.querySelectorAll('.dropdown-menu');
