@@ -7,7 +7,7 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--space-m);
 }
 
 /* ==========================================================================
@@ -18,7 +18,7 @@
   color: #1E3856;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: var(--space-m);
   font-weight: 300;
   font-size: 12px;
   padding: var(--space-xs);
