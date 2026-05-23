@@ -84,7 +84,7 @@
 .nav-menu {
   position: fixed;
   top: 0;
-  left: -100%;
+  transform: translateX(-100%);
   width: 80%;
   height: 100vh;
   background-color: #ffffff;
@@ -92,13 +92,13 @@
   flex-direction: column;
   gap: var(--space-m);
   padding-top: var(--space-3xl);
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
   z-index: 1001;
   justify-self: center;
 }
 
 .nav-menu.active {
-  left: 0;
+  transform: translateX(0);
 }
 
 .nav-link {
@@ -304,6 +304,8 @@
     /* Dette tvinger menuen til at forsøge at centrere sig i flex-containeren */
     margin: 0 auto;
 
+    transform: translateX(0);
+
     /* Fjern justify-self: center (det virker kun i grid) */
     background: none;
     width: auto;
@@ -335,7 +337,7 @@
   .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    transform: translateX(0);
     min-width: 200px;
     display: none;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
