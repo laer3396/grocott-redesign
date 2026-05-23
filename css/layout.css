@@ -119,15 +119,17 @@
   width: 100%;
 }
 
-
 .dropdown-menu {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
   background-color: #edf3f7;
+  transition: max-height 0.3s ease;
 }
 
 .dropdown-menu.active {
-  display: flex;
+  max-height: 500px;
 }
 
 .dropdown-item {
