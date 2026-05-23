@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
   const dropdownMenus = document.querySelectorAll('.dropdown-menu');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
   });
 
   // 2. Klik på almindelige links → luk menu
@@ -60,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMenu() {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    overlay.classList.remove('active');
 
     // Luk alle dropdowns + reset pile
     dropdownMenus.forEach(menu => {
