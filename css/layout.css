@@ -124,7 +124,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #edf3f7;
+  background-color: #F2F7FB;
+  border-radius: 12px;
+  margin: 0 12px;
   transition: max-height 0.3s ease;
 }
 
