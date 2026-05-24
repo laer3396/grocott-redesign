@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  //Henter elementer de elementer fra html, som jeg arbejder med i JS
+  //Henter de elementer fra html, som jeg arbejder med i JS
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
   const overlay = document.querySelector('.overlay');
