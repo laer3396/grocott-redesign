@@ -6,8 +6,8 @@
 // Derfor bruger jeg 'let', fordi værdien skal kunne opdateres.
 let currentIndex = 0;
 
-// 'treatments' er et array af objekter, som ikke skal reassignes.
-// Derfor bruger jeg 'const'. Jeg ændrer ikke selve arrayet, kun indholdet jeg læser fra det.
+// 'treatments' er et array af objekter.
+//  jeg 'const' bruger. Jeg ændrer ikke selve arrayet, kun indholdet jeg læser fra det.
 const treatments = [
   {
     name: "Hovedpine",
@@ -135,7 +135,7 @@ function setActiveTreatment(index) {
 // FUNKTIONER: Næste / Forrige
 // ===============================
 
-// Her bruger jeg modulo-operatoren (%) til at loope rundt i arrayet.
+// Her bruger jeg operatoren (%) til at loope rundt i arrayet.
 // Det betyder, at når man når sidste element, starter man forfra.
 function nextTreatment() {
   currentIndex = (currentIndex + 1) % treatments.length;
@@ -165,7 +165,7 @@ document.addEventListener("keydown", (e) => {
 // ===============================
 
 // Her logger jeg tidspunktet for at vise, at scriptet loader korrekt.
-// Jeg bruger 'new Date()', men kunne også bruge et library som Day.js.
+// Jeg bruger 'new Date()'
 console.log("Behandlingsmodul loaded:", new Date().toLocaleTimeString());
 
 
