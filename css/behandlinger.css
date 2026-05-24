@@ -75,7 +75,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
-  align-items: top;
+  align-items: start;
 }
 
 .treatment-image {
