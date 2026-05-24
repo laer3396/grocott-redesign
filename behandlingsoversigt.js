@@ -14,63 +14,63 @@ const treatments = [
     image: "img/alberte_nakke.webp",
     description: "Hovedpine opstår ofte på grund af spændinger eller ubalance i nakke og kæbe. Med specialiseret erfaring i behandling af hovedrelaterede smerter hjælper jeg dig med at finde årsagen og skabe varig lindring.",
     link: "booking.html",
-    secondaryLink: "hovedpine.html"
+    secondaryLink: "#"
   },
   {
     name: "Skulder og nakkegener",
     image: "img/skulder-og-nakkegener.webp",
     description: "Skulder- og nakkesmerter skyldes ofte spændinger, overbelastning eller nedsat bevægelighed. Med særlig erfaring i behandling af nakke- og skulderproblematikker hjælper jeg dig med at genvinde frihed i bevægelsen og mindske smerterne.",
     link: "booking.html",
-    secondaryLink: "skulder-nakke.html"
+    secondaryLink: "#"
   },
   {
     name: "Knæ og hofter",
     image: "img/knæ-og-hofter.webp",
     description: "Knæ- og hoftesmerter opstår ofte ved overbelastning, nedsat styrke eller ændret bevægemønster. Med erfaring i behandling og genoptræning af både akutte og længerevarende problemer hjælper jeg dig tilbage til en stærk og stabil hverdag.",
     link: "booking.html",
-    secondaryLink: "knae-hofte.html"
+    secondaryLink: "#"
   },
   {
     name: "Kæbegener",
     image: "img/kæbegener.webp",
     description: "Kæbesmerter kan stamme fra spændinger, bidfunktion eller nakkeproblemer. Med erfaring i behandling af kæberelaterede gener hjælper jeg dig med at skabe balance og reducere smerterne.",
     link: "booking.html",
-    secondaryLink: "kaebe.html"
+    secondaryLink: "#"
   },
   {
     name: "Fod problematikker",
     image: "img/fodproblematikker.webp",
     description: "Fodproblemer opstår ofte ved fejlbelastning, nedsat støtte eller ændret gangmønster. Jeg hjælper dig med at finde årsagen og skabe bedre støtte og funktion i hverdagen.",
     link: "booking.html",
-    secondaryLink: "fodproblemer.html"
+    secondaryLink: "#"
   },
   {
     name: "Ryg",
     image: "img/ryg.webp",
     description: "Rygsmerter skyldes ofte stivhed, overbelastning eller nedsat kontrol. Med erfaring i behandling af både akutte og længerevarende rygproblemer hjælper jeg dig tilbage til en stærkere og mere stabil ryg.",
     link: "booking.html",
-    secondaryLink: "ryg.html"
+    secondaryLink: "#"
   },
   {
     name: "Massage",
     image: "img/massage.webp",
     description: "Massage kan løsne spændinger, øge blodcirkulationen og give ro i kroppen. Jeg tilpasser behandlingen til dine behov, så du får den mest effektive lindring.",
     link: "booking.html",
-    secondaryLink: "massage.html"
+    secondaryLink: "#"
   },
   {
     name: "Formthotics",
     image: "img/formthotics.webp",
     description: "Formthotics er individuelt tilpassede indlægssåler, der støtter foden og forbedrer din belastning. Jeg hjælper dig med at finde den rette løsning, så du kan gå og stå mere komfortabelt.",
     link: "booking.html",
-    secondaryLink: "formthotics.html"
+    secondaryLink: "#"
   },
   {
     name: "Spenco sandaler",
     image: "img/spenco-sandaler.webp",
     description: "Spenco sandaler giver støtte, komfort og aflastning til fødderne. Jeg guider dig til den model, der passer bedst til dine behov og din hverdag.",
     link: "booking.html",
-    secondaryLink: "spenco.html"
+    secondaryLink: "#"
   }
 ];
 
