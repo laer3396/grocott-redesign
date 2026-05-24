@@ -1,3 +1,6 @@
+// Lavet i samarbejde med AI (Copilot) - rettet og tilpasset af Mathilde
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
+
 // Venter på, at alt HTML er indlæst, så koden ikke fejler
 document.addEventListener("DOMContentLoaded", () => {
     

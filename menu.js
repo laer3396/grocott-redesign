@@ -1,3 +1,6 @@
+// Lavet i samarbejde med AI (Copilot) - rettet og tilpasset af Ela
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
+
 document.addEventListener('DOMContentLoaded', () => {
 
   //Henter de elementer fra html, som jeg arbejder med i JS

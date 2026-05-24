@@ -1,3 +1,6 @@
+// Lavet i samarbejde med AI (Copilot) - rettet og tilpasset af Lærke
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
+
 // ===============================
 // VARIABLE SCOPE (let / const)
 // ===============================

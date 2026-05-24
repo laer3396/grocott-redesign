@@ -1,3 +1,5 @@
+// Lavet i samarbejde med AI (Copilot) - rettet og tilpasset af Mathilde
+
 document.getElementById("feedbackForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
