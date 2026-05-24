@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loop der automatisk giver alle prikker en klik-funktion og sender prikkens indeks videre.
     for (let i = 0; i < dots.length; i++) {
         dots[i].addEventListener("click", () => {
-            changeSlide(i); 
+            changeSlide(i);  // Aargument, faktiske værdi, vi giver til funktioen.
         });
     }
 
