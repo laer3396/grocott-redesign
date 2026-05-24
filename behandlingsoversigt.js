@@ -1,7 +1,13 @@
 // ===============================
 // VARIABLE SCOPE (let / const)
 // ===============================
-let currentIndex = 0; // ændrer sig når man klikker
+
+// 'currentIndex' ændrer sig, når brugeren klikker eller bruger piletaster.
+// Derfor bruger jeg 'let', fordi værdien skal kunne opdateres.
+let currentIndex = 0;
+
+// 'treatments' er et array af objekter, som ikke skal reassignes.
+// Derfor bruger jeg 'const'. Jeg ændrer ikke selve arrayet, kun indholdet jeg læser fra det.
 const treatments = [
   {
     name: "Hovedpine",
@@ -68,9 +74,13 @@ const treatments = [
   }
 ];
 
+
 // ===============================
 // DOM ELEMENTER
 // ===============================
+
+// Her henter jeg alle de elementer i DOM'en, som jeg skal opdatere dynamisk.
+// Det gør det muligt at ændre indholdet på siden med JavaScript.
 const list = document.getElementById("treatmentList");
 const img = document.getElementById("treatmentImage");
 const title = document.getElementById("treatmentTitle");
@@ -82,12 +92,15 @@ const secondary = document.getElementById("treatmentSecondary");
 // ===============================
 // FUNKTION: Byg menuen
 // ===============================
+
+// Denne funktion bygger menuen dynamisk ved at loope gennem arrayet.
+// For hver behandling opretter jeg et <li>-element og tilføjer et klik-event.
 function renderMenu() {
   treatments.forEach((t, index) => {
     const li = document.createElement("li");
     li.textContent = t.name;
 
-    // EVENT: klik på menu
+    // Når man klikker på et menupunkt, skifter indholdet i højre side.
     li.addEventListener("click", () => setActiveTreatment(index));
 
     list.appendChild(li);
@@ -98,6 +111,9 @@ function renderMenu() {
 // ===============================
 // FUNKTION: Opdater indhold
 // ===============================
+
+// Denne funktion opdaterer hele indholdsområdet baseret på det valgte index.
+// Her bruger jeg DOM-manipulation til at ændre billede, tekst og links.
 function setActiveTreatment(index) {
   currentIndex = index;
 
@@ -109,15 +125,18 @@ function setActiveTreatment(index) {
   link.href = t.link;
   secondary.href = t.secondaryLink;
 
-  // Aktiv menu-styling
+  // Aktiv styling: fjerner 'active' fra alle og tilføjer til den valgte.
   [...list.children].forEach(li => li.classList.remove("active"));
   list.children[index].classList.add("active");
 }
 
 
 // ===============================
-// FUNKTIONER: Næste / Forrige (brug af operatorer + modulo)
+// FUNKTIONER: Næste / Forrige
 // ===============================
+
+// Her bruger jeg modulo-operatoren (%) til at loope rundt i arrayet.
+// Det betyder, at når man når sidste element, starter man forfra.
 function nextTreatment() {
   currentIndex = (currentIndex + 1) % treatments.length;
   setActiveTreatment(currentIndex);
@@ -132,6 +151,9 @@ function prevTreatment() {
 // ===============================
 // EVENT: Keyboard navigation
 // ===============================
+
+// Her lytter jeg efter piletasterne, så brugeren kan navigere uden mus.
+// Det viser brug af events på dokumentniveau.
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") nextTreatment();
   if (e.key === "ArrowLeft") prevTreatment();
@@ -139,13 +161,19 @@ document.addEventListener("keydown", (e) => {
 
 
 // ===============================
-// LIBRARY (valgfrit): Day.js til debug-tidspunkt
+// DEBUGGING + LIBRARY
 // ===============================
+
+// Her logger jeg tidspunktet for at vise, at scriptet loader korrekt.
+// Jeg bruger 'new Date()', men kunne også bruge et library som Day.js.
 console.log("Behandlingsmodul loaded:", new Date().toLocaleTimeString());
 
 
 // ===============================
 // INITIALISERING
 // ===============================
+
+// Til sidst initialiserer jeg modulet ved at bygge menuen
+// og vise den første behandling.
 renderMenu();
 setActiveTreatment(0);
